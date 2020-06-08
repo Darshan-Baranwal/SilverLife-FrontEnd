@@ -1,0 +1,29 @@
+.Footer{
+    height: 100px;
+    width: 100%;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    top:60px;
+}
+
+.Footer.text{
+    margin-left: 7%;
+    color: rgb(139, 138, 138);
+    height: 50%;
+}
+
+.Footer.images{
+    margin-right: 7%;
+    height: 50%;
+    width:20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.Footer img{
+    height: 50%;
+    width: 15%;
+}

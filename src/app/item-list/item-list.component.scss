@@ -1,0 +1,64 @@
+.Justarrived{
+    position: relative; 
+    top:100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.Justarrived h1{
+    margin-bottom: 0.5%;
+}
+
+.Justarrived a{
+    color: red;
+    text-decoration: underline solid red;
+}
+
+.Justarrived ul{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 10%;
+    /* padding: 1% 10% 0 15%; */
+    width: 75%;
+    margin-top: 3%;
+}
+
+.Justarrived ul li{
+    list-style: none;
+    width: 20%;
+    height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+ .Justarrived ul li img{
+    max-width: 75%;
+    max-height: 75%;
+    height: 60%;
+    width: 75%;
+    border-bottom: rgb(211, 211, 211) solid 1px;
+}
+
+.Justarrived ul li h3{
+    height: 8%;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    width: 75%;
+    border-bottom: rgb(211, 211, 211) solid 1px;
+    font-weight: normal;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    padding-bottom: 2px;
+}
+
+.Justarrived ul li span{
+    height: 10%;
+    color: red;
+    font-weight: bold;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}

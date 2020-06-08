@@ -18,6 +18,8 @@ import { ReviewTrackingComponent } from './review-tracking/review-tracking.compo
 import { QualitiesComponent } from './qualities/qualities.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginRegisterComponent } from './login-register/login-register.component';
+import { MajorCategoriesComponent } from './major-categories/major-categories.component';
+import { SeasonalBannerComponent } from './seasonal-banner/seasonal-banner.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { LoginRegisterComponent } from './login-register/login-register.componen
     ReviewTrackingComponent,
     QualitiesComponent,
     FooterComponent,
-    LoginRegisterComponent
+    LoginRegisterComponent,
+    MajorCategoriesComponent,
+    SeasonalBannerComponent
   ],
   imports: [
     BrowserModule,

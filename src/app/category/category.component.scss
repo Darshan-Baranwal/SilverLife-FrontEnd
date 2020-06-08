@@ -1,0 +1,39 @@
+.Cards{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    top: 60px;
+    padding: 1% 10% 0 15%;
+    background-color: #FAFAFA;
+}
+
+.Card{
+    height: 75%;
+    width: 25%;
+    border-radius: 15px;
+    margin:6px 6px 24px 6px;
+    background-image: linear-gradient(to right,#D2FCFA,#FFFFFF);
+}
+
+.Card:hover{
+    box-shadow: 2px 2px 8px #dadada;
+    margin:1px 6px 24px 6px;
+}
+
+.Card div{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 5px 0 0 20px;
+}
+
+.Card div p{
+    height: 25%;
+    width: 30%;
+    background-color: white;
+    margin: 5px 5px 10px 5px;
+    border-radius:  0 10px 10px 0;
+    color: #3265B9;
+    padding: 5px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,36 @@
+.Advises{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    background-color: #DEF3FD;
+    position: relative;
+    top:50px;
+}
+
+.Advises h1{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+}
+
+.Advises ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    list-style: none;
+    margin: 0px;
+    padding: 0% 10% 0 15%;
+}
+
+.Advises ul li{
+    background-color: white;
+    height:150px;
+    width: 25%;
+    margin: 2% 2% 2% 0%;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    box-shadow: 0px 10px 8px #d1d1d1;;
+}

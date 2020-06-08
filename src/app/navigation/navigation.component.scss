@@ -1,0 +1,212 @@
+.Toolbar{
+    height: 65px;
+    width : 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #FEFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 90;
+}
+
+.Toolbar nav{
+    height: 100%;
+}
+
+.Logo{
+    height: 80%;
+}
+.NavigationItems{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.NavigationItem {
+    margin: 10px 0;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+}
+
+.NavigationItem a{
+    color: #8f5c2c;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+.NavigationItem a:hover,
+.NavigationItem a:active,
+.NavigationItem a.active{
+    color: #40a4c8;
+}
+
+@media (min-width: 500px){
+    .NavigationItem {
+        margin: 0;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        font-size: 24px;
+        white-space: nowrap;
+        font-weight: 600;
+    }
+    
+    .NavigationItem a{
+        color: rgb(88, 88, 88);
+        height: 100%;
+        padding: 16px 10px;
+        border-bottom: 4px solid transparent;
+        position: relative;
+    }
+    .NavigationItem a:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 10px;
+        left: 0;
+        background-color: #DC1336;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+      }
+    
+    .NavigationItem a:hover,    
+    .NavigationItem a.active{
+        color:  #DC1336;
+    }
+
+    .NavigationItem a:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+
+    .NavigationItem a:hover + .BroadCategories{
+        visibility: visible;
+    }
+}
+.Search{
+    padding: 12px;
+    height: 80%;
+    box-sizing: border-box;
+}
+
+.Search img{
+    height: 30px;
+}
+.Login{
+    padding: 12px;
+    height: 80%;
+    box-sizing: border-box;
+}
+
+.Login img{
+    height: 30px;
+}
+
+.Cart{
+    padding: 10px;
+    height: 80%;
+    box-sizing: border-box;
+
+}
+
+.Cart img{
+    height: 30px;
+}
+.DrawerToggle {
+    width: 40px;
+    height: 80%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.DrawerToggle div {
+    width: 90%;
+    height: 2px;
+    background-color: black;
+}
+.BroadCategories{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: absolute;
+    top:65px;
+    width:100%;
+    left:0px;
+    list-style: none;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: rgb(100, 100, 100);
+    padding: 0 0 2% 0;
+    visibility: hidden;
+    border-top: 1px solid rgb(218, 217, 217);
+}
+
+.BroadCategories img{
+    height: 25px;
+}
+.BroadCategories h5{
+    margin: 20px 0;
+    display: inline-block;
+}
+
+.BroadCategory{
+    list-style: none;
+    padding:0;
+}
+
+.BroadCategory li{
+    font-size: 15px;
+    padding : 7px 0;
+}
+
+.BroadCategories li:hover h5,
+.BroadCategory li:hover{
+    color: #DD1336;
+}
+
+.BroadCategories:hover{
+    visibility: visible;
+}
+.Logo{
+    padding: 0px 10px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.Logo img{
+    height: 65px;
+}
+@media(min-width: 500px){
+    .NavigationItems{
+        flex-flow: row;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 499px){
+    .DesktopOnly{
+        display: none;
+    }
+}
