@@ -70,7 +70,7 @@
             <li class="NavigationItem">
                 <a href="/">Sale</a>
             </li>
-            <div class="Logo">
+            <div class="Logo" (click) = "navigateTo('home')">
                 <img src="../../assets/LOGO.png" alt="SilverCare" />
             </div>
             <li class="NavigationItem">
@@ -80,7 +80,7 @@
                 <a href="/">About Us</a>
             </li>
             <li class="NavigationItem">
-                <a href="/">Account</a>
+                <a routerLink="account">Account</a>
             </li>
         </ul>
     </nav>
@@ -91,7 +91,7 @@
         <div class="Login">
             <img src="../../assets/Login.png" alt="Login" />
         </div>
-        <div class="Cart">
+        <div class="Cart" (click)="navigateTo('shopping-cart')">
             <img src="../../assets/Cart.png" alt="Cart" />
         </div>
         <div class="DrawerToggle">

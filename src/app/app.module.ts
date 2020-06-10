@@ -20,6 +20,9 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginRegisterComponent } from './login-register/login-register.component';
 import { MajorCategoriesComponent } from './major-categories/major-categories.component';
 import { SeasonalBannerComponent } from './seasonal-banner/seasonal-banner.component';
+import { AccountComponent } from './account/account.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { SeasonalBannerComponent } from './seasonal-banner/seasonal-banner.compo
     FooterComponent,
     LoginRegisterComponent,
     MajorCategoriesComponent,
-    SeasonalBannerComponent
+    SeasonalBannerComponent,
+    AccountComponent,
+    ShoppingCartComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

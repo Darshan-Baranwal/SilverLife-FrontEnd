@@ -1,0 +1,82 @@
+.CartSection{
+    position: relative;
+    top:40px;
+    background-color: #FAFAFA;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.table{
+    padding: 3% 10%;    
+}
+
+.tableRow{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    height:80px;
+    align-items: center;
+    background-color: white;
+    margin: 0;
+    border: 1px solid rgb(224, 224, 224);
+}
+
+.delBtn{
+    width: 5%;    
+}
+
+.Pic{
+    width: 10%;
+}
+
+.Pic img{
+    padding: 5px;
+    height: 60px;
+    width: 75px;
+}
+
+.Name{
+    width: 50%;
+}
+
+.Pricing{
+    width: 10%;
+}
+
+.Qty{
+    width:10%
+}
+
+.total{
+    width: 10%;
+}
+
+.Pricetable{
+    padding: 3% 10% 3% 70%;
+}
+
+.Pricetable li{
+    width: 50%;
+}
+.Quantity .plus,
+.Quantity .minus{
+ background-color: white;
+ color: black;
+ border: none;
+ border-radius: 50px;
+ box-shadow: 0 2px 12px rgba(0,0,0,.08);
+ height: 35px;
+ width: 35px;
+ line-height: 24px
+}
+
+.Quantity .number{
+    background-color: transparent;
+    border: none;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    padding :0 5px;
+    font-weight: 700;
+    font-size: 24px;
+    vertical-align: middle;
+}
