@@ -1,5 +1,5 @@
 <div class="Justarrived item-list-container">
-    <app-item-list-header></app-item-list-header>
+    <app-item-list-header [header]=header [hideAllNewLink] = hideAllNewLink></app-item-list-header>
     <ul>
         <li (click)="openProductDetailPage('productId')">
             <img src="../../assets/PillBox.jpg" />
