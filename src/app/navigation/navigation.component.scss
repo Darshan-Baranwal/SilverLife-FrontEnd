@@ -8,13 +8,18 @@
     display: flex;
     justify-content: space-between;
     align-content: center;
-    padding: 0 20px;
+    padding: 0;
     box-sizing: border-box;
     z-index: 90;
 }
 
 .Toolbar nav{
     height: 100%;
+}
+
+.EmptyTool{
+    width:198px;
+    visibility: hidden;
 }
 
 .Logo{
@@ -54,51 +59,7 @@
     color: #40a4c8;
 }
 
-@media (min-width: 500px){
-    .NavigationItem {
-        margin: 0;
-        display: flex;
-        height: 100%;
-        align-items: center;
-        font-size: 24px;
-        white-space: nowrap;
-        font-weight: 600;
-    }
-    
-    .NavigationItem a{
-        color: rgb(88, 88, 88);
-        height: 100%;
-        padding: 16px 10px;
-        border-bottom: 4px solid transparent;
-        position: relative;
-    }
-    .NavigationItem a:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 10px;
-        left: 0;
-        background-color: #DC1336;
-        visibility: hidden;
-        transform: scaleX(0);
-        transition: all 0.3s ease-in-out;
-      }
-    
-    .NavigationItem a:hover,    
-    .NavigationItem a.active{
-        color:  #DC1336;
-    }
 
-    .NavigationItem a:hover:before {
-        visibility: visible;
-        transform: scaleX(1);
-      }
-
-    .NavigationItem a:hover + .BroadCategories{
-        visibility: visible;
-    }
-}
 .Search{
     padding: 12px;
     height: 80%;
@@ -198,15 +159,63 @@
 .Logo img{
     height: 65px;
 }
-@media(min-width: 500px){
+
+@media (max-width:785px){
+    .DesktopOnly{
+        display: none;
+    }
+}
+@media (min-width: 786px){
+    .Toolbar{
+        padding:0 20px;
+    }
+
     .NavigationItems{
         flex-flow: row;
         justify-content: center;
     }
-}
 
-@media (max-width: 499px){
-    .DesktopOnly{
-        display: none;
+    .NavigationItem {
+        margin: 0;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        font-size: 24px;
+        white-space: nowrap;
+        font-weight: 600;
+    }
+    
+    .NavigationItem a{
+        color: rgb(88, 88, 88);
+        height: 100%;
+        padding: 16px 10px;
+        border-bottom: 4px solid transparent;
+        position: relative;
+    }
+    .NavigationItem a:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 10px;
+        left: 0;
+        background-color: #DC1336;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+      }
+    
+    .NavigationItem a:hover,    
+    .NavigationItem a.active{
+        color:  #DC1336;
+    }
+
+    .NavigationItem a:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+
+    .NavigationItem a:hover + .BroadCategories{
+        visibility: visible;
     }
 }
