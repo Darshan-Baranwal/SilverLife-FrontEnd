@@ -198,6 +198,60 @@
 .Logo img{
     height: 65px;
 }
+.search-modal {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    height: 30vh;
+    z-index: 2000 !important;
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1) 0s, opacity 0.8s cubic-bezier(0.2, 1, 0.3, 1) 0s;
+}
+.search-modal input[type="text"] {
+    border: none;
+    width: 100%;
+    color: rgb(136, 136, 136);
+    font-size: 24px;
+    line-height: 40px;
+    background-color: transparent;
+    box-shadow: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: none 0s ease 0s;
+    padding-left: 4px;
+}
+.search-modal a {
+    background: #efacac;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+.search-modal .inner-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 20% 0 20%;
+    form {
+        flex: 1;
+        input[type="text"]:hover,
+        input[type="text"]:focus  {
+            border: none;
+            outline:none;
+        }
+        div {
+            border-top: 2px solid rgb(221, 19, 54);
+            display: block;
+    color: rgba(0, 0, 0, 0.4);
+    padding-top: 15px;
+        }
+    }
+}
 @media(min-width: 500px){
     .NavigationItems{
         flex-flow: row;

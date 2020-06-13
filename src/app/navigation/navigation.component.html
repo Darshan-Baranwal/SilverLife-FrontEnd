@@ -5,7 +5,7 @@
     <nav>
         <ul class="NavigationItems">
             <li class="NavigationItem">
-                <a href="/">Categories</a>
+                <a routerLink="categories">Categories</a>
                 <ul class="BroadCategories">
                     <li>
                         <img src="../../assets/dressing.svg" alt="Dressing" />
@@ -85,7 +85,7 @@
         </ul>
     </nav>
     <div style="display: flex; flex-direction: row;height: 100%;margin-top: 10px;">
-        <div class="Search">
+        <div class="Search" (click) = "toggleSearchModel()">
             <img src="../../assets/Search.png" alt="Search" />
         </div>
         <div class="Login">
@@ -99,5 +99,16 @@
             <div></div>
             <div></div>
         </div>
+    </div>
+    <div class="search-modal" *ngIf="openCloseSearchModal">
+            <div class="inner-wrap">
+                <form role="search">
+                <input type="text" name="s" id="s" value="" placeholder="Search">
+                <input type="hidden" name="post_type" value="product">
+                <div>Hit enter to search or ESC to close</div> </form>
+                <div id="close"><a  (click) = "toggleSearchModel()">
+                    <i class="fa fa-times" aria-hidden="true"></i> </a>
+                </div>
+            </div>
     </div>
 </div>

@@ -7,13 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-
+  openCloseSearchModal: boolean = false;
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
   navigateTo(routerLink) {
     this.router.navigate([routerLink]);
+  }
+  toggleSearchModel() {
+    this.openCloseSearchModal = ! this.openCloseSearchModal;
   }
 
 }

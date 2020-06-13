@@ -6,6 +6,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { PopularComponent } from './popular/popular.component';
 import { SaleComponent } from './sale/sale.component';
+import { CategoryComponent } from './category/category.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'product-detail/:id', component: ProductDetailComponent},
   {path: 'popular', component: PopularComponent},
   {path: 'sale', component: SaleComponent},
+  {path: 'categories', component: CategoryComponent},
   {path: '', pathMatch: 'full', redirectTo: 'home'}
 ];
 
