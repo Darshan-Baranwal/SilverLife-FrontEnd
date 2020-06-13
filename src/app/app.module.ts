@@ -23,6 +23,8 @@ import { SeasonalBannerComponent } from './seasonal-banner/seasonal-banner.compo
 import { AccountComponent } from './account/account.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { PopularComponent } from './popular/popular.component';
+import { SaleComponent } from './sale/sale.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     SeasonalBannerComponent,
     AccountComponent,
     ShoppingCartComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    PopularComponent,
+    SaleComponent
   ],
   imports: [
     BrowserModule,

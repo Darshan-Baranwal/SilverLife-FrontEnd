@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-item-list-header',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item-list-header.component.scss']
 })
 export class ItemListHeaderComponent implements OnInit {
-
+@Input() header;
+@Input() hideAllNewLink;
   constructor() { }
 
   ngOnInit(): void {
