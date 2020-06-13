@@ -5,16 +5,19 @@
     flex-wrap: wrap;
     position: relative;
     top: 60px;
-    padding: 1% 10% 0 15%;
+    padding: 1% 1% 0 1%;
     background-color: #FAFAFA;
 }
 
 .Card{
-    height: 75%;
+    height: 105px;
     width: 25%;
     border-radius: 15px;
     margin:6px 6px 24px 6px;
     background-image: linear-gradient(to right,#D2FCFA,#FFFFFF);
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 .Card:hover{
@@ -28,12 +31,18 @@
 }
 
 .Card div p{
-    height: 25%;
-    width: 30%;
+    height: 25px;
+    width: 100px;
     background-color: white;
     margin: 5px 5px 10px 5px;
     border-radius:  0 10px 10px 0;
     color: #3265B9;
     padding: 5px;
     box-sizing: border-box;
+}
+
+.Card img{
+    height:105px;
+    width:120px;
+    border-radius: 0 15px 15px 0;
 }
