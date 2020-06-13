@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class NavigationComponent implements OnInit {
   openCloseSearchModal: boolean = false;
+  @Output() toggleDrawer = new EventEmitter<void>();
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -17,6 +18,9 @@ export class NavigationComponent implements OnInit {
   }
   toggleSearchModel() {
     this.openCloseSearchModal = ! this.openCloseSearchModal;
+  }
+  openDrawer() {
+    this.toggleDrawer.emit();
   }
 
 }

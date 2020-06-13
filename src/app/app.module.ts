@@ -25,6 +25,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { PopularComponent } from './popular/popular.component';
 import { SaleComponent } from './sale/sale.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { SaleComponent } from './sale/sale.component';
     ShoppingCartComponent,
     ProductDetailComponent,
     PopularComponent,
-    SaleComponent
+    SaleComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,45 @@
+.AboutUs{
+    height: 1000px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.AboutUs img{
+    width: 100%;
+    height: 500px
+}
+
+.AboutUs .list{
+    background-color: white;
+    width: 10%;
+    list-style: none;
+    padding: 1% 3%;
+    float:left;
+}
+
+.AboutUs .list li{
+    color: rgb(223, 34, 65);
+    font-size: 18px;
+    padding: 8px;
+    font-weight: 500;
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.AboutUs .list li:active,
+.AboutUs .list li:hover{
+    color: #333333;
+}
+
+.AboutUs .data{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.WriteUp{
+    width: 55%;
+}
+
+.AboutUs h4{
+    font-size: 24px;
+    margin-bottom: 0px;
+}

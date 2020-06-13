@@ -1,4 +1,16 @@
-<app-navigation></app-navigation>
-<router-outlet></router-outlet>
-<app-qualities></app-qualities>
-<app-footer></app-footer>
+<div id="main-container" #mainContainer [class.with-drawer]="toggleSideDrawer">
+    <div class="close-icon" (click)="toggleDrawerForSideDrawer($event)" *ngIf="toggleSideDrawer">
+        <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+    <app-navigation (toggleDrawer) = "toggleDrawerForSideDrawer($event)"></app-navigation>
+    <router-outlet></router-outlet>
+    <app-qualities></app-qualities>
+    <app-footer></app-footer>
+</div>
+<div class="side-drawer-content" id="side-drawer-div" *ngIf="toggleSideDrawer">
+    <ul>
+        <li>Login</li>
+        <li>Account</li>
+        <li>About us</li>
+    </ul>
+</div>

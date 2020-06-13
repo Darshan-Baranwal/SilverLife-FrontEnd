@@ -77,7 +77,7 @@
                 <a href="/">Blog</a>
             </li>
             <li class="NavigationItem DesktopOnly">
-                <a href="/">About Us</a>
+                <a routerLink="aboutUs">About Us</a>
             </li>
             <li class="NavigationItem DesktopOnly">
                 <a routerLink="account">Account</a>
@@ -88,13 +88,13 @@
         <div class="Search" (click) = "toggleSearchModel()">
             <img src="../../assets/Search.png" alt="Search" />
         </div>
-        <div class="Login">
+        <div class="Login"  routerLink="account">
             <img src="../../assets/Login.png" alt="Login" />
         </div>
         <div class="Cart" (click)="navigateTo('shopping-cart')">
             <img src="../../assets/Cart.png" alt="Cart" />
         </div>
-        <div class="DrawerToggle">
+        <div class="DrawerToggle" (click) = openDrawer()>
             <div></div>
             <div></div>
             <div></div>
