@@ -100,15 +100,17 @@
             <div></div>
         </div>
     </div>
-    <div class="search-modal" *ngIf="openCloseSearchModal">
-            <div class="inner-wrap">
-                <form role="search">
-                <input type="text" name="s" id="s" value="" placeholder="Search">
-                <input type="hidden" name="post_type" value="product">
-                <div>Hit enter to search or ESC to close</div> </form>
-                <div id="close"><a  (click) = "toggleSearchModel()">
-                    <i class="fa fa-times" aria-hidden="true"></i> </a>
+    <div class="search-modal-container" *ngIf="openCloseSearchModal" #searchModalContainer (click)="clickOutsideCheck($event)">
+        <div class="search-modal" #searchModal>
+                <div class="inner-wrap">
+                    <form role="search">
+                    <input type="text" name="s" id="s" value="" placeholder="Search">
+                    <input type="hidden" name="post_type" value="product">
+                    <div>Hit enter to search or ESC to close</div> </form>
+                    <div id="close"><a  (click) = "toggleSearchModel()">
+                        <i class="fa fa-times" aria-hidden="true"></i> </a>
+                    </div>
                 </div>
-            </div>
+        </div>
     </div>
 </div>

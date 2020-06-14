@@ -1,6 +1,8 @@
 <div id="main-container" #mainContainer [class.with-drawer]="toggleSideDrawer">
-    <div class="close-icon" (click)="toggleDrawerForSideDrawer($event)" *ngIf="toggleSideDrawer">
-        <i class="fa fa-times" aria-hidden="true"></i>
+    <div class="close-icon-container" (click)="toggleDrawerForSideDrawer($event)"  *ngIf="toggleSideDrawer">
+        <div class="close-icon">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
     </div>
     <app-navigation (toggleDrawer) = "toggleDrawerForSideDrawer($event)"></app-navigation>
     <router-outlet></router-outlet>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 export class NavigationComponent implements OnInit {
   openCloseSearchModal: boolean = false;
   @Output() toggleDrawer = new EventEmitter<void>();
+  @ViewChild('searchModalContainer', {static: false}) searchModalContainer: ElementRef;
+  @ViewChild('searchModal', {static: false}) searchModal: ElementRef;
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -22,5 +24,9 @@ export class NavigationComponent implements OnInit {
   openDrawer() {
     this.toggleDrawer.emit();
   }
-
+  clickOutsideCheck(event) {
+    if(event.target.className !== "search-modal") {
+      this.openCloseSearchModal = false;
+    }
+  }
 }
