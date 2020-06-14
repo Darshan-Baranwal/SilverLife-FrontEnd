@@ -1,33 +1,97 @@
 {
-    "name":"Wound care",
-    "description":"",
-    "startColor":"#D2FCFA",
-    "endColor":"#F6FDFD",
-    "imgAddress":"assets/Cards/WoundCare.jpg",
-    "subCategories" :[
-        {
-            "name":"Wound cleansers"
-        },
-        {
-            "name":"Band aids"
-        },
-        {
-            "name":"Gauzes"
-        },
-        {
-            "name":"Medical tapes"
-        },
-        {
-            "name":"Gloves"
-        },
-        {
-            "name":"Povidine Iodine swabs"
-        },
-        {
-            "name":"First Aid kits"
-        },
-        {
-            "name":"Wound closure strips"
-        }
+    "categories" : [
+    {
+        "name":"Wound care",
+        "description":"",
+        "startColor":"#D2FCFA",
+        "endColor":"#F6FDFD",
+        "imgAddress":"assets/Cards/WoundCare.jpg",
+        "subCategories" :[
+            {
+                "name":"Wound cleansers"
+            },
+            {
+                "name":"Band aids"
+            },
+            {
+                "name":"Gauzes"
+            },
+            {
+                "name":"Medical tapes"
+            },
+            {
+                "name":"Gloves"
+            },
+            {
+                "name":"Povidine Iodine swabs"
+            },
+            {
+                "name":"First Aid kits"
+            },
+            {
+                "name":"Wound closure strips"
+            }
+        ]
+    },
+    {
+        "name":"Bedsore Dressings",
+        "description":"",
+        "startColor":"#DBE4F1",
+        "endColor":"#F4F9FB",
+        "imgAddress":"assets/Cards/Bedsore.png",
+        "subCategories" :[
+            {
+                "name":"Absorbent dressings"
+            },
+            {
+                "name":"Foam dressing"
+            },
+            {
+                "name":"Siver dressing"
+            },
+            {
+                "name":"Silicone dressing"
+            },
+            {
+                "name":"Transparent films"
+            },
+            {
+                "name":"IV dressings"
+            },
+            {
+                "name":"Burn dressing"
+            }
+        ]
+    },
+    {
+        "name":"Pain relief",
+        "description":"",
+        "startColor":"#FFE0F3",
+        "endColor":"rgb(251, 248, 251)",
+        "imgAddress":"assets/Cards/PainRelief.jpg",
+        "subCategories" :[
+            {
+                "name":"Hot & cold pads"
+            },
+            {
+                "name":"Electric massagers"
+            },
+            {
+                "name":"Foot massagers"
+            },
+            {
+                "name":"Manual massagers"
+            },
+            {
+                "name":"Gels and Creams"
+            },
+            {
+                "name":"Sprays & roll ons"
+            },
+            {
+                "name":"Magnet therapy"
+            }
+        ]
+    }
     ]
 }
