@@ -10,21 +10,21 @@
         z-index: 99;
     .close-icon {
         border-color: white;
-    position: absolute;
-    right: 2px;
-    top: 45vh;
-    border-radius: 35px;
-    height: 64px;
-    width: 64px;
-    display: flex;
-    z-index: 999999999999999;
-    background: red;
-    justify-content: center;
-    align-items: center;
+        position: absolute;
+        right: 2px;
+        top: 45vh;
+        border-radius: 35px;
+        height: 64px;
+        width: 64px;
+        display: flex;
+        z-index: 999999999999999;
+        background: red;
+        justify-content: center;
+        align-items: center;
         i {
             font-size: 40px;
-    font-weight: 100!important;
-    color: white;
+            font-weight: 100!important;
+            color: white;
         }
     }
   }

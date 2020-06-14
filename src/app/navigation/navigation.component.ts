@@ -9,8 +9,6 @@ import { Router } from '@angular/router';
 export class NavigationComponent implements OnInit {
   openCloseSearchModal: boolean = false;
   @Output() toggleDrawer = new EventEmitter<void>();
-  @ViewChild('searchModalContainer', {static: false}) searchModalContainer: ElementRef;
-  @ViewChild('searchModal', {static: false}) searchModal: ElementRef;
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -18,15 +16,7 @@ export class NavigationComponent implements OnInit {
   navigateTo(routerLink) {
     this.router.navigate([routerLink]);
   }
-  toggleSearchModel() {
-    this.openCloseSearchModal = ! this.openCloseSearchModal;
-  }
   openDrawer() {
     this.toggleDrawer.emit();
-  }
-  clickOutsideCheck(event) {
-    if(event.target.className !== "search-modal") {
-      this.openCloseSearchModal = false;
-    }
   }
 }

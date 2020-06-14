@@ -26,6 +26,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { PopularComponent } from './popular/popular.component';
 import { SaleComponent } from './sale/sale.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { SubCategoryComponent } from './category/sub-category/sub-category.component';
+import { AutoCloseDirective } from './auto-close.directive';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
     ProductDetailComponent,
     PopularComponent,
     SaleComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    SubCategoryComponent,
+    AutoCloseDirective
   ],
   imports: [
     BrowserModule,

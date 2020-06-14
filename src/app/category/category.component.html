@@ -1,5 +1,5 @@
 <div class="Cards">
-    <div class="Card" style="background-image: linear-gradient(to right,#D2FCFA,#F6FDFD);">
+    <div class="Card" style="background-image: linear-gradient(to right,#D2FCFA,#F6FDFD);" (click) = "openSubCategoryList()">
         <div>
             <h4>Wound Care</h4>
             <p>SHOP NOW</p>
@@ -71,5 +71,23 @@
             <h4>NEED AND CONDITION</h4>
             <p>SHOP NOW</p>
         </div>
+    </div>
+</div>
+<div class="modal sub-category-container animate__animated animate__bounce" *ngIf="toggleSubCategoryList">
+    <div class="modal-content"  appAutoClose (autoCloseOnclickOutside)="toggleSubCategoryList = false">
+        <div id="close"><a class="close-link" (click) = "toggleSubCategoryList = false">
+            <i class="fa fa-times" aria-hidden="true"></i> </a>
+        </div>
+        <h3 class="modal-header">Category Name</h3>
+        <div class="sub-category-list">
+            <div *ngFor="let i of [1,2,3,4,5,6]" class="sub-category-cards" 
+            style="background-image: linear-gradient(to right,#F6DFBE,rgb(250, 239, 225));">
+                <div>
+                    <a >Sub cat {{i}}</a>
+                </div>
+            </div>
+               
+        </div>
+
     </div>
 </div>

@@ -159,6 +159,17 @@
 .Logo img{
     height: 65px;
 }
+.search-modal-container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0px;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.7); 
+}
 .search-modal {
     position: absolute;
     display: flex;
@@ -270,14 +281,5 @@
 
     .NavigationItem a:hover + .BroadCategories{
         visibility: visible;
-    }
-    .search-modal-container {
-        width: 100%;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0px;
     }
 }

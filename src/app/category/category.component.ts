@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryComponent implements OnInit {
 
+  toggleSubCategoryList: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  openSubCategoryList() {
+    this.toggleSubCategoryList = !this.toggleSubCategoryList;
+  }
+  closeModal() {
+    this.toggleSubCategoryList = false;
+  }
 }
