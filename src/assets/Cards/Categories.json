@@ -92,6 +92,96 @@
                 "name":"Magnet therapy"
             }
         ]
+    },
+    {
+        "name":"Urine management",
+        "description":"",
+        "startColor":"#FFF3E3",
+        "endColor":"#FDF2E4",
+        "imgAddress":"assets/Cards/UrineManagment.jpg",
+        "subCategories" :[
+            {
+                "name":"Diapers"
+            },
+            {
+                "name":"Diaper pants"
+            },
+            {
+                "name":"Underpad sheets"
+            },
+            {
+                "name":"Washclots and wipes"
+            },
+            {
+                "name":"Bed pan"
+            },
+            {
+                "name":"Urinals"
+            },
+            {
+                "name":"Drainage bags"
+            },
+            {
+                "name":"Diaper disposal system"
+            }
+        ]
+    },
+    {
+        "name":"Medicene management",
+        "description":"",
+        "startColor":"#D2EFF3",
+        "endColor":"#E3EDDF",
+        "imgAddress":"assets/Cards/MedicineManagement.jpg",
+        "subCategories" :[
+            {
+                "name":"Alarms"
+            },
+            {
+                "name":"Pill boxes"
+            },
+            {
+                "name":"Pill cutter"
+            },
+            {
+                "name":"Pill crusher"
+            },
+            {
+                "name":"Medicine cup"
+            },
+            {
+                "name":"Medicine charts"
+            }
+        ]
+    },
+    {
+        "name":"Dental Care",
+        "description":"",
+        "startColor":"#E8FDFF",
+        "endColor":"#E1FBFB",
+        "imgAddress":"assets/Cards/DentalCare.jpg",
+        "subCategories" :[
+            {
+                "name":"Tooth brush & Paste"
+            },
+            {
+                "name":"Disposable Swabs"
+            },
+            {
+                "name":"Silicone brush"
+            },
+            {
+                "name":"Mouthwash"
+            },
+            {
+                "name":"Tongue cleaners"
+            },
+            {
+                "name":"Suction brush"
+            },
+            {
+                "name":"Denture cups"
+            }
+        ]
     }
     ]
 }
