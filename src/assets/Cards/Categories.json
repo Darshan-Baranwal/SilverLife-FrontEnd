@@ -1,0 +1,187 @@
+{
+    "categories" : [
+    {
+        "name":"Wound care",
+        "description":"",
+        "startColor":"#D2FCFA",
+        "endColor":"#F6FDFD",
+        "imgAddress":"assets/Cards/WoundCare.jpg",
+        "subCategories" :[
+            {
+                "name":"Wound cleansers"
+            },
+            {
+                "name":"Band aids"
+            },
+            {
+                "name":"Gauzes"
+            },
+            {
+                "name":"Medical tapes"
+            },
+            {
+                "name":"Gloves"
+            },
+            {
+                "name":"Povidine Iodine swabs"
+            },
+            {
+                "name":"First Aid kits"
+            },
+            {
+                "name":"Wound closure strips"
+            }
+        ]
+    },
+    {
+        "name":"Bedsore Dressings",
+        "description":"",
+        "startColor":"#DBE4F1",
+        "endColor":"#F4F9FB",
+        "imgAddress":"assets/Cards/Bedsore.png",
+        "subCategories" :[
+            {
+                "name":"Absorbent dressings"
+            },
+            {
+                "name":"Foam dressing"
+            },
+            {
+                "name":"Siver dressing"
+            },
+            {
+                "name":"Silicone dressing"
+            },
+            {
+                "name":"Transparent films"
+            },
+            {
+                "name":"IV dressings"
+            },
+            {
+                "name":"Burn dressing"
+            }
+        ]
+    },
+    {
+        "name":"Pain relief",
+        "description":"",
+        "startColor":"#FFE0F3",
+        "endColor":"rgb(251, 248, 251)",
+        "imgAddress":"assets/Cards/PainRelief.jpg",
+        "subCategories" :[
+            {
+                "name":"Hot & cold pads"
+            },
+            {
+                "name":"Electric massagers"
+            },
+            {
+                "name":"Foot massagers"
+            },
+            {
+                "name":"Manual massagers"
+            },
+            {
+                "name":"Gels and Creams"
+            },
+            {
+                "name":"Sprays & roll ons"
+            },
+            {
+                "name":"Magnet therapy"
+            }
+        ]
+    },
+    {
+        "name":"Urine management",
+        "description":"",
+        "startColor":"#FFF3E3",
+        "endColor":"#FDF2E4",
+        "imgAddress":"assets/Cards/UrineManagment.jpg",
+        "subCategories" :[
+            {
+                "name":"Diapers"
+            },
+            {
+                "name":"Diaper pants"
+            },
+            {
+                "name":"Underpad sheets"
+            },
+            {
+                "name":"Washclots and wipes"
+            },
+            {
+                "name":"Bed pan"
+            },
+            {
+                "name":"Urinals"
+            },
+            {
+                "name":"Drainage bags"
+            },
+            {
+                "name":"Diaper disposal system"
+            }
+        ]
+    },
+    {
+        "name":"Medicene management",
+        "description":"",
+        "startColor":"#D2EFF3",
+        "endColor":"#E3EDDF",
+        "imgAddress":"assets/Cards/MedicineManagement.jpg",
+        "subCategories" :[
+            {
+                "name":"Alarms"
+            },
+            {
+                "name":"Pill boxes"
+            },
+            {
+                "name":"Pill cutter"
+            },
+            {
+                "name":"Pill crusher"
+            },
+            {
+                "name":"Medicine cup"
+            },
+            {
+                "name":"Medicine charts"
+            }
+        ]
+    },
+    {
+        "name":"Dental Care",
+        "description":"",
+        "startColor":"#E8FDFF",
+        "endColor":"#E1FBFB",
+        "imgAddress":"assets/Cards/DentalCare.jpg",
+        "subCategories" :[
+            {
+                "name":"Tooth brush & Paste"
+            },
+            {
+                "name":"Disposable Swabs"
+            },
+            {
+                "name":"Silicone brush"
+            },
+            {
+                "name":"Mouthwash"
+            },
+            {
+                "name":"Tongue cleaners"
+            },
+            {
+                "name":"Suction brush"
+            },
+            {
+                "name":"Denture cups"
+            }
+        ]
+    }
+    ]
+}
