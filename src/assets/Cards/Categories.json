@@ -1,0 +1,33 @@
+{
+    "name":"Wound care",
+    "description":"",
+    "startColor":"#D2FCFA",
+    "endColor":"#F6FDFD",
+    "imgAddress":"assets/Cards/WoundCare.jpg",
+    "subCategories" :[
+        {
+            "name":"Wound cleansers"
+        },
+        {
+            "name":"Band aids"
+        },
+        {
+            "name":"Gauzes"
+        },
+        {
+            "name":"Medical tapes"
+        },
+        {
+            "name":"Gloves"
+        },
+        {
+            "name":"Povidine Iodine swabs"
+        },
+        {
+            "name":"First Aid kits"
+        },
+        {
+            "name":"Wound closure strips"
+        }
+    ]
+}
