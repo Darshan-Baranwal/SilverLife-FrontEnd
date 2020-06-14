@@ -18,7 +18,7 @@
         <div class="sub-category-list">
             <div *ngFor="let subCategory of selectedCategory.subCategories" class="sub-category-cards" 
             style="background-image: linear-gradient(to right,#F6DFBE,rgb(250, 239, 225));"
-            (click)="navigateToProductListpage()">
+            (click)="navigateToProductListpage(subCategory)">
                 <div>
                     <a >{{subCategory.name}}</a>
                 </div>

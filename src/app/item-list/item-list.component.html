@@ -1,4 +1,7 @@
 <div class="Justarrived item-list-container">
+    <div class="advices-container" *ngIf="!!productTypeForFilter">
+       <h2>Advisory for the Product</h2>
+    </div>
     <app-item-list-header [header]=header [hideAllNewLink] = hideAllNewLink></app-item-list-header>
     <ul>
         <li (click)="openProductDetailPage('productId')">

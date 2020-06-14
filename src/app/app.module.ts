@@ -29,6 +29,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { SubCategoryComponent } from './category/sub-category/sub-category.component';
 import { AutoCloseDirective } from './auto-close.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { SilverlifeService } from './silverlife.service';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [SilverlifeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

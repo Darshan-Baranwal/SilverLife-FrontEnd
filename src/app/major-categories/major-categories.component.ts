@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SilverlifeService } from '../silverlife.service';
 
 @Component({
   selector: 'app-major-categories',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MajorCategoriesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service: SilverlifeService) { }
 
   ngOnInit(): void {
   }

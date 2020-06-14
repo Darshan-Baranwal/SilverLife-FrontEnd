@@ -6,6 +6,7 @@ import {
 import { of } from 'rxjs';
 import { ICategory } from './CategoryModel';
 import { Router } from '@angular/router';
+import { SilverlifeService } from '../silverlife.service';
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
@@ -16,7 +17,7 @@ export class CategoryComponent implements OnInit {
   toggleSubCategoryList: boolean = false;
   categories:ICategory[]=[];
   selectedCategory: ICategory;
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router, private service: SilverlifeService) { }
 
   ngOnInit(): void {
     this.http.get('../assets/Cards/Categories.json')
@@ -26,7 +27,6 @@ export class CategoryComponent implements OnInit {
         }
     ), catchError(err => {console.log(err); return of(err)})
     ).subscribe(data => {
-      console.log(data);
       this.categories = data.categories;
     })
   }  
@@ -34,7 +34,7 @@ export class CategoryComponent implements OnInit {
     this.selectedCategory = category;
     this.toggleSubCategoryList = !this.toggleSubCategoryList;
   }
-  navigateToProductListpage() {
-    this.router.navigate(["item-list"]);
+  navigateToProductListpage(subcategory) {
+    this.service.navigateToProductListpage("item-list", undefined,  this.selectedCategory, subcategory);
   }
 }
