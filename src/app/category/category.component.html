@@ -1,89 +1,26 @@
 <div class="Cards">
-    <div class="Card" style="background-image: linear-gradient(to right,#D2FCFA,#F6FDFD);" (click) = "openSubCategoryList()">
+    <div class="Card" *ngFor="let category of categories" 
+    [style.background-image]="'linear-gradient(to right,'+category.startColor+','+category.endColor+')'" 
+    (click) = "openSubCategoryList(category)">
         <div>
-            <h4>Wound Care</h4>
+            <h4>{{category.name}}</h4>
             <p>SHOP NOW</p>
         </div>
-        <img src="../../assets/Cards/WoundCare.jpg">
-    </div>
-    <div class="Card" style="background-image: linear-gradient(to right,#DBE4F1,#F4F9FB);">
-        <div>
-            <h4>Bedsore Dressings</h4>
-            <p>SHOP NOW</p>
-        </div>
-    </div>
-    <div class="Card" style="background-image: linear-gradient(to right,#FFE0F3,rgb(251, 248, 251));">
-        <div>
-            <h4>INCONTINIENCE CARE</h4>
-            <p>SHOP NOW</p>
-        </div>
-    </div>
-    <div class="Card" style="background-image: linear-gradient(to right,#FFF3E3,#FDF2E4);">
-        <div>
-            <h4>MOBILITY AIDS</h4>
-            <p>SHOP NOW</p>
-        </div>
-    </div>
-    <div class="Card" style="background-image: linear-gradient(to right,#E8FDFF,#E1FBFB);">
-        <div>
-            <h4>BED ACCESSORIES</h4>
-            <p>SHOP NOW</p>
-        </div>
-    </div>
-    <div class="Card" style="background-image: linear-gradient(to right,#D2EFF3,#E3EDDF);">
-        <div>
-            <h4>BATHROOM ACCESSORIES</h4>
-            <p>SHOP NOW</p>
-        </div>
-    </div>
-    <div class="Card" style="background-image: linear-gradient(to right,#F0E9B8,rgb(248, 246, 228));">
-        <div>
-            <h4>PERSONAL HYGINE</h4>
-            <p>SHOP NOW</p>
-        </div>
-    </div>
-    <div class="Card" style="background-image: linear-gradient(to right,#F5EAF5,rgb(255, 241, 251));">
-        <div>
-            <h4>MEDICAL DEVICES</h4>
-            <p>SHOP NOW</p>
-        </div>
-    </div>
-    <div class="Card" style="background-image: linear-gradient(to right,rgb(238, 205, 138),#F0E6DA);">
-        <div>
-            <h4>WOUND CARE</h4>
-            <p>SHOP NOW</p>
-        </div>
-    </div>
-    <div class="Card" style="background-image: linear-gradient(to right,#F8ECE7,rgb(253, 247, 245));">
-        <div>
-            <h4>DAILY USE CARE</h4>
-            <p>SHOP NOW</p>
-        </div>
-    </div>
-    <div class="Card" style="background-image: linear-gradient(to right,#D3E8F5,#EAF6FB);">
-        <div>
-            <h4>MEDICAL EQUIPMENTS</h4>
-            <p>SHOP NOW</p>
-        </div>
-    </div>
-    <div class="Card" style="background-image: linear-gradient(to right,#F6DFBE,rgb(250, 239, 225));">
-        <div>
-            <h4>NEED AND CONDITION</h4>
-            <p>SHOP NOW</p>
-        </div>
+        <img [src]="category.imgAddress">
     </div>
 </div>
-<div class="modal sub-category-container animate__animated animate__bounce" *ngIf="toggleSubCategoryList">
+<div class="modal sub-category-container" *ngIf="toggleSubCategoryList">
     <div class="modal-content"  appAutoClose (autoCloseOnclickOutside)="toggleSubCategoryList = false">
         <div id="close"><a class="close-link" (click) = "toggleSubCategoryList = false">
             <i class="fa fa-times" aria-hidden="true"></i> </a>
         </div>
-        <h3 class="modal-header">Category Name</h3>
+        <h3 class="modal-header animate__animated animate__bounce">Items available for {{selectedCategory.name}}</h3>
         <div class="sub-category-list">
-            <div *ngFor="let i of [1,2,3,4,5,6]" class="sub-category-cards" 
-            style="background-image: linear-gradient(to right,#F6DFBE,rgb(250, 239, 225));">
+            <div *ngFor="let subCategory of selectedCategory.subCategories" class="sub-category-cards" 
+            style="background-image: linear-gradient(to right,#F6DFBE,rgb(250, 239, 225));"
+            (click)="navigateToProductListpage()">
                 <div>
-                    <a >Sub cat {{i}}</a>
+                    <a >{{subCategory.name}}</a>
                 </div>
             </div>
                

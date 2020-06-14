@@ -8,6 +8,7 @@ import { PopularComponent } from './popular/popular.component';
 import { SaleComponent } from './sale/sale.component';
 import { CategoryComponent } from './category/category.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ItemListComponent } from './item-list/item-list.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'sale', component: SaleComponent},
   {path: 'categories', component: CategoryComponent},
   {path: 'aboutUs', component: AboutUsComponent},
+  {path: 'item-list', component: ItemListComponent},
   {path: '', pathMatch: 'full', redirectTo: 'home'}
 ];
 

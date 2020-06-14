@@ -11,11 +11,12 @@
 
 .Card{
     height: 105px;
-    width: 25%;
+    flex: 1 1 25%;
+    flex-wrap: nowrap;
     border-radius: 15px;
-    margin:6px 6px 24px 6px;
-    background-image: linear-gradient(to right,#D2FCFA,#FFFFFF);
-    display:flex;
+    margin: 6px 6px 24px 6px;
+    background-image: linear-gradient(to right, #D2FCFA, #FFFFFF);
+    display: flex;
     justify-content: space-between;
     flex-direction: row;
 }
@@ -26,22 +27,26 @@
 }
 
 .Card div{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 5px 0 0 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    h4 {
+        margin: 0;
+    }
+    p {
+        height: 25px;
+        width: 100px;
+        font-weight: 700;
+        white-space: nowrap;
+        margin: 0;
+        border-radius:  0 10px 10px 0;
+        color: #3265B9;
+        box-sizing: border-box;
+    }
 }
-
-.Card div p{
-    height: 25px;
-    width: 100px;
-    font-weight: 700;
-    white-space: nowrap;
-    margin: 5px 5px 10px 5px;
-    border-radius:  0 10px 10px 0;
-    color: #3265B9;
-    padding: 5px;
-    box-sizing: border-box;
-}
-
 .Card img{
     height:105px;
     width:120px;
@@ -58,7 +63,7 @@
     right: 0px;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.7); 
-    padding-top: 25%;
+    padding-top: 60px;
     .modal-content {
         background-color: #fefefe;
         margin: 5% auto 15% auto;
@@ -85,6 +90,8 @@
     h3 {
         display: flex;
         justify-content: center;
+        text-decoration: underline;
+        font-size: 20px;
     }
     .sub-category-list {
         display: flex;
@@ -93,10 +100,15 @@
         flex: 1 1 auto;
         flex-wrap: wrap;
         .sub-category-cards {
+            padding: 16px;
+            font-size: 24px;
             width: 200px;
             margin: 8px;
             border-radius: 4px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            :hover {
+                transform: scale(1.1);
+            }
         }
     }
 }

@@ -28,6 +28,7 @@ import { SaleComponent } from './sale/sale.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { SubCategoryComponent } from './category/sub-category/sub-category.component';
 import { AutoCloseDirective } from './auto-close.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { AutoCloseDirective } from './auto-close.directive';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

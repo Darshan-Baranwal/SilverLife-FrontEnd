@@ -1,4 +1,9 @@
-a{
-    color: red;
-    text-decoration: underline solid red;
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a{
+        color: red;
+        text-decoration: underline solid red;
+    }
 }
