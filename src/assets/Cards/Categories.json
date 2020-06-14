@@ -182,6 +182,216 @@
                 "name":"Denture cups"
             }
         ]
+    },
+    {
+        "name":"Eye Care",
+        "description":"",
+        "startColor":"#E8FDFF",
+        "endColor":"#E1FBFB",
+        "imgAddress":"../../assets/Cards/EyeCare.png",
+        "subCategories" :[
+            {
+                "name":"Eye wash liquids"
+            },
+            {
+                "name":"Magnifiers"
+            },
+            {
+                "name":"Reading aids"
+            },
+            {
+                "name":"Large print items"
+            },
+            {
+                "name":"Keyboards"
+            }
+        ]
+    },
+    {
+        "name":"Nasal Care",
+        "description":"",
+        "startColor":"#E8FDFF",
+        "endColor":"#E1FBFB",
+        "imgAddress":"../../assets/Cards/NasalCare.jpg",
+        "subCategories" :[
+            {
+                "name":"Oxygen Masks"
+            },
+            {
+                "name":"Nebiluzer masks"
+            },
+            {
+                "name":"Steam inhalers"
+            },
+            {
+                "name":"Nebulizers"
+            },
+            {
+                "name":"Spirometer"
+            },
+            {
+                "name":"Suction tubes"
+            },
+            {
+                "name":"Puff inhalers"
+            }
+        ]
+    },
+    {
+        "name":"Hygiene and self Care",
+        "description":"",
+        "startColor":"#E8FDFF",
+        "endColor":"#E1FBFB",
+        "imgAddress":"../../assets/Cards/SkinCare.jpeg",
+        "subCategories" :[
+            {
+                "name":"Face Masks"
+            },
+            {
+                "name":"Cleansing wipes"
+            },
+            {
+                "name":"Sanitizers"
+            },
+            {
+                "name":"Liquid lotions and soaps"
+            },
+            {
+                "name":"Shampoo caps"
+            },
+            {
+                "name":"Silicone scalp brush"
+            },
+            {
+                "name":"Dabur Suraksha kit"
+            }
+        ]
+    },
+    {
+        "name":"Ear Care",
+        "description":"",
+        "startColor":"#E8FDFF",
+        "endColor":"#E1FBFB",
+        "imgAddress":"../../assets/Cards/EarCare.jpg",
+        "subCategories" :[
+            {
+                "name":"Thin ear buds"
+            },
+            {
+                "name":"Alarms"
+            },
+            {
+                "name":"Amplifiers"
+            },
+            {
+                "name":"Hearing aids"
+            },
+            {
+                "name":"Ear cleaners"
+            },
+            {
+                "name":"Signaling devices"
+            }
+        ]
+    },
+    {
+        "name":"Mobility",
+        "description":"",
+        "startColor":"#E8FDFF",
+        "endColor":"#E1FBFB",
+        "imgAddress":"../../assets/Cards/Mobility.jpg",
+        "subCategories" :[
+            {
+                "name":"Splints"
+            },
+            {
+                "name":"Stick"
+            },
+            {
+                "name":"Walker"
+            },
+            {
+                "name":"Wheelchair"
+            },
+            {
+                "name":"Stair climbers"
+            }
+        ]
+    },
+    {
+        "name":"Bedroom accessories",
+        "description":"",
+        "startColor":"#E8FDFF",
+        "endColor":"#E1FBFB",
+        "imgAddress":"../../assets/Cards/bedroomAccessories.png",
+        "subCategories" :[
+            {
+                "name":"Trolleys"
+            },
+            {
+                "name":"Bed & matress"
+            },
+            {
+                "name":"Recliners"
+            },
+            {
+                "name":"Side rails"
+            },
+            {
+                "name":"Over bed table"
+            },
+            {
+                "name":"Cabinets"
+            },
+            {
+                "name":"Patient transfer slides"
+            }
+        ]
+    },
+    {
+        "name":"Bathroom accessories",
+        "description":"",
+        "startColor":"#E8FDFF",
+        "endColor":"#E1FBFB",
+        "imgAddress":"../../assets/Cards/BathroomAccessories.jpg",
+        "subCategories" :[
+            {
+                "name":"High toilet seat"
+            },
+            {
+                "name":"Shower chair"
+            },
+            {
+                "name":"Commode"
+            },
+            {
+                "name":"Grab bars"
+            },
+            {
+                "name":"Mats"
+            }
+        ]
+    },
+    {
+        "name":"Dining accessories",
+        "description":"",
+        "startColor":"#E8FDFF",
+        "endColor":"#E1FBFB",
+        "imgAddress":"../../assets/Cards/DiningAccessories.png",
+        "subCategories" :[
+            {
+                "name":"Non spill plates"
+            },
+            {
+                "name":"Non spill cups"
+            },
+            {
+                "name":"Cutlery"
+            },
+            {
+                "name":"Trays"
+            }
+        ]
     }
     ]
 }
