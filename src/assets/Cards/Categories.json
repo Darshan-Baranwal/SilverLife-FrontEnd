@@ -392,6 +392,327 @@
                 "name":"Trays"
             }
         ]
+    },
+    {
+        "name":"Health Monitoring devices",
+        "description":"",
+        "startColor":"#E8FDFF",
+        "endColor":"#E1FBFB",
+        "imgAddress":"../../assets/Cards/HealthMonitoringDevices.jpg",
+        "subCategories" :[
+            {
+                "name":"Weighing scales"
+            },
+            {
+                "name":"Thermometers"
+            },
+            {
+                "name":"Infra red thermometer"
+            },
+            {
+                "name":"Stethoscopes"
+            },
+            {
+                "name":"BP monitors"
+            },
+            {
+                "name":"Glucometers"
+            },
+            {
+                "name":"Pulse oxymeter"
+            }
+        ]
+    },
+    {
+        "name":"Home Care Medical equipments",
+        "description":"",
+        "startColor":"#E8FDFF",
+        "endColor":"#E1FBFB",
+        "imgAddress":"../../assets/Cards/HomeCareEquip.jpg",
+        "subCategories" :[
+            {
+                "name":"Suction machine"
+            },
+            {
+                "name":"Bipap"
+            },
+            {
+                "name":"Cpap"
+            },
+            {
+                "name":"Oxygen cylinder"
+            },
+            {
+                "name":"Oxygen conc."
+            }
+        ]
+    },
+    {
+        "name":"Home Care RENTAL items",
+        "description":"",
+        "startColor":"#E8FDFF",
+        "endColor":"#E1FBFB",
+        "imgAddress":"../../assets/Cards/HomeRental.jpg",
+        "subCategories" :[
+            {
+                "name":"Beds"
+            },
+            {
+                "name":"Matress"
+            },
+            {
+                "name":"Recliners"
+            },
+            {
+                "name":"IV stand"
+            },
+            {
+                "name":"Air matress"
+            },
+            {
+                "name":"DVT pumps"
+            }
+        ]
+    },
+    {
+        "name":"Foot Care",
+        "description":"",
+        "startColor":"#E8FDFF",
+        "endColor":"#E1FBFB",
+        "imgAddress":"../../assets/Cards/Footcare.jpg",
+        "subCategories" :[
+            {
+                "name":"Heel pads"
+            },
+            {
+                "name":"Insoles"
+            },
+            {
+                "name":"Heel protector"
+            },
+            {
+                "name":"Diabetic foot"
+            }
+        ]
+    },
+    {
+        "name":"Clothing",
+        "description":"",
+        "startColor":"#E8FDFF",
+        "endColor":"#E1FBFB",
+        "imgAddress":"../../assets/Cards/Clothing.jpg",
+        "subCategories" :[
+            {
+                "name":"Disposable sheets"
+            },
+            {
+                "name":"Briefs"
+            },
+            {
+                "name":"Bras"
+            },
+            {
+                "name":"Gown"
+            },
+            {
+                "name":"Warmers"
+            }
+        ]
+    },
+    {
+        "name":"Ostomy products",
+        "description":"",
+        "startColor":"#D2FCFA",
+        "endColor":"#F6FDFD",
+        "imgAddress":"../../assets/Cards/Ostomy.png",
+        "subCategories" :[
+            {
+                "name":"One pc system"
+            },
+            {
+                "name":"Two pc system"
+            },
+            {
+                "name":"Belts"
+            },
+            {
+                "name":"Cleansers"
+            },
+            {
+                "name":"Paste"
+            }
+        ]
+    },
+    {
+        "name":"Nutrition",
+        "description":"",
+        "startColor":"#D2FCFA",
+        "endColor":"#F6FDFD",
+        "imgAddress":"../../assets/Cards/Nutrition.jpg",
+        "subCategories" :[
+            {
+                "name":"Diabetic care"
+            },
+            {
+                "name":"Renal care"
+            },
+            {
+                "name":"Vitamins"
+            },
+            {
+                "name":"Protein powder"
+            },
+            {
+                "name":"Weight management"
+            },
+            {
+                "name":"Healthy Drinks"
+            },
+            {
+                "name":"Ayurvedic juices"
+            }
+        ]
+    },
+    {
+        "name":"Daily use items",
+        "description":"",
+        "startColor":"#D2FCFA",
+        "endColor":"#F6FDFD",
+        "imgAddress":"../../assets/Cards/DailyUse.jpg",
+        "subCategories" :[
+            {
+                "name":"Elevated back rest"
+            },
+            {
+                "name":"Back scratchers"
+            },
+            {
+                "name":"Non slip products"
+            },
+            {
+                "name":"Door stoppers"
+            },
+            {
+                "name":"Torch"
+            },
+            {
+                "name":"Nail clippers"
+            },
+            {
+                "name":"Paper products"
+            }
+        ]
+    },
+    {
+        "name":"Home safety products",
+        "description":"",
+        "startColor":"#D2FCFA",
+        "endColor":"#F6FDFD",
+        "imgAddress":"../../assets/Cards/HomeSafetyProducts.jpg",
+        "subCategories" :[
+            {
+                "name":"Pepper spray"
+            },
+            {
+                "name":"Call bell"
+            },
+            {
+                "name":"CCTV"
+            },
+            {
+                "name":"Fall protection aids"
+            },
+            {
+                "name":"Fire extinguishers"
+            },
+            {
+                "name":"Cut proof gloves"
+            },
+            {
+                "name":"Florescent tapes"
+            }
+        ]
+    },
+    {
+        "name":"Ayurvedic Items",
+        "description":"",
+        "startColor":"#D2FCFA",
+        "endColor":"#F6FDFD",
+        "imgAddress":"../../assets/Cards/AyurvedicItems.jpg",
+        "subCategories" :[
+            {
+                "name":"Digestives"
+            },
+            {
+                "name":"Juices"
+            },
+            {
+                "name":"Oils"
+            },
+            {
+                "name":"Drops"
+            },
+            {
+                "name":"Lotions"
+            },
+            {
+                "name":"Medicated soaps"
+            },
+            {
+                "name":"Medicated paste"
+            }
+        ]
+    },
+    {
+        "name":"COVID Safety",
+        "description":"",
+        "startColor":"#D2FCFA",
+        "endColor":"#F6FDFD",
+        "imgAddress":"../../assets/Cards/CovidSafety.jpg",
+        "subCategories" :[
+            {
+                "name":"Masks"
+            },
+            {
+                "name":"Sanitizers"
+            },
+            {
+                "name":"Gloves"
+            },
+            {
+                "name":"Face shields"
+            },
+            {
+                "name":"Googles"
+            },
+            {
+                "name":"PPE kit"
+            },
+            {
+                "name":"Dabur Suraksha kit"
+            }
+        ]
+    },
+    {
+        "name":"Therapies",
+        "description":"",
+        "startColor":"#D2FCFA",
+        "endColor":"#F6FDFD",
+        "imgAddress":"../../assets/Cards/Therapies.jpg",
+        "subCategories" :[
+            {
+                "name":"Aroma therapy"
+            },
+            {
+                "name":"Hydrotherapy"
+            },
+            {
+                "name":"Sound therapy"
+            },
+            {
+                "name":"Light therapy"
+            }
+        ]
     }
     ]
 }
