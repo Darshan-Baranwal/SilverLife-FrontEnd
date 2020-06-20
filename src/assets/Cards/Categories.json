@@ -1,7 +1,7 @@
 {
     "categories" : [
     {
-        "name":"Wound care",
+        "name":"Wound Care",
         "description":"",
         "startColor":"#D2FCFA",
         "endColor":"#F6FDFD",
@@ -36,7 +36,7 @@
     {
         "name":"Bedsore Dressings",
         "description":"",
-        "startColor":"#DBE4F1",
+        "startColor":"#FAE1F2",
         "endColor":"#F4F9FB",
         "imgAddress":"../../assets/Cards/BedSore.png",
         "subCategories" :[
@@ -64,10 +64,10 @@
         ]
     },
     {
-        "name":"Pain relief",
+        "name":"Pain Relief",
         "description":"",
-        "startColor":"#FFE0F3",
-        "endColor":"rgb(251, 248, 251)",
+        "startColor":"#DBE4F1",
+        "endColor":"#F4F9FB",
         "imgAddress":"../../assets/Cards/PainRelief.jpg",
         "subCategories" :[
             {
@@ -94,9 +94,9 @@
         ]
     },
     {
-        "name":"Urine management",
+        "name":"Urine Management",
         "description":"",
-        "startColor":"#FFF3E3",
+        "startColor":"#EEEAE7",
         "endColor":"#FDF2E4",
         "imgAddress":"../../assets/Cards/UrineManagment.jpg",
         "subCategories" :[
@@ -127,9 +127,9 @@
         ]
     },
     {
-        "name":"Medicene management",
+        "name":"Medicene Management",
         "description":"",
-        "startColor":"#D2EFF3",
+        "startColor":"#FFF3E3",
         "endColor":"#E3EDDF",
         "imgAddress":"../../assets/Cards/MedicineManagement.jpg",
         "subCategories" :[
@@ -186,7 +186,7 @@
     {
         "name":"Eye Care",
         "description":"",
-        "startColor":"#E8FDFF",
+        "startColor":"#F0E9B8",
         "endColor":"#E1FBFB",
         "imgAddress":"../../assets/Cards/EyeCare.png",
         "subCategories" :[
@@ -210,8 +210,8 @@
     {
         "name":"Nasal Care",
         "description":"",
-        "startColor":"#E8FDFF",
-        "endColor":"#E1FBFB",
+        "startColor":"#F0E0C8",
+        "endColor":"#faf1e3",
         "imgAddress":"../../assets/Cards/NasalCare.jpg",
         "subCategories" :[
             {
@@ -238,10 +238,10 @@
         ]
     },
     {
-        "name":"Hygiene and self Care",
+        "name":"Hygiene and Self Care",
         "description":"",
-        "startColor":"#E8FDFF",
-        "endColor":"#E1FBFB",
+        "startColor":"#f1ffb3",
+        "endColor":"#faffe6",
         "imgAddress":"../../assets/Cards/SkinCare.jpeg",
         "subCategories" :[
             {
@@ -270,8 +270,8 @@
     {
         "name":"Ear Care",
         "description":"",
-        "startColor":"#E8FDFF",
-        "endColor":"#E1FBFB",
+        "startColor":"#ffe085",
+        "endColor":"#fff3cf",
         "imgAddress":"../../assets/Cards/EarCare.jpg",
         "subCategories" :[
             {
@@ -297,8 +297,8 @@
     {
         "name":"Mobility",
         "description":"",
-        "startColor":"#E8FDFF",
-        "endColor":"#E1FBFB",
+        "startColor":"#fccce9",
+        "endColor":"#FFFFFF",
         "imgAddress":"../../assets/Cards/Mobility.jpg",
         "subCategories" :[
             {
@@ -319,10 +319,10 @@
         ]
     },
     {
-        "name":"Bedroom accessories",
+        "name":"Bedroom Accessories",
         "description":"",
-        "startColor":"#E8FDFF",
-        "endColor":"#E1FBFB",
+        "startColor":"#bdb4fa",
+        "endColor":"#FFFFFF",
         "imgAddress":"../../assets/Cards/bedroomAccessories.png",
         "subCategories" :[
             {
@@ -349,10 +349,10 @@
         ]
     },
     {
-        "name":"Bathroom accessories",
+        "name":"Bathroom Accessories",
         "description":"",
-        "startColor":"#E8FDFF",
-        "endColor":"#E1FBFB",
+        "startColor":"#fcddc5",
+        "endColor":"#ffffff",
         "imgAddress":"../../assets/Cards/BathroomAccessories.jpg",
         "subCategories" :[
             {
@@ -373,9 +373,9 @@
         ]
     },
     {
-        "name":"Dining accessories",
+        "name":"Dining Accessories",
         "description":"",
-        "startColor":"#E8FDFF",
+        "startColor":"#fdff96",
         "endColor":"#E1FBFB",
         "imgAddress":"../../assets/Cards/DiningAccessories.png",
         "subCategories" :[
@@ -394,9 +394,9 @@
         ]
     },
     {
-        "name":"Health Monitoring devices",
+        "name":"Monitoring Devices",
         "description":"",
-        "startColor":"#E8FDFF",
+        "startColor":"#abe7ff",
         "endColor":"#E1FBFB",
         "imgAddress":"../../assets/Cards/HealthMonitoringDevices.jpg",
         "subCategories" :[
@@ -424,9 +424,9 @@
         ]
     },
     {
-        "name":"Home Care Medical equipments",
+        "name":"Home Care Equipments",
         "description":"",
-        "startColor":"#E8FDFF",
+        "startColor":"#d8d8e6",
         "endColor":"#E1FBFB",
         "imgAddress":"../../assets/Cards/HomeCareEquip.jpg",
         "subCategories" :[
@@ -448,9 +448,9 @@
         ]
     },
     {
-        "name":"Home Care RENTAL items",
+        "name":"Rental Items",
         "description":"",
-        "startColor":"#E8FDFF",
+        "startColor":"#c3fcbb",
         "endColor":"#E1FBFB",
         "imgAddress":"../../assets/Cards/HomeRental.jpg",
         "subCategories" :[
@@ -498,7 +498,7 @@
     {
         "name":"Clothing",
         "description":"",
-        "startColor":"#E8FDFF",
+        "startColor":"#ffe8c2",
         "endColor":"#E1FBFB",
         "imgAddress":"../../assets/Cards/Clothing.jpg",
         "subCategories" :[
@@ -520,9 +520,9 @@
         ]
     },
     {
-        "name":"Ostomy products",
+        "name":"Ostomy Products",
         "description":"",
-        "startColor":"#D2FCFA",
+        "startColor":"#ead9fc",
         "endColor":"#F6FDFD",
         "imgAddress":"../../assets/Cards/Ostomy.png",
         "subCategories" :[
@@ -546,7 +546,7 @@
     {
         "name":"Nutrition",
         "description":"",
-        "startColor":"#D2FCFA",
+        "startColor":"#faffb3",
         "endColor":"#F6FDFD",
         "imgAddress":"../../assets/Cards/Nutrition.jpg",
         "subCategories" :[
@@ -574,7 +574,7 @@
         ]
     },
     {
-        "name":"Daily use items",
+        "name":"Daily Use Items",
         "description":"",
         "startColor":"#D2FCFA",
         "endColor":"#F6FDFD",
@@ -604,9 +604,9 @@
         ]
     },
     {
-        "name":"Home safety products",
+        "name":"Home Safety Products",
         "description":"",
-        "startColor":"#D2FCFA",
+        "startColor":"#ffdab3",
         "endColor":"#F6FDFD",
         "imgAddress":"../../assets/Cards/HomeSafetyProducts.jpg",
         "subCategories" :[
@@ -636,7 +636,7 @@
     {
         "name":"Ayurvedic Items",
         "description":"",
-        "startColor":"#D2FCFA",
+        "startColor":"#d9d8d7",
         "endColor":"#F6FDFD",
         "imgAddress":"../../assets/Cards/AyurvedicItems.jpg",
         "subCategories" :[
@@ -666,7 +666,7 @@
     {
         "name":"COVID Safety",
         "description":"",
-        "startColor":"#D2FCFA",
+        "startColor":"#e4f7ba",
         "endColor":"#F6FDFD",
         "imgAddress":"../../assets/Cards/CovidSafety.jpg",
         "subCategories" :[
@@ -696,7 +696,7 @@
     {
         "name":"Therapies",
         "description":"",
-        "startColor":"#D2FCFA",
+        "startColor":"#f2ceb3",
         "endColor":"#F6FDFD",
         "imgAddress":"../../assets/Cards/Therapies.jpg",
         "subCategories" :[
