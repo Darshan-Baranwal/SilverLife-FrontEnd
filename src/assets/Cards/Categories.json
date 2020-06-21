@@ -492,6 +492,7 @@
         ]
     },
     {
+        "id":18,
         "name":"Foot Care",
         "description":"",
         "startColor":"#E8FDFF",
@@ -513,6 +514,7 @@
         ]
     },
     {
+        "id":19,
         "name":"Clothing",
         "description":"",
         "startColor":"#ffe8c2",
@@ -537,6 +539,7 @@
         ]
     },
     {
+        "id":20,
         "name":"Ostomy Products",
         "description":"",
         "startColor":"#ead9fc",
@@ -561,6 +564,7 @@
         ]
     },
     {
+        "id":21,
         "name":"Nutrition",
         "description":"",
         "startColor":"#faffb3",
@@ -591,6 +595,7 @@
         ]
     },
     {
+        "id":22,
         "name":"Daily Use Items",
         "description":"",
         "startColor":"#D2FCFA",
@@ -621,6 +626,7 @@
         ]
     },
     {
+        "id":23,
         "name":"Home Safety Products",
         "description":"",
         "startColor":"#ffdab3",
@@ -651,6 +657,7 @@
         ]
     },
     {
+        "id":24,
         "name":"Ayurvedic Items",
         "description":"",
         "startColor":"#d9d8d7",
@@ -681,6 +688,7 @@
         ]
     },
     {
+        "id":25,
         "name":"COVID Safety",
         "description":"",
         "startColor":"#e4f7ba",
@@ -711,6 +719,7 @@
         ]
     },
     {
+        "id":26,
         "name":"Therapies",
         "description":"",
         "startColor":"#f2ceb3",
