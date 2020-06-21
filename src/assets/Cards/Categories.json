@@ -1,6 +1,7 @@
 {
     "categories" : [
     {
+        "id": 1,
         "name":"Wound Care",
         "description":"",
         "startColor":"#D2FCFA",
@@ -34,6 +35,7 @@
         ]
     },
     {
+        "id": 2,
         "name":"Bedsore Dressings",
         "description":"",
         "startColor":"#FAE1F2",
@@ -64,6 +66,7 @@
         ]
     },
     {
+        "id":3,
         "name":"Pain Relief",
         "description":"",
         "startColor":"#DBE4F1",
@@ -94,6 +97,7 @@
         ]
     },
     {
+        "id":4,
         "name":"Urine Management",
         "description":"",
         "startColor":"#EEEAE7",
@@ -127,6 +131,7 @@
         ]
     },
     {
+        "id":5,
         "name":"Medicene Management",
         "description":"",
         "startColor":"#FFF3E3",
@@ -154,6 +159,7 @@
         ]
     },
     {
+        "id":6,
         "name":"Dental Care",
         "description":"",
         "startColor":"#E8FDFF",
@@ -184,6 +190,7 @@
         ]
     },
     {
+        "id":7,
         "name":"Eye Care",
         "description":"",
         "startColor":"#F0E9B8",
@@ -208,6 +215,7 @@
         ]
     },
     {
+        "id":8,
         "name":"Nasal Care",
         "description":"",
         "startColor":"#F0E0C8",
@@ -238,6 +246,7 @@
         ]
     },
     {
+        "id":9,
         "name":"Hygiene and Self Care",
         "description":"",
         "startColor":"#f1ffb3",
@@ -268,6 +277,7 @@
         ]
     },
     {
+        "id":10,
         "name":"Ear Care",
         "description":"",
         "startColor":"#ffe085",
@@ -295,6 +305,7 @@
         ]
     },
     {
+        "id":11,
         "name":"Mobility",
         "description":"",
         "startColor":"#fccce9",
@@ -319,6 +330,7 @@
         ]
     },
     {
+        "id":12,
         "name":"Bedroom Accessories",
         "description":"",
         "startColor":"#bdb4fa",
@@ -349,6 +361,7 @@
         ]
     },
     {
+        "id":13,
         "name":"Bathroom Accessories",
         "description":"",
         "startColor":"#fcddc5",
@@ -373,6 +386,7 @@
         ]
     },
     {
+        "id":14,
         "name":"Dining Accessories",
         "description":"",
         "startColor":"#fdff96",
@@ -394,6 +408,7 @@
         ]
     },
     {
+        "id":15,
         "name":"Monitoring Devices",
         "description":"",
         "startColor":"#abe7ff",
@@ -424,6 +439,7 @@
         ]
     },
     {
+        "id":16,
         "name":"Home Care Equipments",
         "description":"",
         "startColor":"#d8d8e6",
@@ -448,6 +464,7 @@
         ]
     },
     {
+        "id":17,
         "name":"Rental Items",
         "description":"",
         "startColor":"#c3fcbb",
