@@ -18,7 +18,7 @@
         width: 64px;
         display: flex;
         z-index: 999999999999999;
-        background: red;
+        background: #DD1336;
         justify-content: center;
         align-items: center;
         i {
@@ -31,14 +31,33 @@
 }
 .side-drawer-content {
     position: absolute;
-    background: red;
+    background: #DD1336;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     z-index: -1;
     & ul {
+      position: relative;
+      top:40%;
       float: right;
       margin-right: 20%;
+      color: white;
+      list-style: none;
+      width:150px;
+      & li{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 20px;
+      }
     }
   }
+
+  @media (max-width:785px){
+    .side-drawer-content{
+      & ul{
+        top:30%;
+        margin-right: 0;
+        width:110px;
+      }
+    }
+}
