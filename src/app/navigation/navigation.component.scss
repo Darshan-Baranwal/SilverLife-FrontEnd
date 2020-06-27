@@ -61,22 +61,13 @@
 }
 
 
-.Search{
-    padding: 12px;
+.Icon{
+    padding: 6px;
     height: 80%;
     box-sizing: border-box;
 }
 
-.Search img{
-    height: 30px;
-}
-.Login{
-    padding: 12px;
-    height: 80%;
-    box-sizing: border-box;
-}
-
-.Login img{
+.Icon img{
     height: 30px;
 }
 
@@ -290,5 +281,9 @@
 
     .NavigationItem a:hover + .BroadCategories{
         visibility: visible;
+    }
+
+    .Icon{
+        padding: 12px;
     }
 }
