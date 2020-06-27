@@ -30,6 +30,7 @@ import { SubCategoryComponent } from './category/sub-category/sub-category.compo
 import { AutoCloseDirective } from './auto-close.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { SilverlifeService } from './silverlife.service';
+import { ContactMailComponent } from './contact-mail/contact-mail.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { SilverlifeService } from './silverlife.service';
     SaleComponent,
     AboutUsComponent,
     SubCategoryComponent,
-    AutoCloseDirective
+    AutoCloseDirective,
+    ContactMailComponent
   ],
   imports: [
     BrowserModule,
