@@ -74,17 +74,17 @@
     padding: 10px;
     height: 80%;
     box-sizing: border-box;
-    .modal.cart-info {
-      position: absolute;
-      width: 80px;
-      height: 40px;
-      background: red;
-      z-index: 999;
-      border-radius: 0px 12px 12px 5px;
-      padding-left: 10px;
-    }
-}
 
+}
+.modal.cart-info {
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background: red;
+  z-index: 999;
+  border-radius: 0px 12px 12px 5px;
+  padding-left: 10px;
+}
 .Cart img{
     height: 30px;
 }
