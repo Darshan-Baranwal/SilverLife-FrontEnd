@@ -12,6 +12,7 @@ import { BehaviorSubject } from 'rxjs';
 export class SilverlifeService {
   informCartInNavigation = new BehaviorSubject<IProduct>(null);
   cartList: IProduct[] = [];
+  cartTotalAmount: number;
   constructor(private router: Router) { }
   navigateToProductListpage(routeLink: string, majorCategory, category: ICategory, subcategory: SubCategory) {
     const queryParams = CATEGORY_QUERY_PARAMETER.query;

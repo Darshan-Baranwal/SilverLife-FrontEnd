@@ -9,6 +9,8 @@ import { SaleComponent } from './sale/sale.component';
 import { CategoryComponent } from './category/category.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ItemListComponent } from './item-list/item-list.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
 
 
 const routes: Routes = [
@@ -21,6 +23,8 @@ const routes: Routes = [
   {path: 'categories', component: CategoryComponent},
   {path: 'aboutUs', component: AboutUsComponent},
   {path: 'item-list', component: ItemListComponent},
+  {path: 'user-details', component:UserDetailsComponent},
+  {path: 'order-successful', component:OrderConfirmationComponent},
   {path: '', pathMatch: 'full', redirectTo: 'home'}
 ];
 

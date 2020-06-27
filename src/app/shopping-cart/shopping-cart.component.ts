@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { IProduct } from '../item-list/ProductModel';
 import { SilverlifeService } from '../silverlife.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -11,7 +12,7 @@ export class ShoppingCartComponent implements OnInit {
   cartProductList: IProduct[]=[];
   calculateTotalAmount: number;
   deliveryFee: number;
-  constructor(public service: SilverlifeService) { }
+  constructor(public service: SilverlifeService, private router: Router) { }
 
   ngOnInit(): void {
     this.cartProductList = [
@@ -65,7 +66,7 @@ export class ShoppingCartComponent implements OnInit {
     },
     ];
     //this.cartProductList = this.service.cartList;
-    this.getTotalAmount();
+    this.getTotalProductAmount();
     this.deliveryFee = 200;
   }
   changeProductCount(product: IProduct, action: number) {
@@ -75,7 +76,7 @@ export class ShoppingCartComponent implements OnInit {
     }
   }
 
-  getTotalAmount(): number {
+  getTotalProductAmount(): number {
     return this.cartProductList.reduce((a,v) => {
       a = a+v.selectedCount*v.price;
       return a;
@@ -83,7 +84,14 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   removeProduct(product: IProduct) {
-    this.cartProductList = this.cartProductList.filter(v => v.id!==product.id);
+    this.cartProductList = this.cartProductList.filter(v => v.id !== product.id);
+  }
+  navigateToUserInfoPage() {
+    this.service.cartTotalAmount = this.getTotalAmount();
+    this.router.navigate(['/user-details']);
   }
 
+  getTotalAmount() {
+    return this.getTotalProductAmount() + this.deliveryFee;
+  }
 }

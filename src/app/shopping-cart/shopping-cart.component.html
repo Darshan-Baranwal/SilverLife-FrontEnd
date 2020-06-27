@@ -32,7 +32,7 @@
                 <span><b>Price</b></span>
             </li>
             <li>
-                <span>₹ {{getTotalAmount()}}</span>
+                <span>₹ {{getTotalProductAmount()}}</span>
             </li>
         </ul>
         <ul class="tableRow">
@@ -48,11 +48,11 @@
                 <span><b>Total</b></span>
             </li>
             <li>
-                <span><b>₹ {{getTotalAmount() + deliveryFee}}</b></span>
+                <span><b>₹ {{getTotalAmount()}}</b></span>
             </li>
         </ul>
         <div style="display: flex; justify-content: space-between;align-items: center;padding-top: 5%;">
-            <input type="button" value="Checkout" class="SizeSelect">
+            <input type="button" value="Checkout" class="SizeSelect" (click)="navigateToUserInfoPage()">
             <a style="color: red;" routerLink = "/home">Continue shopping</a>
         </div>
     </div>

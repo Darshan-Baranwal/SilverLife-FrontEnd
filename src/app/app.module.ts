@@ -31,6 +31,8 @@ import { AutoCloseDirective } from './auto-close.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { SilverlifeService } from './silverlife.service';
 import { ContactMailComponent } from './contact-mail/contact-mail.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { ContactMailComponent } from './contact-mail/contact-mail.component';
     AboutUsComponent,
     SubCategoryComponent,
     AutoCloseDirective,
-    ContactMailComponent
+    ContactMailComponent,
+    UserDetailsComponent,
+    OrderConfirmationComponent
   ],
   imports: [
     BrowserModule,

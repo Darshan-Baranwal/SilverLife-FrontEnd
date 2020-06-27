@@ -1,0 +1,42 @@
+.OrderConfirmation{
+  position: relative;
+  top:150px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  align-content: center;
+  text-align: center;
+  height: 700px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.success{
+  height: 150px;
+  width: 150px;
+}
+
+.details{
+  border: 1px solid grey;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.detailsRow{
+  height: 30px;
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.detailsRow div{
+  text-align: left;
+  padding: 0 20px;
+  width: 50%;
+
+}
+
+.rightBorder{
+  border-right: 1px solid grey;
+}

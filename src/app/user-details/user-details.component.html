@@ -1,0 +1,80 @@
+<form class="Address">
+  <div>
+    <h3>Billing Details</h3>
+    <div class="AddressRow">
+      <div>
+        <label for="firstname">
+          First Name<span class="required">*</span>
+        </label>
+        <input id="firstname" class="textbox MediumTextBox" type="text">
+      </div>
+      <div>
+        <label for="lastname">
+          Last Name<span class="required">*</span>
+        </label>
+        <input id="lastname" class="textbox MediumTextBox" type="text">
+      </div>
+    </div>
+    <div class="AddressRow">
+      <div>
+        <label for="contactNum">
+          Mobile No.<span class="required">*</span>
+        </label>
+        <input id="contactNum" class="textbox MediumTextBox" type="text">
+      </div>
+      <div>
+        <label for="email">
+          Email<span class="required">*</span>
+        </label>
+        <input id="email" class="textbox MediumTextBox" type="text">
+      </div>
+    </div>
+    <div class="AddressRow">
+      <div>
+        <label for="address1">
+          House No., Building Name<span class="required">*</span>
+        </label>
+        <input id="address1" class="textbox LongtextBox" type="text">
+      </div>
+    </div>
+    <div class="AddressRow">
+      <div>
+        <label for="address2">
+          Road Name, Area, Colony<span class="required">*</span>
+        </label>
+        <input id="address2" class="textbox LongtextBox" type="text">
+      </div>
+    </div>
+    <div class="AddressRow">
+      <div>
+        <label for="city">
+          City<span class="required">*</span>
+        </label>
+        <input id="city" class="textbox MediumTextBox" type="text">
+      </div>
+      <div>
+        <label for="state">
+          State<span class="required">*</span>
+        </label>
+        <input id="state" class="textbox MediumTextBox" type="text">
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3>Sub Total</h3><span>₹ {{service.cartTotalAmount}}</span>
+    <h3>Payment Mode</h3>
+    <label for="pod">
+      <input type="radio" id="pod" name="PaymentMode" value="pod">
+      Pay on Delivery</label><br>
+    <label for="card">
+      <input type="radio" id="card" name="PaymentMode" value="card">
+      Card</label><br>
+    <label for="wallet">
+      <input type="radio" id="wallet" name="PaymentMode" value="wallet">
+      Wallet</label><br>
+    <label for="UPI">
+      <input type="radio" id="UPI" name="PaymentMode" value="UPI">
+      UPI</label>
+    <input type="button" value="Proceed" class="Loginbutton" (click) = "proceedToOrder()">
+  </div>
+</form>

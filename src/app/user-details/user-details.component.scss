@@ -1,0 +1,27 @@
+.Address{
+  position: relative;
+  top: 100px;
+  height: 700px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  padding: 2% 15%;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.AddressRow{
+  padding : 1% 0;
+  display: flex;
+  width:800px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Address label{
+  display: block;
+  width: 400px;
+  padding-bottom: 10px;
+}
+
+

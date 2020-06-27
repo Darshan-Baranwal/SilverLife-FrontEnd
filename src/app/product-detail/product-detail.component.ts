@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SilverlifeService } from '../silverlife.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { SilverlifeService } from '../silverlife.service';
 })
 export class ProductDetailComponent implements OnInit {
   count: number;
-  constructor(private activateRoute: ActivatedRoute, public service: SilverlifeService) { }
+  constructor(private activateRoute: ActivatedRoute, public service: SilverlifeService, private router: Router) { }
   productId: string;
   ngOnInit(): void {
     this.count = 1;
@@ -24,5 +24,6 @@ export class ProductDetailComponent implements OnInit {
   addTocart() {
     this.service.cartList.push({name: "sample product", selectedCount: this.count});
     this.service.informCartInNavigation.next({name: "sample product", selectedCount: this.count});
+    this.router.navigate(["/shopping-cart"]);
   }
 }

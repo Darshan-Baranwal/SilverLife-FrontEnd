@@ -11,7 +11,7 @@
     background-color: white;
     width: 17%;
     list-style: none;
-    
+
     padding: 3%;
     float:left;
 }
@@ -33,7 +33,7 @@
     float: right;
     width: 72%;
     color:#333333;
-    
+
 }
 
 .Account .working h1{
@@ -61,57 +61,4 @@
 .Account .working .login .heading div:active{
     color:rgb(223, 34, 65);
     border-bottom: 1px solid rgb(223, 34, 65);
-}
-
-
-.form{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    justify-content: space-between;
-    padding: 7%;
-    margin: 5% 10%;
-    border: 1px solid rgb(224, 224, 224);
-    border-radius: 10px;
-}
-
-.form label{
-    padding:1% 0;
-}
-
-.textbox{
-    line-height: 30px;
-    margin-bottom: 1%;
-    border: 2px solid transparent;
-    background-color: #F5F5F5;
-    border-radius: 4px;
-}
-
-.required{
-    color: red;
-}
-
-
-.Loginbutton{
-    margin-top: 8%;
-    background-color: rgb(223, 34, 65);
-    color: white;
-    border: none;
-    height: 40px;
-    border-radius: 4px;
-    width: 100%;
-}
-
-.form a{
-    color: rgb(223, 34, 65);
-    text-align: center;
-}
-
-.LongtextBox{
-    width: 700px;
-}
-
-.MediumTextBox{
-width: 300px;
 }
