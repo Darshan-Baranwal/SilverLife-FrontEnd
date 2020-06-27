@@ -3,10 +3,16 @@
     top:40px;
     background-color: #FAFAFA;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    .no-item-cart {
+      text-align: center;
+      position: relative;
+      top: 40px;
+      height: 80px;
+    }
 }
 
 .table{
-    padding: 3% 10%;    
+    padding: 3% 10%;
 }
 
 .tableRow{
@@ -21,7 +27,7 @@
 }
 
 .delBtn{
-    width: 5%;    
+    width: 5%;
 }
 
 .Pic{

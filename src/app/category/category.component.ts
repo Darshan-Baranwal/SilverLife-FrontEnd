@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import {
-  map, catchError,
+  map, catchError, filter,
 } from "rxjs/operators";
 import { of } from 'rxjs';
 import { ICategory } from './CategoryModel';
 import { Router } from '@angular/router';
 import { SilverlifeService } from '../silverlife.service';
+import { SubCategory } from './sub-category/SubcategoryModel';
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
@@ -16,6 +17,7 @@ export class CategoryComponent implements OnInit {
 
   toggleSubCategoryList: boolean = false;
   categories:ICategory[]=[];
+  selectedCategorySubCategories: SubCategory[];
   selectedCategory: ICategory;
   constructor(private http: HttpClient, private router: Router, private service: SilverlifeService) { }
 
@@ -31,10 +33,22 @@ export class CategoryComponent implements OnInit {
     })
   }  
   openSubCategoryList(category: ICategory) {
-    this.selectedCategory = category;
+    this.selectedCategorySubCategories = [];
+    this.selectedCategory  = category;
+    this.http.get<{subCategories: SubCategory[]}>('../assets/SubCategories/SubCategories.json')
+    .pipe(
+        map((response) => {
+            return response.subCategories;
+        }
+    ),
+    filter(data => !!data),
+    catchError(err => {console.log(err); return of(err)})
+    ).subscribe(data => {
+      this.selectedCategorySubCategories = data.filter((v: SubCategory) => v.categoryId === category.id);
+    })
     this.toggleSubCategoryList = !this.toggleSubCategoryList;
   }
-  navigateToProductListpage(subcategory) {
+  navigateToProductListpage(subcategory: SubCategory) {
     this.service.navigateToProductListpage("item-list", undefined,  this.selectedCategory, subcategory);
   }
 }

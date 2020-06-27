@@ -32,12 +32,12 @@
                 </select>
             </div>
             <div class="Quantity">
-                <input type="button" value="-" class="minus">
-                <input type="button" value="1" class="number">
-                <input type="button" value="+" class="plus">
+                <input type="button" value="-" class="minus" (click)="changeProductCount(-1)">
+                <input type="button" [value]="count" class="number">
+                <input type="button" value="+" class="plus" (click)="changeProductCount(1)">
             </div>
             <div>
-                <input type="button" value="Add to Cart" class="SizeSelect">
+                <input type="button" value="Add to Cart" class="SizeSelect" (click) = "addTocart()">
             </div>
         </div>
     </div>
