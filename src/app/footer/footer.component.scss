@@ -1,21 +1,22 @@
 .Footer{
-    height: 100px;
+    height: 50px;
     width: 100%;
     background-color: #FAFAFA;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     position: relative;
-    top:60px;
+    top:80px;
+    padding-top: 20px;
 }
 
-.Footer.text{
+.text{
     margin-left: 7%;
     color: rgb(139, 138, 138);
     height: 50%;
 }
 
-.Footer.images{
+.images{
     margin-right: 7%;
     height: 50%;
     width:20%;
@@ -24,6 +25,6 @@
     justify-content: flex-end;
 }
 .Footer img{
-    height: 50%;
+    height: 80%;
     width: 15%;
 }
