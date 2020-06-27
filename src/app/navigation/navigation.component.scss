@@ -71,6 +71,24 @@
     height: 30px;
 }
 
+.Cart{
+    padding: 10px;
+    height: 80%;
+    box-sizing: border-box;
+    .modal.cart-info {
+      position: absolute;
+      width: 80px;
+      height: 40px;
+      background: red;
+      z-index: 999;
+      border-radius: 0px 12px 12px 5px;
+      padding-left: 10px;
+    }
+}
+
+.Cart img{
+    height: 30px;
+}
 .DrawerToggle {
     width: 40px;
     height: 80%;
@@ -150,7 +168,7 @@
     left: 0;
     right: 0px;
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.7); 
+    background-color: rgba(0,0,0,0.7);
 }
 .search-modal {
     position: absolute;
@@ -230,7 +248,7 @@
         white-space: nowrap;
         font-weight: 500;
     }
-    
+
     .NavigationItem a{
         color: rgb(88, 88, 88);
         height: 100%;
@@ -250,8 +268,8 @@
         transform: scaleX(0);
         transition: all 0.3s ease-in-out;
       }
-    
-    .NavigationItem a:hover,    
+
+    .NavigationItem a:hover,
     .NavigationItem a.active{
         color:  #DC1336;
     }

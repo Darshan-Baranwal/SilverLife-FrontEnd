@@ -1,5 +1,5 @@
 <div class="CartSection">
-    <div class="table">
+    <div class="table" *ngIf = "cartProductList.length>0;else noItemInCart">
         <ul class="tableRow">
             <li class="delBtn"> </li>
             <li class="Pic"> </li>
@@ -8,42 +8,31 @@
             <li class="Qty"><b>Quantity</b></li>
             <li class="total"><b>Total</b></li>
         </ul>
-        <ul class="tableRow">
-            <li class="delBtn"><span>X</span> </li>
+        <ul class="tableRow" *ngFor="let product of cartProductList">
+            <li class="delBtn" (click) = "removeProduct(product)">X </li>
             <li class="Pic"><img src="../../assets/SurgicalTape.jpg"> </li>
             <li class="Name"><span>Datt Velpore Paper Surgical Tape, Dispenser Pack</span></li>
-            <li class="Pricing"><span>₹ 537</span></li>
+            <li class="Pricing"><span>{{product.price}}</span></li>
             <li class="Qty">
                 <div class="Quantity">
-                    <input type="button" value="-" class="minus">
-                    <input type="button" value="1" class="number">
-                    <input type="button" value="+" class="plus">
+                    <input type="button" value="-" class="minus" (click)= "changeProductCount(product, -1)">
+                    <input type="button" [value]="product.selectedCount" class="number">
+                    <input type="button" value="+" class="plus"  (click)= "changeProductCount(product, 1)">
                 </div>
             </li>
-            <li class="total">₹ 537</li>
-        </ul>
-        <ul class="tableRow">
-            <li class="delBtn"><span>X</span> </li>
-            <li class="Pic"><img src="../../assets/adult-walker.jpg"> </li>
-            <li class="Name"><span>Adult Walker</span></li>
-            <li class="Pricing"><span>₹ 2000</span></li>
-            <li class="Qty">
-                <div class="Quantity">
-                    <input type="button" value="-" class="minus">
-                    <input type="button" value="1" class="number">
-                    <input type="button" value="+" class="plus">
-                </div>
-            </li>
-            <li class="total">₹ 2000</li>
+            <li class="total">{{product.price * product.selectedCount}}</li>
         </ul>
     </div>
-    <div class="Pricetable">
+    <ng-template #noItemInCart>
+      <div class="no-item-cart">You Don't have any item into your card.</div>
+      </ng-template>
+    <div class="Pricetable" *ngIf = "cartProductList.length>0">
         <ul class="tableRow">
             <li>
                 <span><b>Price</b></span>
             </li>
             <li>
-                <span>₹ 2537</span>
+                <span>₹ {{getTotalAmount()}}</span>
             </li>
         </ul>
         <ul class="tableRow">
@@ -51,7 +40,7 @@
                 <span><b>Delivery Fee</b></span>
             </li>
             <li>
-                <span>₹ 200</span>
+                <span>₹ {{deliveryFee}}</span>
             </li>
         </ul>
         <ul class="tableRow">
@@ -59,7 +48,7 @@
                 <span><b>Total</b></span>
             </li>
             <li>
-                <span><b>₹ 2737</b></span>
+                <span><b>₹ {{getTotalAmount() + deliveryFee}}</b></span>
             </li>
         </ul>
         <div style="display: flex; justify-content: space-between;align-items: center;padding-top: 5%;">

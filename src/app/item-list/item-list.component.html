@@ -4,6 +4,13 @@
     </div>
     <app-item-list-header [header]=header [hideAllNewLink] = hideAllNewLink></app-item-list-header>
     <ul>
+        <li *ngFor="let product of productList"  (click)="openProductDetailPage(product.id)">
+            <img src="../../assets/PillBox.jpg" />
+            <h3>{{product.name}}</h3>
+            <span>{{product.price}}</span>
+        </li>
+    </ul>
+    <!-- <ul>
         <li (click)="openProductDetailPage('productId')">
             <img src="../../assets/PillBox.jpg" />
             <h3>Pill Box</h3>
@@ -54,5 +61,5 @@
             <h3>Blood Glucometer</h3>
             <span>₹300</span>
         </li>
-    </ul>
+    </ul> -->
 </div>
