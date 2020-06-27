@@ -39,7 +39,6 @@
 .NavigationItem {
     margin: 10px 0;
     box-sizing: border-box;
-    display: block;
     width: 100%;
 }
 
@@ -224,11 +223,7 @@
         }
     }
 }
-@media (max-width:785px){
-    .DesktopOnly{
-        display: none;
-    }
-}
+
 @media (min-width: 786px){
     .Toolbar{
         padding:0 20px;
