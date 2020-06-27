@@ -4,7 +4,7 @@
     </div>
     <nav>
         <ul class="NavigationItems">
-            <li class="NavigationItem">
+            <li class="NavigationItem DesktopOnly">
                 <a routerLink="categories">Categories</a>
                 <ul class="BroadCategories">
                     <li>
@@ -85,13 +85,13 @@
         </ul>
     </nav>
     <div style="display: flex; flex-direction: row;height: 100%;margin-top: 10px;">
-        <div class="Search" (click) = "openCloseSearchModal = !openCloseSearchModal">
+        <div class="Icon" (click) = "openCloseSearchModal = !openCloseSearchModal">
             <img src="../../assets/Search.png" alt="Search" />
         </div>
-        <div class="Login"  routerLink="account">
+        <div class="Icon"  routerLink="account">
             <img src="../../assets/Login.png" alt="Login" />
         </div>
-        <div class="Cart" (click)="navigateTo('shopping-cart')">
+        <div class="Icon" (click)="navigateTo('shopping-cart')">
             <img src="../../assets/Cart.png" alt="Cart" />
         </div>
         <div class="DrawerToggle" (click) = openDrawer()>
