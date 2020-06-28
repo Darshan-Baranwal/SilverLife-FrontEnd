@@ -1,117 +1,126 @@
 <div class="Toolbar">
-    <div class="EmptyTool DesktopOnly">
-
-    </div>
-    <nav>
-        <ul class="NavigationItems">
-            <li class="NavigationItem DesktopOnly">
-                <a routerLink="categories">Categories</a>
-                <ul class="BroadCategories">
-                    <li>
-                        <img src="../../assets/dressing.svg" alt="Dressing" />
-                        <h5>Wound dressing</h5>
-                        <ul class="BroadCategory">
-                            <li>First Aid</li>
-                            <li>Ostomy</li>
-                            <li>Bedsore Dressing</li>
-                            <li>Pain Relief</li>
-                            <li>Bandages</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <img src="../../assets/hygine.svg" alt="Hygiene" />
-                        <h5>Personal Hygiene</h5>
-                        <ul class="BroadCategory">
-                            <li>Urine Management</li>
-                            <li>Dental Care</li>
-                            <li>Skin Care</li>
-                            <li>Foot Care</li>
-                            <li>Clothing</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <img src="../../assets/Mobility.png" alt="Mobility" />
-                        <h5>Mobility</h5>
-                        <ul class="BroadCategory">
-                            <li>Splints</li>
-                            <li>Pain Relief</li>
-                            <li>Walking Supports</li>
-                            <li>Wheel Chair</li>
-                            <li>Holding Supports</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <img src="../../assets/oxygen.svg" alt="Accessories" />
-                        <h5>Home care Accessories</h5>
-                        <ul class="BroadCategory">
-                            <li>Bedroom</li>
-                            <li>Bathroom</li>
-                            <li>Dining</li>
-                            <!-- <li>Thermometers</li>
+  <div class="EmptyTool DesktopOnly"></div>
+  <nav>
+    <ul class="NavigationItems">
+      <li class="NavigationItem DesktopOnly">
+        <a routerLink="categories">Categories</a>
+        <ul class="BroadCategories">
+          <li>
+            <img src="../../assets/dressing.svg" alt="Dressing" />
+            <h5>Wound dressing</h5>
+            <ul class="BroadCategory">
+              <li>First Aid</li>
+              <li>Ostomy</li>
+              <li>Bedsore Dressing</li>
+              <li>Pain Relief</li>
+              <li>Bandages</li>
+            </ul>
+          </li>
+          <li>
+            <img src="../../assets/hygine.svg" alt="Hygiene" />
+            <h5>Personal Hygiene</h5>
+            <ul class="BroadCategory">
+              <li>Urine Management</li>
+              <li>Dental Care</li>
+              <li>Skin Care</li>
+              <li>Foot Care</li>
+              <li>Clothing</li>
+            </ul>
+          </li>
+          <li>
+            <img src="../../assets/Mobility.png" alt="Mobility" />
+            <h5>Mobility</h5>
+            <ul class="BroadCategory">
+              <li>Splints</li>
+              <li>Pain Relief</li>
+              <li>Walking Supports</li>
+              <li>Wheel Chair</li>
+              <li>Holding Supports</li>
+            </ul>
+          </li>
+          <li>
+            <img src="../../assets/oxygen.svg" alt="Accessories" />
+            <h5>Home care Accessories</h5>
+            <ul class="BroadCategory">
+              <li>Bedroom</li>
+              <li>Bathroom</li>
+              <li>Dining</li>
+              <!-- <li>Thermometers</li>
                             <li>Thermometers</li> -->
-                        </ul>
-                    </li>
-                    <li>
-                        <img src="../../assets/Devices.png" alt="Devices" />
-                        <h5>Medical devices</h5>
-                        <ul class="BroadCategory">
-                            <li>Health Monitoring</li>
-                            <li>Equipments</li>
-                            <li>Rental</li>
-                            <li>Home Safety</li>
-                            <!-- <li>Thermometers</li> -->
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class="NavigationItem DesktopOnly">
-                <a routerLink="popular">Popular</a>
-            </li>
-            <li class="NavigationItem DesktopOnly">
-                <a routerLink="sale">Sale</a>
-            </li>
-            <div class="Logo" (click) = "navigateTo('home')">
-                <img src="../../assets/LOGO.png" alt="SilverCare" />
-            </div>
-            <li class="NavigationItem DesktopOnly">
-                <a href="/">Blog</a>
-            </li>
-            <li class="NavigationItem DesktopOnly">
-                <a routerLink="aboutUs">About Us</a>
-            </li>
-            <li class="NavigationItem DesktopOnly">
-                <a routerLink="account">Account</a>
-            </li>
+            </ul>
+          </li>
+          <li>
+            <img src="../../assets/Devices.png" alt="Devices" />
+            <h5>Medical devices</h5>
+            <ul class="BroadCategory">
+              <li>Health Monitoring</li>
+              <li>Equipments</li>
+              <li>Rental</li>
+              <li>Home Safety</li>
+              <!-- <li>Thermometers</li> -->
+            </ul>
+          </li>
         </ul>
-    </nav>
-    <div style="display: flex; flex-direction: row;height: 100%;margin-top: 10px;">
-        <div class="Icon" (click) = "openCloseSearchModal = !openCloseSearchModal">
-            <img src="../../assets/Search.png" alt="Search" />
-        </div>
-        <div class="Icon"  routerLink="account">
-            <img src="../../assets/Login.png" alt="Login" />
-        </div>
-        <div class="Icon" (click)="navigateTo('shopping-cart')">
-            <img src="../../assets/Cart.png" alt="Cart" />
-            <div class="modal cart-info" *ngIf="toggleNewItemAddedToCartModal">{{newAddedProduct.name}}</div>
-        </div>
-        <div class="DrawerToggle" (click) = openDrawer()>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+      </li>
+      <li class="NavigationItem DesktopOnly">
+        <a routerLink="popular">Popular</a>
+      </li>
+      <li class="NavigationItem DesktopOnly">
+        <a routerLink="sale">Sale</a>
+      </li>
+      <div class="Logo" (click)="navigateTo('home')">
+        <img src="../../assets/LOGO.png" alt="SilverCare" />
+      </div>
+      <li class="NavigationItem DesktopOnly">
+        <a routerLink="blog">Blog</a>
+      </li>
+      <li class="NavigationItem DesktopOnly">
+        <a routerLink="aboutUs">About Us</a>
+      </li>
+      <li class="NavigationItem DesktopOnly">
+        <a routerLink="account">Account</a>
+      </li>
+    </ul>
+  </nav>
+  <div
+    style="display: flex; flex-direction: row; height: 100%; margin-top: 10px;"
+  >
+    <div class="Icon" (click)="openCloseSearchModal = !openCloseSearchModal">
+      <img src="../../assets/Search.png" alt="Search" />
     </div>
-    <div class="modal search-modal-container" *ngIf="openCloseSearchModal">
-        <div class="search-modal"  appAutoClose (autoCloseOnclickOutside)="openCloseSearchModal = false">
-                <div class="inner-wrap">
-                    <form role="search">
-                    <input type="text" name="s" id="s" value="" placeholder="Search">
-                    <input type="hidden" name="post_type" value="product">
-                    <div>Hit enter to search or ESC to close</div> </form>
-                    <div id="close"><a  (click) = "openCloseSearchModal = false">
-                        <i class="fa fa-times" aria-hidden="true"></i> </a>
-                    </div>
-                </div>
-        </div>
+    <div class="Icon" routerLink="account">
+      <img src="../../assets/Login.png" alt="Login" />
     </div>
+    <div class="Icon" (click)="navigateTo('shopping-cart')">
+      <img src="../../assets/Cart.png" alt="Cart" />
+      <div class="modal cart-info" *ngIf="toggleNewItemAddedToCartModal">
+        {{ newAddedProduct.name }}
+      </div>
+    </div>
+    <div class="DrawerToggle" (click)="openDrawer()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <div class="modal search-modal-container" *ngIf="openCloseSearchModal">
+    <div
+      class="search-modal"
+      appAutoClose
+      (autoCloseOnclickOutside)="openCloseSearchModal = false"
+    >
+      <div class="inner-wrap">
+        <form role="search">
+          <input type="text" name="s" id="s" value="" placeholder="Search" />
+          <input type="hidden" name="post_type" value="product" />
+          <div>Hit enter to search or ESC to close</div>
+        </form>
+        <div id="close">
+          <a (click)="openCloseSearchModal = false">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

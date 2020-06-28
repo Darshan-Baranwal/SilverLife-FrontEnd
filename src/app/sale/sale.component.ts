@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-sale',
-  templateUrl: './sale.component.html',
-  styleUrls: ['./sale.component.scss']
+  selector: "app-sale",
+  templateUrl: "./sale.component.html",
+  styleUrls: ["./sale.component.scss"],
 })
 export class SaleComponent implements OnInit {
-
-  constructor() { }
+  isSale: boolean;
+  constructor() {}
 
   ngOnInit(): void {
+    this.isSale = true;
   }
-
 }

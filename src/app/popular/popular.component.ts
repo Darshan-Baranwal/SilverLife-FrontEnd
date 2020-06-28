@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./popular.component.scss']
 })
 export class PopularComponent implements OnInit {
-
+  isPopular: boolean;
   constructor() { }
 
   ngOnInit(): void {
+    this.isPopular = true;
   }
 
 }

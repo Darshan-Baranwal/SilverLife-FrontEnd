@@ -13,8 +13,9 @@ import { SubCategory } from "../category/sub-category/SubcategoryModel";
 export class ItemListComponent implements OnInit {
   @Input() header;
   @Input() hideAllNewLink = true;
+  @Input() isPopular: boolean | undefined;
+  @Input() isSale: boolean | undefined;
   showAdvisories = false;
-  productTypeForFilter: string;
   categoryInfoObj: any = {};
   productList;
   overviewOfSubcategory: SubCategory;
@@ -25,38 +26,52 @@ export class ItemListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.activatedRoute.queryParamMap
-      .pipe(
-        filter((params: any) => !!params && !!params.params.category),
-        switchMap((params: any) => {
-          this.categoryInfoObj = { ...params };
-          return combineLatest([of(this.categoryInfoObj)]);
-        }),
-        switchMap((category: any) => {
-          return combineLatest([
-            of(category),
-            this.http
-              .get("../assets/Products/Products.json")
-              .pipe(catchError((err) => of(err))),
-            this.http
-              .get("../assets/SubCategories/SubCategories.json")
-              .pipe(catchError((err) => of(err))),
-          ]);
-        }),
-        map(([category, products, subcategories]) => {
-          this.overviewOfSubcategory = subcategories.subCategories.filter(
-            (v) => v.id === 3
-          )[0];
-          console.log(this.overviewOfSubcategory);
-          //return products.products.filter(v => v.subCategoryId === category[0].params.subcategory);
-          return products.products.filter((v) => v.subCategoryId === 3);
-        }),
-        catchError((err) => of(err))
-      )
-      .subscribe((data) => {
-        this.productList = data;
-        console.log(data);
-      });
+    if (!!this.isPopular || !!this.isSale) {
+      this.http
+        .get("../assets/Products/Products.json")
+        .pipe(catchError((err) => of(err)))
+        .subscribe((data) => {
+          if (this.isPopular != undefined) {
+            this.productList = data.products.filter((v) => v.isPopular);
+          } else {
+            this.productList = data.products.filter((v) => v.isSale);
+          }
+          console.log(this.productList);
+        });
+    } else {
+      this.activatedRoute.queryParamMap
+        .pipe(
+          filter((params: any) => !!params && !!params.params.category),
+          switchMap((params: any) => {
+            this.categoryInfoObj = { ...params };
+            return combineLatest([of(this.categoryInfoObj)]);
+          }),
+          switchMap((category: any) => {
+            return combineLatest([
+              of(category),
+              this.http
+                .get("../assets/Products/Products.json")
+                .pipe(catchError((err) => of(err))),
+              this.http
+                .get("../assets/SubCategories/SubCategories.json")
+                .pipe(catchError((err) => of(err))),
+            ]);
+          }),
+          map(([category, products, subcategories]) => {
+            this.overviewOfSubcategory = subcategories.subCategories.filter(
+              (v) => v.id === 3
+            )[0];
+            console.log(this.overviewOfSubcategory);
+            //return products.products.filter(v => v.subCategoryId === category[0].params.subcategory);
+            return products.products.filter((v) => v.subCategoryId === 3);
+          }),
+          catchError((err) => of(err))
+        )
+        .subscribe((data) => {
+          this.productList = data;
+          console.log(data);
+        });
+    }
   }
   openProductDetailPage(productId: string) {
     this.router.navigate(["product-detail", productId]);
