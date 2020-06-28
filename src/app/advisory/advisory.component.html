@@ -1,17 +1,8 @@
 <div class="Advises">
     <h1>Advisory</h1>
     <ul>
-        <li>
-            <p>Aging in Place</p>
-        </li>
-        <li>
-            <p>Alzheimer's & Dementia </p>
-        </li>
-        <li>
-            <p>Better Health </p>
-        </li>
-        <li>
-            <p>Care Manager Advantage </p>
+        <li *ngFor="let advisory of advisories" [routerLink] = "['/blog', advisory.name]">
+            <p>{{advisory.name}}</p>
         </li>
     </ul>
 </div>

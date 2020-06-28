@@ -33,6 +33,7 @@ import { SilverlifeService } from './silverlife.service';
 import { ContactMailComponent } from './contact-mail/contact-mail.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { OrderConfirmationComponent } from './order-confirmation/order-confirmat
     AutoCloseDirective,
     ContactMailComponent,
     UserDetailsComponent,
-    OrderConfirmationComponent
+    OrderConfirmationComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,

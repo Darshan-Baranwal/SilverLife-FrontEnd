@@ -31,9 +31,8 @@ export class CategoryComponent implements OnInit {
     ).subscribe(data => {
       this.categories = data.categories;
     })
-  }  
+  }
   openSubCategoryList(category: ICategory) {
-    this.selectedCategorySubCategories = [];
     this.selectedCategory  = category;
     this.http.get<{subCategories: SubCategory[]}>('../assets/SubCategories/SubCategories.json')
     .pipe(

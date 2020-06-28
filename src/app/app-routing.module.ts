@@ -11,6 +11,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'item-list', component: ItemListComponent},
   {path: 'user-details', component:UserDetailsComponent},
   {path: 'order-successful', component:OrderConfirmationComponent},
+  {path: 'blog/:id  ', component: BlogComponent},
   {path: '', pathMatch: 'full', redirectTo: 'home'}
 ];
 
