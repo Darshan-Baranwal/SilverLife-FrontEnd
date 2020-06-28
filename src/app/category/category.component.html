@@ -14,7 +14,7 @@
         <div id="close"><a class="close-link" (click) = "toggleSubCategoryList = false">
             <i class="fa fa-times" aria-hidden="true"></i> </a>
         </div>
-        <h3 class="modal-header animate__animated animate__bounce">Items available for {{selectedCategory.name}}</h3>
+        <h3 class="modal-header">Items available for {{selectedCategory.name}}</h3>
         <div class="sub-category-list" *ngIf="selectedCategorySubCategories.length>0; else noSubCategory">
             <div *ngFor="let subCategory of selectedCategorySubCategories" class="sub-category-cards" 
             style="background-image: linear-gradient(to right,#F6DFBE,rgb(250, 239, 225));"
