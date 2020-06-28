@@ -1,34 +1,50 @@
 <div>
   <div>
     <ul class="DescriptionLinks">
-      <li>Overview</li>
-      <li>Usage</li>
-      <li>Specifications</li>
-      <li>Precautions</li>
+      <li
+        (click)="showDetail('overview')"
+        [class.active]="selectedHeading === 'overview'"
+      >
+        Overview
+      </li>
+      <li
+        (click)="showDetail('usage')"
+        [class.active]="selectedHeading === 'usage'"
+      >
+        Usage
+      </li>
+      <li
+        (click)="showDetail('specification')"
+        [class.active]="selectedHeading === 'specification'"
+      >
+        Specifications
+      </li>
+      <li
+        (click)="showDetail('precaution')"
+        [class.active]="selectedHeading === 'precaution'"
+      >
+        Precautions
+      </li>
     </ul>
   </div>
   <div>
     <ul class="DescriptionSections">
-      <li>
-        <h4>Overview</h4>
+      <li *ngIf="selectedHeading === 'overview'">
         <p>
           {{ details?.overview }}
         </p>
       </li>
-      <li>
-        <h4>Usage</h4>
+      <li *ngIf="selectedHeading === 'usage'">
         <p>
           {{ details?.usage }}
         </p>
       </li>
-      <li>
-        <h4>Specifications</h4>
+      <li *ngIf="selectedHeading === 'specification'">
         <p>
           {{ details?.specification }}
         </p>
       </li>
-      <li>
-        <h4>Precautions</h4>
+      <li *ngIf="selectedHeading === 'precaution'">
         <p>{{ details?.precaution }}</p>
       </li>
     </ul>

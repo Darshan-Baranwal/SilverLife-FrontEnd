@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { IProductDetail } from '../ProductModel';
+import { IProductDetail } from "../ProductModel";
 
 @Component({
   selector: "app-item-overview",
@@ -8,7 +8,13 @@ import { IProductDetail } from '../ProductModel';
 })
 export class ItemOverviewComponent implements OnInit {
   @Input() details: IProductDetail;
+  selectedHeading: string;
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.selectedHeading = "overview";
+  }
+  showDetail(selected: string) {
+    this.selectedHeading = selected;
+  }
 }

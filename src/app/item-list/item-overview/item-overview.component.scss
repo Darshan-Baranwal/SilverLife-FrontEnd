@@ -5,6 +5,10 @@
   list-style: none;
   padding: 5% 0 0 0;
   font-weight: 500;
+  .active {
+    transform: scale(1.5);
+    text-decoration: overline;
+  }
 }
 
 .DescriptionSections {
@@ -12,8 +16,10 @@
   flex-flow: column;
   list-style: none;
   border-top: 1px solid #dcdcdc;
+  padding: 0px;
 }
 
 .DescriptionSections li {
   border-bottom: 1px solid #dcdcdc;
+  padding: 0 8px 0 8px;
 }
