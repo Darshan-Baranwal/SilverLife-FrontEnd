@@ -1,120 +1,100 @@
-.Product{
-    position: relative;
-    top:60px;
-    background-color: #FFFBFD;
-    padding: 0 15%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.Product {
+  position: relative;
+  top: 60px;
+  background-color: #fffbfd;
+  padding: 0 15%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.Product .heading{
-    font-size: 12px;
-    color: red;
-    padding : 2% 0;
+.Product .heading {
+  font-size: 12px;
+  color: red;
+  padding: 2% 0;
 }
 
-.Product .ProductDisplay{
-    display: flex;
-    flex-direction: row;
-
+.Product .ProductDisplay {
+  display: flex;
+  flex-direction: row;
 }
 
-.ProductDisplay img{
-    border: 1px solid rgb(224, 224, 224);
+.ProductDisplay img {
+  border: 1px solid rgb(224, 224, 224);
 }
 
-.DisplayDetails{
-    margin-left: 5%;
+.DisplayDetails {
+  margin-left: 5%;
 }
 
-.DisplayDetails h1{
-    margin-top: 0px;
+.DisplayDetails h1 {
+  margin-top: 0px;
 }
-.Price{
-    color: red;
-}
-
-.DisplayDetails h4{
-    color:rgb(110, 110, 110);
-    margin-bottom: 0%;
+.Price {
+  color: red;
 }
 
-.KeyFeatures{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding-left: 20px;
+.DisplayDetails h4 {
+  color: rgb(110, 110, 110);
+  margin-bottom: 0%;
 }
 
-.KeyFeatures .KeyFeature{
-    width: 30%;
-    font-size: 15px;
-    padding-bottom: 7px;
+.KeyFeatures {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-left: 20px;
 }
 
-.SizeSelect{
-    background: #DD1336;
-    border-radius: 6px;
-    border: 1px solid #dcdcdc;
-    display: inline-block;
-    cursor: pointer;
-    font-size: 18px;
-    width: 30%;
-    height: 40px;
-    color: white;
-    font-weight: 500;
+.KeyFeatures .KeyFeature {
+  width: 30%;
+  font-size: 15px;
+  padding-bottom: 7px;
 }
 
-.SizeSelect option{
-    background-color: white;
-    color: #DD1336;
+.SizeSelect {
+  background: #dd1336;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 18px;
+  width: 30%;
+  height: 40px;
+  color: white;
+  font-weight: 500;
 }
 
-.DisplayDetails .Quantity{
-    padding : 3% 0;
+.SizeSelect option {
+  background-color: white;
+  color: #dd1336;
+}
+
+.DisplayDetails .Quantity {
+  padding: 3% 0;
 }
 
 .Quantity .plus,
-.Quantity .minus{
- background-color: white;
- color: black;
- border: none;
- border-radius: 50px;
- box-shadow: 0 2px 12px rgba(0,0,0,.08);
- height: 35px;
- width: 35px;
- line-height: 24px;
- outline: none;
+.Quantity .minus {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  height: 35px;
+  width: 35px;
+  line-height: 24px;
+  outline: none;
 }
 
-.Quantity .number{
-    background-color: transparent;
-    border: none;
-    height: 35px;
-    width: 35px;
-    line-height: 35px;
-    padding :0 5px;
-    font-weight: 700;
-    font-size: 24px;
-    vertical-align: middle;
-}
-
-.DescriptionLinks{
-    display: flex;
-    flex-flow: row;
-    justify-content: space-around;
-    list-style: none;
-    padding: 5% 0 0 0;
-    font-weight: 500;
-}
-
-.DescriptionSections{
-    display: flex;
-    flex-flow: column;
-    list-style: none;
-    border-top: 1px solid #dcdcdc ;
-}
-
-.DescriptionSections li{
-    border-bottom: 1px solid #dcdcdc ;
+.Quantity .number {
+  background-color: transparent;
+  border: none;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  padding: 0 5px;
+  font-weight: 700;
+  font-size: 24px;
+  vertical-align: middle;
 }

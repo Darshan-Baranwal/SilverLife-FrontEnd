@@ -5,8 +5,16 @@ export interface IProduct {
   price?: number;
   imgAddress?: string;
   details?: string;
-  isSale?: string;
-  isPopular?: string;
+  isSale?: boolean;
+  isPopular?: boolean;
   salePercent?: string;
   selectedCount?: number;
+  product_detail?: IProductDetail;
+}
+
+export interface IProductDetail {
+  overview?: string;
+  usage?: string;
+  specification?: string;
+  precaution?: string;
 }

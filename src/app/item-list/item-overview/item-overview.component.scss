@@ -1,0 +1,19 @@
+.DescriptionLinks {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  list-style: none;
+  padding: 5% 0 0 0;
+  font-weight: 500;
+}
+
+.DescriptionSections {
+  display: flex;
+  flex-flow: column;
+  list-style: none;
+  border-top: 1px solid #dcdcdc;
+}
+
+.DescriptionSections li {
+  border-bottom: 1px solid #dcdcdc;
+}

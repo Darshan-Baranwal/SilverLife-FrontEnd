@@ -1,79 +1,62 @@
 <div class="Product">
-    <div class="heading">
-        <a>HOME</a><span> > </span><a>CATEGORY</a><span> > </span><a>SUB-CATEGORY</a><span> > </span><span>PRODUCT
-            NAME</span>
-    </div>
-    <div class="ProductDisplay">
-        <div>
-            <img src="../../assets/SurgicalTape.jpg">
-        </div>
-        <div class="DisplayDetails">
-            <div>
-                <h1>Datt Velpore Paper Surgical Tape, Dispenser Pack</h1>
-            </div>
-            <div>
-                <h2 class="Price">₹ 537</h2>
-            </div>
-            <div>
-                <h4>Key Features</h4>
-                <ul class="KeyFeatures">
-                    <li class="KeyFeature">Width: 1/2/3 inch</li>
-                    <li class="KeyFeature">Comes with dispenser</li>
-                    <li class="KeyFeature">Length: 10 yards/ 9.1m</li>
-                    <li class="KeyFeature">Non woven paper</li>
-                    <li class="KeyFeature">Latex free</li>
-                </ul>
-            </div>
-            <div>
-                <select class="SizeSelect">
-                    <option>1 inch X 10 yards</option>
-                    <option>2 inch X 10 yards</option>
-                    <option>3 inch X 10 yards</option>
-                </select>
-            </div>
-            <div class="Quantity">
-                <input type="button" value="-" class="minus" (click)="changeProductCount(-1)">
-                <input type="button" [value]="count" class="number">
-                <input type="button" value="+" class="plus" (click)="changeProductCount(1)">
-            </div>
-            <div>
-                <input type="button" value="Add to Cart" class="SizeSelect" (click) = "addTocart()">
-            </div>
-        </div>
-    </div>
+  <div class="heading">
+    <!-- <a>HOME</a><span> > </span><a>CATEGORY</a><span> > </span><a>SUB-CATEGORY</a
+    ><span> > </span><span>PRODUCT NAME</span> -->
+  </div>
+  <div class="ProductDisplay">
     <div>
-        <div>
-            <ul class="DescriptionLinks">
-                <li>Overview</li>
-                <li>Ussage</li>
-                <li>Specifications</li>
-                <li>Precautions</li>
-            </ul>
-        </div>
-        <div>
-            <ul class="DescriptionSections">
-                <li>
-                    <h4>Overview</h4>
-                    <p>Datt Velpore is a surgical paper tape. It is hypoallergenic, 100% latex free, non woven,
-                        lightweight, conformable, water repellent and tearable by hand. Velpore is porous and allows
-                        the skin to breathe. Velpore is white in colour</p>
-                </li>
-                <li>
-                    <h4>Ussage</h4>
-                    <p>Velpore can be used for securing dressings, tubes and catheters to the body</p>
-                </li>
-                <li>
-                    <h4>Specifications</h4>
-                    <p>Velpore dispenser packs are available in the following configurations:
-                        - 1 Inch X 10 Yards (9.14 m) in a box of 12 rolls with dispenser
-                        - 2 Inch X 10 Yards (9.14 m) in a box of 6 rolls with dispenser
-                        - 3 Inch X 10 Yards (9.14 m) in a box of 4 rolls with dispenser</p>
-                </li>
-                <li>
-                    <h4>Precautions</h4>
-                    <p>Avoid Sunlight, store at room temperature</p>
-                </li>
-            </ul>
-        </div>
+      <img src="../../assets/SurgicalTape.jpg" />
     </div>
+    <div class="DisplayDetails">
+      <div>
+        <h1>Datt Velpore Paper Surgical Tape, Dispenser Pack</h1>
+      </div>
+      <div>
+        <h2 class="Price">₹ 537</h2>
+      </div>
+      <div>
+        <h4>Key Features</h4>
+        <ul class="KeyFeatures">
+          <li class="KeyFeature">Width: 1/2/3 inch</li>
+          <li class="KeyFeature">Comes with dispenser</li>
+          <li class="KeyFeature">Length: 10 yards/ 9.1m</li>
+          <li class="KeyFeature">Non woven paper</li>
+          <li class="KeyFeature">Latex free</li>
+        </ul>
+      </div>
+      <div>
+        <select class="SizeSelect">
+          <option>1 inch X 10 yards</option>
+          <option>2 inch X 10 yards</option>
+          <option>3 inch X 10 yards</option>
+        </select>
+      </div>
+      <div class="Quantity">
+        <input
+          type="button"
+          value="-"
+          class="minus"
+          (click)="changeProductCount(-1)"
+        />
+        <input type="button" [value]="count" class="number" />
+        <input
+          type="button"
+          value="+"
+          class="plus"
+          (click)="changeProductCount(1)"
+        />
+      </div>
+      <div>
+        <input
+          type="button"
+          value="Add to Cart"
+          class="SizeSelect"
+          (click)="addTocart()"
+        />
+      </div>
+    </div>
+  </div>
+  <app-item-overview
+    [details]="productDetail?.product_detail"
+  ></app-item-overview>
 </div>

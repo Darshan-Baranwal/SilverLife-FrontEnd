@@ -1,16 +1,25 @@
 <div class="Justarrived item-list-container">
-    <div class="advices-container" *ngIf="!!productTypeForFilter">
-       <h2>Advisory for the Product</h2>
-    </div>
-    <app-item-list-header [header]=header [hideAllNewLink] = hideAllNewLink></app-item-list-header>
-    <ul>
-        <li *ngFor="let product of productList"  (click)="openProductDetailPage(product.id)">
-            <img src="../../assets/PillBox.jpg" />
-            <h3>{{product.name}}</h3>
-            <span>{{product.price}}</span>
-        </li>
-    </ul>
-    <!-- <ul>
+  <div class="advices-container" *ngIf="!!productTypeForFilter">
+    <h2>Advisory for the Product</h2>
+  </div>
+  <app-item-list-header
+    [header]="overviewOfSubcategory?.name"
+    [hideAllNewLink]="hideAllNewLink"
+  ></app-item-list-header>
+  <app-item-overview
+    [details]="overviewOfSubcategory?.subcategory_detail"
+  ></app-item-overview>
+  <ul>
+    <li
+      *ngFor="let product of productList"
+      (click)="openProductDetailPage(product.id)"
+    >
+      <img src="../../assets/PillBox.jpg" />
+      <h3>{{ product.name }}</h3>
+      <span>{{ product.price }}</span>
+    </li>
+  </ul>
+  <!-- <ul>
         <li (click)="openProductDetailPage('productId')">
             <img src="../../assets/PillBox.jpg" />
             <h3>Pill Box</h3>

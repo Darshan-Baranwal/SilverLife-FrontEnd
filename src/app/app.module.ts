@@ -34,6 +34,7 @@ import { ContactMailComponent } from './contact-mail/contact-mail.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
 import { BlogComponent } from './blog/blog.component';
+import { ItemOverviewComponent } from './item-list/item-overview/item-overview.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { BlogComponent } from './blog/blog.component';
     ContactMailComponent,
     UserDetailsComponent,
     OrderConfirmationComponent,
-    BlogComponent
+    BlogComponent,
+    ItemOverviewComponent
   ],
   imports: [
     BrowserModule,
