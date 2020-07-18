@@ -36,6 +36,10 @@ import { OrderConfirmationComponent } from "./order-confirmation/order-confirmat
 import { BlogComponent } from "./blog/blog.component";
 import { ItemOverviewComponent } from "./item-list/item-overview/item-overview.component";
 import { NgMarqueeModule } from "ng-marquee";
+import { FirebaseService } from "./firebase.service";
+import {AngularFireModule} from '@angular/fire';
+import {environment} from '../environments/environment';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,8 +74,15 @@ import { NgMarqueeModule } from "ng-marquee";
     BlogComponent,
     ItemOverviewComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgMarqueeModule],
-  providers: [SilverlifeService],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    NgMarqueeModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+  ],
+  providers: [SilverlifeService, FirebaseService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
