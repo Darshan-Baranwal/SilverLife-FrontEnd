@@ -26,7 +26,7 @@
     align-items: center;
 }
 
-.Banner div span{
+.Quote{
     font-size: 40px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color : rgb(51, 51, 51);
@@ -57,4 +57,31 @@
     width:7%;
     background-color: white;
     border: 0.5px solid rgb(175, 175, 175);
+}
+
+@media (max-width:785px){
+    .Slide1{
+        width:100%;
+    }
+
+    .Banner{
+        height: 240px;
+    }
+
+    .Quote{
+        font-size: 25px;
+        padding-top: 40px;
+    }
+
+    .Banner .SearchBox{
+        height: 20px;
+    }
+
+    .Banner div div{
+        padding: 2px;
+    }
+
+    .SearchButton{
+        width: 15%;
+    }
 }
