@@ -1,0 +1,539 @@
+{
+  "subCategories": [
+    {
+      "id": 1,
+      "name": "Bandage",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "Band aids",
+      "categoryId": 1
+    },
+    {
+      "id": 3,
+      "name": "Gauzes",
+      "categoryId": 1
+    },
+    {
+      "id": 4,
+      "name": "Medical tapes",
+      "categoryId": 1
+    },
+    {
+      "id": 5,
+      "name": "Anti Blister",
+      "categoryId": 1
+    },
+    {
+      "id": 6,
+      "name": "Antiseptic", 
+      "categoryId": 1
+    },
+    {
+      "id": 7,
+      "name": "Burns", 
+      "categoryId": 1
+    },
+    {
+      "id": 8,
+      "name": "Wound closure", 
+      "categoryId": 1
+    },
+    {
+      "id": 9,
+      "name": "First- Aid Box", 
+      "categoryId": 1
+    },
+    {
+      "id": 10,
+      "name": "Absorbent dressing", 
+      "categoryId": 2
+    },
+    {
+      "id": 11,
+      "name": "Siver dressing", 
+      "categoryId": 2
+    },
+    {
+      "id": 12,
+      "name": "Silicone dressing", 
+      "categoryId": 2
+    },
+    {
+      "id": 13,
+      "name": "Hot & cold pads", 
+      "categoryId": 3
+    },
+    {
+      "id": 14,
+      "name": "Electric massagers", 
+      "categoryId": 3
+    },
+    {
+      "id": 15,
+      "name": "Foot massagers", 
+      "categoryId": 3
+    },
+    {
+      "id": 16,
+      "name": "Manual massagers", 
+      "categoryId": 3
+    },
+    {
+      "id": 17,
+      "name": "Gels and Creams", 
+      "categoryId": 3
+    },
+    {
+      "id": 18,
+      "name": "Sprays & roll ons", 
+      "categoryId": 3
+    },
+    {
+      "id": 19,
+      "name": "Patches", 
+      "categoryId": 3
+    },
+    {
+      "id": 20,
+      "name": "Diapers", 
+      "categoryId": 4
+    },
+    {
+      "id": 21,
+      "name": "Underpad sheets", 
+      "categoryId": 4
+    },
+    {
+      "id": 22,
+      "name": "Washclots and wipes", 
+      "categoryId": 4
+    },
+    {
+      "id": 23,
+      "name": "Bed pan", 
+      "categoryId": 4
+    },
+    {
+      "id": 24,
+      "name": "Urinals", 
+      "categoryId": 4
+    },
+    {
+      "id": 25,
+      "name": "Urine drainage bag", 
+      "categoryId": 4
+    },
+    {
+      "id": 26,
+      "name": "Diaper disposal system", 
+      "categoryId": 4
+    },
+    {
+      "id": 27,
+      "name": "Medicine alarms", 
+      "categoryId": 5
+    },
+    {
+      "id": 28,
+      "name": "Pill boxes", 
+      "categoryId": 5
+    },
+    {
+      "id": 29,
+      "name": "Pill cutter", 
+      "categoryId": 5
+    },
+    {
+      "id": 30,
+      "name": "Pill crusher", 
+      "categoryId": 5
+    },
+    {
+      "id": 31,
+      "name": "Medicine cup", 
+      "categoryId": 5
+    },
+    {
+      "id": 32,
+      "name": "Medicine charts", 
+      "categoryId": 5
+    },
+    {
+      "id": 33,
+      "name": "Tooth Paste", 
+      "categoryId": 6
+    },
+	{
+		"id" :34,
+		"name":"Tooth brush",
+		"categoryId": 6
+	},
+    {
+      "id": 35,
+      "name": "Disposable oral swabs", 
+      "categoryId": 6
+    },
+    {
+      "id": 36,
+      "name": "Silicone brush", 
+      "categoryId": 6
+    },
+	{
+	  "id": 37,
+      "name": "Dental floss", 
+      "categoryId": 6
+	},
+    {
+      "id": 38,
+      "name": "Mouthwash", 
+      "categoryId": 6
+    },
+    {
+      "id": 39,
+      "name": "Tongue cleaners", 
+      "categoryId": 6
+    },
+    {
+      "id": 40,
+      "name": "Suction Swabs", 
+      "categoryId": 6
+    },
+    {
+      "id": 41,
+      "name": "Denture cups", 
+      "categoryId": 6
+    },
+    {
+      "id": 42,
+      "name": "Eye wash", 
+      "categoryId": 7
+    },
+    {
+      "id": 43,
+      "name": "Magnifiers", 
+      "categoryId": 7
+    },
+    {
+      "id": 44,
+      "name": "Eye lubricating drops", 
+      "categoryId": 7
+    },
+    {
+      "id": 45,
+      "name": "Lens cleansing", 
+      "categoryId": 7
+    },
+    {
+      "id": 46,
+      "name": "Eye patches", 
+      "categoryId": 7
+    },
+    {
+      "id": 47,
+      "name": "Eye packs", 
+      "categoryId": 7
+    },
+    {
+      "id": 48,
+      "name": "Inhalers / Spacer", 
+      "categoryId": 8
+    },
+    {
+      "id": 49,
+      "name": "Steam inhalers", 
+      "categoryId": 8
+    },
+    {
+      "id": 50,
+      "name": "Nebulizers", 
+      "categoryId": 8
+    },
+    {
+      "id": 51,
+      "name": "Spirometer", 
+      "categoryId": 8
+    },
+    {
+      "id": 52,
+      "name": "Suction tubes", 
+      "categoryId": 8
+    },
+    {
+      "id": 53,
+      "name": "Nasal saline drops", 
+      "categoryId": 8
+    },
+    {
+      "id": 54,
+      "name": "Masks", 
+      "categoryId": 8
+    },
+    {
+      "id": 55,
+      "name": "Nasal cleaners", 
+      "categoryId": 8
+    },
+    {
+      "id": 56,
+      "name": "Sanitizers", 
+      "categoryId": 9
+    },
+    {
+      "id": 57,
+      "name": "Liquid lotions and soaps", 
+      "categoryId": 9
+    },
+    {
+      "id": 58,
+      "name": "Shampoo caps", 
+      "categoryId": 9
+    },
+    {
+      "id": 59,
+      "name": "Cleansing wipes", 
+      "categoryId": 9
+    },
+    {
+      "id": 60,
+      "name": "Gloves", 
+      "categoryId": 9
+    },
+    {
+      "id": 61,
+      "name": "Body lotions", 
+      "categoryId": 9
+    },
+    {
+      "id": 62,
+      "name": "Medicated soaps", 
+      "categoryId": 9
+    },
+    {
+      "id": 63,
+      "name": "Ear buds", 
+      "categoryId": 10
+    },
+    {
+      "id": 64,
+      "name": "Hearing aids", 
+      "categoryId": 10
+    },
+    {
+      "id": 65,
+      "name": "Ear cleaners", 
+      "categoryId": 10
+    },
+    {
+      "id": 66,
+      "name": "Ear plugs", 
+      "categoryId": 10
+    },
+    {
+      "id": 67,
+      "name": "Alarms", 
+      "categoryId": 10
+    },
+    {
+      "id": 68,
+      "name": "Autoscope", 
+      "categoryId": 10
+    },
+    {
+      "id": 69,
+      "name": "Ear lift lobe", 
+      "categoryId": 10
+    },
+    {
+      "id": 70,
+      "name": "Ear drops for wax", 
+      "categoryId": 10
+    },
+    {
+      "id": 71,
+      "name": "Splints", 
+      "categoryId": 11
+    },
+    {
+      "id": 72,
+      "name": "Stick", 
+      "categoryId": 11
+    },
+    {
+      "id": 73,
+      "name": "Walker", 
+      "categoryId": 11
+    },
+    {
+      "id": 74,
+      "name": "Wheelchair", 
+      "categoryId": 11
+    },
+    {
+      "id": 75,
+      "name": "Stair Climber", 
+      "categoryId": 11
+    },
+    {
+      "id": 76,
+      "name": "Beds", 
+      "categoryId": 12
+    },
+    {
+      "id": 77,
+      "name": "Side rails", 
+      "categoryId": 12
+    },
+    {
+      "id": 78,
+      "name": "Over bed table", 
+      "categoryId": 12
+    },
+    {
+      "id": 79,
+      "name": "Foot step", 
+      "categoryId": 12
+    },
+    {
+      "id": 80,
+      "name": "Patient transfer board", 
+      "categoryId": 12
+    },
+    {
+      "id": 81,
+      "name": "Recliners", 
+      "categoryId": 12
+    },
+    {
+      "id": 82,
+      "name": "Bedside cabinets", 
+      "categoryId": 12
+    },
+    {
+      "id": 83,
+      "name": "High toilet seat", 
+      "categoryId": 13
+    },
+    {
+      "id": 84,
+      "name": "Commode", 
+      "categoryId": 13
+    },
+    {
+      "id": 85,
+      "name": "Shower chair", 
+      "categoryId": 13
+    },
+    {
+      "id": 86,
+      "name": "Grab Bars", 
+      "categoryId": 13
+    },
+    {
+      "id": 87,
+      "name": "Anti slip mats", 
+      "categoryId": 13
+    },
+    {
+      "id": 88,
+      "name": "Stool", 
+      "categoryId": 13
+    },
+    {
+      "id": 89,
+      "name": "Plates", 
+      "categoryId": 14
+    },
+    {
+      "id": 90,
+      "name": "Cups", 
+      "categoryId": 14
+    },
+    {
+      "id": 91,
+      "name": "Trays", 
+      "categoryId": 14
+    },
+    {
+      "id": 92,
+      "name": "Cutlery", 
+      "categoryId": 14
+    },
+    {
+      "id": 93,
+      "name": "Grip liner", 
+      "categoryId": 14
+    },
+    {
+      "id": 94,
+      "name": "Pulse oxymeter", 
+      "categoryId": 15
+    },
+    {
+      "id": 95,
+      "name": "Stethoscope", 
+      "categoryId": 15
+    },
+    {
+      "id": 96,
+      "name": "Lancets", 
+      "categoryId": 15
+    },
+    {
+      "id": 97,
+      "name": "Pens", 
+      "categoryId": 15
+    },
+    {
+      "id": 98,
+      "name": "Glucometer", 
+      "categoryId": 15
+    },
+    {
+      "id": 99,
+      "name": "Blood Pressure monitor", 
+      "categoryId": 15
+    },
+    {
+      "id": 100,
+      "name": "Thermometer", 
+      "categoryId": 15
+    },
+    {
+      "id": 101,
+      "name": "Weighing scale", 
+      "categoryId": 15
+    },
+    {
+      "id": 102,
+      "name": "Suction machine", 
+      "categoryId": 16
+    },
+    {
+      "id": 103,
+      "name": "BIPAP", 
+      "categoryId": 16
+    },
+    {
+      "id": 104,
+      "name": "CPAP", 
+      "categoryId": 16
+    },
+    {
+      "id": 105,
+      "name": "Oxygen concentrator", 
+      "categoryId": 16
+    },
+    {
+      "id": 106,
+      "name": "Oxygen cylinder", 
+      "categoryId": 16
+    },
+    {
+      "id": 107,
+      "name": "Air Mattress", 
+      "categoryId": 16
+    }
+  ]
+}
