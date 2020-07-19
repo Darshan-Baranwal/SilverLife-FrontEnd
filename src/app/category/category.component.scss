@@ -16,7 +16,6 @@
     flex-wrap: nowrap;
     border-radius: 15px;
     margin: 6px 6px 24px 6px;
-    // background-image: linear-gradient(to right, #D2FCFA, #FFFFFF);
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -28,6 +27,7 @@
 }
 
 .Card div{
+    width: 50%;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     flex: 1 0 auto;
     display: flex;
@@ -36,6 +36,7 @@
     align-items: center;
     h4 {
         margin: 0;
+        text-align: center;
     }
     p {
         height: 25px;
