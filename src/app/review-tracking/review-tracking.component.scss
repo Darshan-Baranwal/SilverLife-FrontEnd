@@ -95,3 +95,14 @@
 .Trackbutton:hover{
     background-color: #DD1336;
 }
+
+@media (max-width:785px){
+    .Data{
+        flex-direction: column;
+    }
+
+    .Column{
+        width:100%;
+    }
+    
+}

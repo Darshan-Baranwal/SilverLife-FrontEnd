@@ -27,4 +27,11 @@
 .Footer img{
     height: 80%;
     width: 15%;
+    padding:5px;
+}
+
+@media (max-width:785px){
+    .images{
+        width: 40%;
+    }
 }

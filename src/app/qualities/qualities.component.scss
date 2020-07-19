@@ -47,3 +47,13 @@
     width:50%;
     text-align: center;
 }
+
+@media (max-width:785px){
+    .Section{
+        flex-direction: column;
+    }
+    .Quality{
+        width: 100%;
+        padding-bottom: 40px;
+    }
+}
