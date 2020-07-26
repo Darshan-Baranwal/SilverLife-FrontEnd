@@ -66,14 +66,29 @@
 @media (max-width:785px){
     .Account{
         height: 900px;
-        padding: 2% 2%;
+        padding: 2%;
     }
 
     .Account .list{
         width: 250px;
+        float: none;
+        margin: auto;
     }
 
     .Account .working{
         width: 250px;
+    }
+
+    .Account .working h1{
+        text-align: center;
+    }
+
+    .Account .working .login{
+        padding: 0%;
+    }
+
+    .form{
+        padding: 4%;
+        margin: 5%;
     }
 }
