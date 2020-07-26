@@ -7,7 +7,7 @@ import { IProductDetail } from "../ProductModel";
   styleUrls: ["./item-overview.component.scss"],
 })
 export class ItemOverviewComponent implements OnInit {
-  @Input() details: IProductDetail;
+  @Input() details;
   selectedHeading: string;
   constructor() {}
 
