@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Gauze (5cm X 5cm) - pk of 100",
-      "subCategoryId": 3	,
+      "subCategoryId": 3,
       "price": 1000,
       "currency": "Rs",
       "imgAddress": "",
@@ -19,7 +19,7 @@
     {
       "id": 2,
       "name": "Gauze (7.5cm X 7.5cm) - pk of 100",
-      "subCategoryId": 3	,
+      "subCategoryId": 3,
       "price": 1000,
       "currency": "Rs",
       "imgAddress": "",
@@ -35,7 +35,7 @@
     {
       "id": 3,
       "name": "Gauze (10cm X 10cm) - pk of 100",
-      "subCategoryId": 3	,
+      "subCategoryId": 3,
       "price": 1000,
       "currency": "Rs",
       "imgAddress": "",
@@ -51,7 +51,7 @@
     {
       "id": 4,
       "name": "Sterile Gauze - 5 pc",
-      "subCategoryId": 3	,
+      "subCategoryId": 3,
       "price": 1000,
       "currency": "Rs",
       "imgAddress": "",
@@ -67,7 +67,7 @@
     {
       "id": 5,
       "name": "Sterile Gauze - 2 pc",
-      "subCategoryId": 3	,
+      "subCategoryId": 3,
       "price": 1000,
       "currency": "Rs",
       "imgAddress": "",
@@ -128,7 +128,7 @@
       "overview": "For cleaning of skin ",
       "Precautions": "Use immediately after opening of pack"
     },
-	{
+    {
       "id": 9,
       "name": "Bandage roll",
       "subCategoryId": 1,
@@ -144,7 +144,7 @@
       "overview": "For holding gauze pc and cotton",
       "Precautions": "Single use"
     },
-	{
+    {
       "id": 10,
       "name": "Gamjee roll",
       "subCategoryId": 1,
@@ -160,7 +160,7 @@
       "overview": "For holding gauze pc and cotton",
       "Precautions": "Single use"
     },
-	{
+    {
       "id": 11,
       "name": "Crepe bandage - 4 inch",
       "subCategoryId": 1,
@@ -176,7 +176,7 @@
       "overview": "For relief of sprains thru compression",
       "Precautions": ""
     },
-	{
+    {
       "id": 12,
       "name": "Crepe bandage - 6 inch",
       "subCategoryId": 1,
@@ -192,7 +192,7 @@
       "overview": "For relief of sprains thru compression",
       "Precautions": ""
     },
-	{
+    {
       "id": 13,
       "name": "Crepe bandage - colored",
       "subCategoryId": 1,
@@ -208,7 +208,7 @@
       "overview": "For relief of sprains thru compression",
       "Precautions": ""
     },
-	{
+    {
       "id": 14,
       "name": "Elastomull",
       "subCategoryId": 1,
@@ -300,8 +300,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,      
-	  "overview": "For holding gauze pc and cotton",
+      "selectedCount": 1,
+      "overview": "For holding gauze pc and cotton",
       "Precautions": "Single use"
     },
     {
@@ -317,7 +317,7 @@
       "salePercent": 40,
       "percentageSymbol": "%",
       "selectedCount": 1,
-	  "overview": "To cover the wound",
+      "overview": "To cover the wound",
       "Precautions": "Single use"
     },
     {
@@ -333,7 +333,7 @@
       "salePercent": 40,
       "percentageSymbol": "%",
       "selectedCount": 1,
-	  "overview": "Provides comfort in blisters",
+      "overview": "Provides comfort in blisters",
       "Precautions": "Single use"
     },
     {
@@ -349,7 +349,7 @@
       "salePercent": 40,
       "percentageSymbol": "%",
       "selectedCount": 1,
-	  "overview": "Provides comfort in blisters",
+      "overview": "Provides comfort in blisters",
       "Precautions": "Single use"
     },
     {
@@ -365,7 +365,7 @@
       "salePercent": 40,
       "percentageSymbol": "%",
       "selectedCount": 1,
-	  "overview": "Anti microbial function",
+      "overview": "Anti microbial function",
       "Precautions": ""
     },
     {
@@ -381,7 +381,7 @@
       "salePercent": 40,
       "percentageSymbol": "%",
       "selectedCount": 1,
-	  "overview": "Anti microbial function",
+      "overview": "Anti microbial function",
       "Precautions": ""
     },
     {
@@ -397,7 +397,7 @@
       "salePercent": 40,
       "percentageSymbol": "%",
       "selectedCount": 1,
-	  "overview": "Anti microbial function",
+      "overview": "Anti microbial function",
       "Precautions": ""
     },
     {
@@ -412,8 +412,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "Anti microbial function",
+      "selectedCount": 1,
+      "overview": "Anti microbial function",
       "Precautions": ""
     },
     {
@@ -428,8 +428,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "Anti microbial function",
+      "selectedCount": 1,
+      "overview": "Anti microbial function",
       "Precautions": ""
     },
     {
@@ -444,8 +444,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "To be used on burn area",
+      "selectedCount": 1,
+      "overview": "To be used on burn area",
       "Precautions": ""
     },
     {
@@ -460,8 +460,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "Small size first aid kit",
+      "selectedCount": 1,
+      "overview": "Small size first aid kit",
       "Precautions": ""
     },
     {
@@ -476,8 +476,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "Large size first aid kit",
+      "selectedCount": 1,
+      "overview": "Large size first aid kit",
       "Precautions": ""
     },
     {
@@ -492,8 +492,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "To be put on the cuts on the skin",
+      "selectedCount": 1,
+      "overview": "To be put on the cuts on the skin",
       "Precautions": "Single use"
     },
     {
@@ -508,8 +508,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "Used for dry bedsores",
+      "selectedCount": 1,
+      "overview": "Used for dry bedsores",
       "Precautions": "Single use"
     },
     {
@@ -524,8 +524,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "Used for dry bedsores",
+      "selectedCount": 1,
+      "overview": "Used for dry bedsores",
       "Precautions": "Single use"
     },
     {
@@ -540,8 +540,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "Small size bed sore",
+      "selectedCount": 1,
+      "overview": "Small size bed sore",
       "Precautions": "Single use"
     },
     {
@@ -556,8 +556,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "Large size bed sore",
+      "selectedCount": 1,
+      "overview": "Large size bed sore",
       "Precautions": "Single use"
     },
     {
@@ -572,8 +572,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "For bedsore on lower back / Buttock area",
+      "selectedCount": 1,
+      "overview": "For bedsore on lower back / Buttock area",
       "Precautions": "Single use"
     },
     {
@@ -588,8 +588,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "For bedsore in Heel area",
+      "selectedCount": 1,
+      "overview": "For bedsore in Heel area",
       "Precautions": "Single use"
     },
     {
@@ -604,8 +604,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "Silver containing anti microbial bedsore dressing",
+      "selectedCount": 1,
+      "overview": "Silver containing anti microbial bedsore dressing",
       "Precautions": "Single use"
     },
     {
@@ -620,8 +620,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "Silver containing anti microbial bedsore dressing",
+      "selectedCount": 1,
+      "overview": "Silver containing anti microbial bedsore dressing",
       "Precautions": ""
     },
     {
@@ -636,8 +636,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "Silver containing anti microbial bedsore dressing",
+      "selectedCount": 1,
+      "overview": "Silver containing anti microbial bedsore dressing",
       "Precautions": ""
     },
     {
@@ -652,8 +652,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "For giving heat to the sprain area",
+      "selectedCount": 1,
+      "overview": "For giving heat to the sprain area",
       "Precautions": ""
     },
     {
@@ -668,8 +668,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "For giving heat to the sprain area",
+      "selectedCount": 1,
+      "overview": "For giving heat to the sprain area",
       "Precautions": ""
     },
     {
@@ -684,8 +684,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "Gives pain relief to the desired area",
+      "selectedCount": 1,
+      "overview": "Gives pain relief to the desired area",
       "Precautions": ""
     },
     {
@@ -700,8 +700,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "Gives pain relief to the desired area",
+      "selectedCount": 1,
+      "overview": "Gives pain relief to the desired area",
       "Precautions": ""
     },
     {
@@ -716,8 +716,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "Gives pain relief to the desired area thru heat",
+      "selectedCount": 1,
+      "overview": "Gives pain relief to the desired area thru heat",
       "Precautions": ""
     },
     {
@@ -732,8 +732,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "Small size massager",
+      "selectedCount": 1,
+      "overview": "Small size massager",
       "Precautions": ""
     },
     {
@@ -748,8 +748,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "4 attachment massager",
+      "selectedCount": 1,
+      "overview": "4 attachment massager",
       "Precautions": ""
     },
     {
@@ -764,8 +764,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "Electric massager - Premium quality",
+      "selectedCount": 1,
+      "overview": "Electric massager - Premium quality",
       "Precautions": ""
     },
     {
@@ -780,8 +780,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "Foot massager - Premium quality",
+      "selectedCount": 1,
+      "overview": "Foot massager - Premium quality",
       "Precautions": ""
     },
     {
@@ -796,8 +796,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "For back relief",
+      "selectedCount": 1,
+      "overview": "For back relief",
       "Precautions": ""
     },
     {
@@ -812,8 +812,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "For back relief",
+      "selectedCount": 1,
+      "overview": "For back relief",
       "Precautions": ""
     },
     {
@@ -828,8 +828,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "For scalp relief",
+      "selectedCount": 1,
+      "overview": "For scalp relief",
       "Precautions": ""
     },
     {
@@ -844,8 +844,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "for relief of fingers",
+      "selectedCount": 1,
+      "overview": "for relief of fingers",
       "Precautions": ""
     },
     {
@@ -860,8 +860,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "To be used to give relief to various points",
+      "selectedCount": 1,
+      "overview": "To be used to give relief to various points",
       "Precautions": ""
     },
     {
@@ -876,8 +876,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "For pain relief",
+      "selectedCount": 1,
+      "overview": "For pain relief",
       "Precautions": ""
     },
     {
@@ -892,8 +892,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "For pain relief",
+      "selectedCount": 1,
+      "overview": "For pain relief",
       "Precautions": ""
     },
     {
@@ -908,8 +908,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "For pain relief",
+      "selectedCount": 1,
+      "overview": "For pain relief",
       "Precautions": ""
     },
     {
@@ -924,8 +924,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "For pain relief",
+      "selectedCount": 1,
+      "overview": "For pain relief",
       "Precautions": ""
     },
     {
@@ -940,8 +940,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "For pain relief",
+      "selectedCount": 1,
+      "overview": "For pain relief",
       "Precautions": ""
     },
     {
@@ -956,8 +956,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "For pain relief",
+      "selectedCount": 1,
+      "overview": "For pain relief",
       "Precautions": ""
     },
     {
@@ -972,8 +972,8 @@
       "isPopular": false,
       "salePercent": 40,
       "percentageSymbol": "%",
-      "selectedCount": 1,,
-	  "overview": "For pain relief",
+      "selectedCount": 1,
+      "overview": "For pain relief",
       "Precautions": ""
     }
   ]

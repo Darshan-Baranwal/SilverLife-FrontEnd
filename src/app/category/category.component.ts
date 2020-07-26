@@ -24,7 +24,7 @@ export class CategoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.http
-      .get("../assets/Cards/Categories.json")
+      .get("../assets/JsonData/Categories.json")
       .pipe(
         map((response: Response) => {
           return response;
@@ -42,7 +42,7 @@ export class CategoryComponent implements OnInit {
     this.selectedCategory = category;
     this.http
       .get<{ subCategories: SubCategory[] }>(
-        "../assets/SubCategories/SubCategories.json"
+        "../assets/JsonData/SubCategories.json"
       )
       .pipe(
         map((response) => {

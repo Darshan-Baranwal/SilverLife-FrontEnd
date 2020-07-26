@@ -50,10 +50,10 @@ export class ItemListComponent implements OnInit {
             return combineLatest([
               of(category),
               this.http
-                .get("../assets/Products/Products.json")
+                .get("../assets/JsonData/Products.json")
                 .pipe(catchError((err) => of(err))),
               this.http
-                .get("../assets/SubCategories/SubCategories.json")
+                .get("../assets/JsonData/SubCategories.json")
                 .pipe(catchError((err) => of(err))),
             ]);
           }),

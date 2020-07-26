@@ -4,7 +4,7 @@ import { SilverlifeService } from "../silverlife.service";
 import { filter, switchMap, catchError, map } from "rxjs/operators";
 import { combineLatest, of } from "rxjs";
 import { HttpClient } from "@angular/common/http";
-import { IProduct } from '../item-list/ProductModel';
+import { IProduct } from "../item-list/ProductModel";
 
 @Component({
   selector: "app-product-detail",
@@ -35,7 +35,7 @@ export class ProductDetailComponent implements OnInit {
           return combineLatest([
             of(params),
             this.http
-              .get("../assets/Products/Products.json")
+              .get("../assets/JsonData/Products.json")
               .pipe(catchError((err) => of(err))),
           ]);
         }),
