@@ -9,7 +9,7 @@
 
 .Account .list{
     background-color: white;
-    width: 250px;
+    width: 17%;
     list-style: none;
 
     padding: 3%;
@@ -66,5 +66,14 @@
 @media (max-width:785px){
     .Account{
         height: 900px;
+        padding: 2% 2%;
+    }
+
+    .Account .list{
+        width: 250px;
+    }
+
+    .Account .working{
+        width: 250px;
     }
 }
