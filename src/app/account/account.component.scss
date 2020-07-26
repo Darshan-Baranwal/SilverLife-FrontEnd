@@ -65,18 +65,20 @@
 
 @media (max-width:785px){
     .Account{
-        height: 900px;
+        height: 100%;
         padding: 2%;
     }
 
     .Account .list{
-        width: 250px;
+        width: 90%;
         float: none;
         margin: auto;
     }
 
     .Account .working{
-        width: 250px;
+        width: 100%;
+        float: none;
+        margin: auto;
     }
 
     .Account .working h1{
