@@ -1,6 +1,6 @@
 .Justarrived{
     position: relative; 
-    top:100px;
+    top:65px;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -19,16 +19,19 @@
 
 .Justarrived ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
     padding-left: 10%;
     /* padding: 1% 10% 0 15%; */
     width: 75%;
     margin-top: 3%;
+    
 }
 
 .Justarrived ul li{
+    border: rgb(211, 211, 211) solid 1px;
+    padding: 2% 0 0 2%;
     list-style: none;
     width: 20%;
     height: 300px;
@@ -42,7 +45,6 @@
     max-height: 75%;
     height: 60%;
     width: 75%;
-    border-bottom: rgb(211, 211, 211) solid 1px;
 }
 
 .Justarrived ul li h3{
@@ -50,7 +52,6 @@
     margin-top: 1px;
     margin-bottom: 1px;
     width: 80%;
-    border-bottom: rgb(211, 211, 211) solid 1px;
     font-weight: normal;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-bottom: 2px;
@@ -61,4 +62,28 @@
     color: red;
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media (max-width:785px){
+    .Justarrived ul{
+        width: 100%;
+        padding-left: 0;
+        
+    }
+    .Justarrived ul li{
+        width: 45%;
+        height: 200px;
+        padding: 4% 0 0 4%;
+        
+    }
+
+    .Justarrived ul li img{
+        height: 100px;
+        width: 100px;
+    }
+
+    .Justarrived ul li h3{
+        font-size: 15px;
+        width: 100%;
+    }
 }

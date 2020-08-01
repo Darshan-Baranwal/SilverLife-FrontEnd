@@ -3,11 +3,6 @@
     [header]="overviewOfSubcategory?.name"
     [hideAllNewLink]="hideAllNewLink"
   ></app-item-list-header>
-  <app-item-overview
-    *ngIf="overviewOfSubcategory"
-    style="width: 100%;"
-    [details]="overviewOfSubcategory?.subcategory_detail"
-  ></app-item-overview>
   <ul>
     <li
       *ngFor="let product of productList"
@@ -15,7 +10,7 @@
     >
       <img src="../../assets/PillBox.jpg" />
       <h3>{{ product.name }}</h3>
-      <span>{{ product.price }}</span>
+      <span>₹{{ product.price }}</span>
     </li>
   </ul>
   <!-- <ul>
