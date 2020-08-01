@@ -1,18 +1,17 @@
 <div class="CartSection">
     <div class="table" *ngIf = "cartProductList.length>0;else noItemInCart">
-        <ul class="tableRow">
-            <li class="delBtn"> </li>
+        <ul class="tableRow Header">
             <li class="Pic"> </li>
             <li class="Name"><b>Product</b></li>
             <li class="Pricing"><b>Price</b></li>
             <li class="Qty"><b>Quantity</b></li>
             <li class="total"><b>Total</b></li>
+            <li class="delBtn"> </li>
         </ul>
         <ul class="tableRow" *ngFor="let product of cartProductList">
-            <li class="delBtn" (click) = "removeProduct(product)">X </li>
             <li class="Pic"><img src="../../assets/SurgicalTape.jpg"> </li>
             <li class="Name"><span>Datt Velpore Paper Surgical Tape, Dispenser Pack</span></li>
-            <li class="Pricing"><span>{{product.price}}</span></li>
+            <li class="Pricing Price"><span>₹{{product.price}}</span></li>
             <li class="Qty">
                 <div class="Quantity">
                     <input type="button" value="-" class="minus" (click)= "changeProductCount(product, -1)">
@@ -20,14 +19,15 @@
                     <input type="button" value="+" class="plus"  (click)= "changeProductCount(product, 1)">
                 </div>
             </li>
-            <li class="total">{{product.price * product.selectedCount}}</li>
+            <li class="total DesktopOnly">₹{{product.price * product.selectedCount}}</li>
+            <li class="delBtn" (click) = "removeProduct(product)"> X </li>
         </ul>
     </div>
     <ng-template #noItemInCart>
       <div class="no-item-cart">You Don't have any item into your card.</div>
       </ng-template>
     <div class="Pricetable" *ngIf = "cartProductList.length>0">
-        <ul class="tableRow">
+        <ul class="tableRow priceRow">
             <li>
                 <span><b>Price</b></span>
             </li>
@@ -35,7 +35,7 @@
                 <span>₹ {{getTotalProductAmount()}}</span>
             </li>
         </ul>
-        <ul class="tableRow">
+        <ul class="tableRow priceRow">
             <li>
                 <span><b>Delivery Fee</b></span>
             </li>
@@ -43,7 +43,7 @@
                 <span>₹ {{deliveryFee}}</span>
             </li>
         </ul>
-        <ul class="tableRow">
+        <ul class="tableRow priceRow Price">
             <li>
                 <span><b>Total</b></span>
             </li>
@@ -52,7 +52,7 @@
             </li>
         </ul>
         <div style="display: flex; justify-content: space-between;align-items: center;padding-top: 5%;">
-            <input type="button" value="Checkout" class="SizeSelect" (click)="navigateToUserInfoPage()">
+            <input type="button" value="Checkout" class="button CheckoutBtn" (click)="navigateToUserInfoPage()">
             <a style="color: red;" routerLink = "/home">Continue shopping</a>
         </div>
     </div>

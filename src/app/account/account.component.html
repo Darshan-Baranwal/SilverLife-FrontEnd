@@ -1,39 +1,47 @@
 <div class="Account">
-    <div>
-        <ul class="list">
-            <li>Dashboard</li>
-            <li>My Orders</li>
-            <li>Order Tracking</li>
-            <li>WishList</li>
-            <li>Edit Profile</li>
-            <li>Forgot Password</li>
-            <li>Contact Us</li>
-        </ul>
+  <div>
+    <ul class="list">
+      <li>Dashboard</li>
+      <li>My Orders</li>
+      <li>Order Tracking</li>
+      <li>WishList</li>
+      <li>Edit Profile</li>
+      <li>Forgot Password</li>
+      <li>Contact Us</li>
+    </ul>
+  </div>
+  <div class="working">
+    <h1>My Account</h1>
+    <div class="login">
+      <div class="heading">
+        <div>Login</div>
+        <div>Register</div>
+      </div>
+      <div class="form">
+        <label for="username">
+          Username or email address<span class="required">*</span>
+        </label>
+        <input id="username" class="textbox" type="text" />
+        <label for="password"> Password<span class="required">*</span> </label>
+        <input class="textbox" type="password" id="password" />
+        <label for="rememberMe">
+          <input
+            type="checkbox"
+            id="rememberMe"
+            value=""
+            style="display: inline-block;"
+          />
+          Remember Me
+        </label>
+        <input
+          class="Loginbutton button"
+          type="button"
+          value="Log In"
+          (click)="registerUser()"
+        />
+        <a>Forgot Password</a>
+      </div>
     </div>
-    <div class="working">
-        <h1>My Account</h1>
-        <div class="login">
-            <div class="heading">
-                <div>Login</div>
-                <div>Register</div>
-            </div>
-            <div class="form">
-                <label for="username">
-                    Username or email address<span class="required">*</span>
-                </label>
-                <input id="username" class="textbox" type="text">
-                <label for="password">
-                    Password<span class="required">*</span>
-                </label>
-                <input class="textbox" type="password" id="password">
-                <label for="rememberMe">
-                    <input type="checkbox" id="rememberMe" value="" style="display: inline-block;">
-                    Remember Me
-                </label>
-                <input class="Loginbutton" type="button" value="Log In" (click) = "registerUser()">
-                <a>Forgot Password</a>
-            </div>
-        </div>
-    </div>
-    <!-- <app-contact-mail></app-contact-mail> -->
+  </div>
+  <!-- <app-contact-mail></app-contact-mail> -->
 </div>
