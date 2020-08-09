@@ -7,7 +7,7 @@
       >
         Overview
       </li>
-      <li
+      <!-- <li
         (click)="showDetail('usage')"
         [class.active]="selectedHeading === 'usage'"
       >
@@ -18,7 +18,7 @@
         [class.active]="selectedHeading === 'specification'"
       >
         Specifications
-      </li>
+      </li> -->
       <li
         (click)="showDetail('precaution')"
         [class.active]="selectedHeading === 'precaution'"
@@ -34,7 +34,7 @@
           {{ details?.overview }}
         </p>
       </li>
-      <li *ngIf="selectedHeading === 'usage'">
+      <!-- <li *ngIf="selectedHeading === 'usage'">
         <p>
           {{ details?.usage }}
         </p>
@@ -43,7 +43,7 @@
         <p>
           {{ details?.specification }}
         </p>
-      </li>
+      </li> -->
       <li *ngIf="selectedHeading === 'precaution'">
         <p>{{ details?.precaution }}</p>
       </li>

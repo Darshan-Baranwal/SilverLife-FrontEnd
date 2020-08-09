@@ -7,7 +7,7 @@
   width: 100%;
   align-content: center;
   text-align: center;
-  height: 700px;
+  height: 600px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -34,9 +34,42 @@
   text-align: left;
   padding: 0 20px;
   width: 50%;
-
+  margin: auto;
 }
 
 .rightBorder{
   border-right: 1px solid grey;
+}
+
+h2,h4{
+  //margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.ContnuShpg{
+margin-top: 10px;
+width: 200px;
+font-size: 20px;
+}
+
+@media (max-width:785px){
+  .OrderConfirmation{
+    top:100px;
+  }
+  .success{
+    height: 100px;
+    width: 100px;
+  }
+  .details{
+    width: 95%;
+    margin: 7px;
+  }
+  .detailsRow{
+    height: 50px;
+  }
+
+  h2,h4{
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
 }

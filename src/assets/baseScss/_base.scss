@@ -80,6 +80,9 @@ body {
   .DesktopOnly {
     display: none;
   }
+  .LongtextBox {
+    width: 300px;
+  }
 }
 
 @media (min-width: 785px) {

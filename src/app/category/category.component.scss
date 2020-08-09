@@ -91,36 +91,67 @@
             width: 32px;
             height: 32px;
         }
-    h3 {
-        display: flex;
-        justify-content: center;
-        font-size: 25px;
-    }
-    .sub-category-list {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        flex: 1 1 auto;
-        flex-wrap: wrap;
-        text-align: center;
-        padding : 0 50px 50px 50px;
-        align-items: center;
-        .sub-category-cards {
-            padding: 16px;
-            font-size: 20px;
-            width: 200px;
-            height: 70px;
-            margin: 8px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            align-content: center;
+        h3 {
             display: flex;
-            align-items: center;
             justify-content: center;
-            :hover {
-                transform: scale(1.1);
+            text-align: center;
+            font-size: 25px;
+        }
+        .sub-category-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex: 1 1 auto;
+            flex-wrap: wrap;
+            text-align: center;
+            padding : 0 50px 50px 50px;
+            align-items: center;
+            .sub-category-cards {
+                padding: 16px;
+                font-size: 20px;
+                width: 200px;
+                height: 70px;
+                margin: 8px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                align-content: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                :hover {
+                    transform: scale(1.1);
+                }
             }
         }
     }
 }
+
+@media (max-width:785px){
+    .sub-category-container{
+        //background-color: transparent;
+        overflow: scroll;
+        top: 65px;
+        padding-top: 0;
+        .modal-content{
+            background-color: rgba(255, 255, 255);
+            width: 100%;
+            margin:0;
+            height: 100%;
+            padding: 0;
+            border: 1px solid #ffffff;
+            h3 {
+                position: relative;
+                top:15px;
+                font-size: 20px;
+            }
+            .sub-category-list{
+                //justify-content: flex-start;
+                padding : 0;
+                .sub-category-cards{
+                    width: 30%;
+                    height: 40px;
+                }
+            }
+        }
+    }
 }
