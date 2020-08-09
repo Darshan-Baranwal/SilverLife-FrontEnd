@@ -9,7 +9,14 @@ import { FirebaseApiService } from "../firebase-api.service";
 import { ActivatedRoute, Router } from "@angular/router";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { IUser } from "../iuser.model";
-import { map, filter, switchMap, takeUntil } from "rxjs/operators";
+import {
+  map,
+  filter,
+  switchMap,
+  takeUntil,
+  flatMap,
+  tap,
+} from "rxjs/operators";
 import { of, Subject, Subscription } from "rxjs";
 import { SilverlifeService } from "../silverlife.service";
 
@@ -56,7 +63,6 @@ export class LoginRegisterComponent implements OnInit, OnDestroy {
     }
   }
   registerUser() {
-    debugger;
     this.subscriptionObj = this.fireBaseAPi
       .getUser()
       .pipe(
@@ -73,46 +79,54 @@ export class LoginRegisterComponent implements OnInit, OnDestroy {
           return data.filter((v) => {
             return v.data.email === this.loginRegisterForm.value.email;
           });
+        }),
+        tap((data) => {
+          if (data.length > 0) {
+            if (this.subscriptionObj) this.subscriptionObj.unsubscribe();
+            alert("Email id is duplicate");
+            this.loginRegisterForm.get("email").setValue("");
+          } else {
+            if (this.subscriptionObj) this.subscriptionObj.unsubscribe();
+            this.fireBaseAPi
+              .createUser({
+                first_name: this.loginRegisterForm.value.userName,
+                email: this.loginRegisterForm.value.email,
+                password: this.loginRegisterForm.value.password,
+              })
+              .then((res) => {
+                alert("user registered successfully");
+                this.router.navigate(["../login"], {
+                  relativeTo: this.activateRoute,
+                });
+                this.isLogin = true;
+              })
+              .catch((rej) => alert("rejected " + rej));
+          }
         })
       )
-      .subscribe((data) => {
-        if (data.length > 0) {
-          alert("Email id is duplicate");
-          this.loginRegisterForm.get("email").setValue("");
-          if (this.subscriptionObj) this.subscriptionObj.unsubscribe();
-        } else {
-          this.fireBaseAPi
-            .createUser({
-              first_name: this.loginRegisterForm.value.userName,
-              email: this.loginRegisterForm.value.email,
-              password: this.loginRegisterForm.value.password,
-            })
-            .then((res) => {
-              alert("user registered successfully");
-              this.router.navigate(["../login"], {
-                relativeTo: this.activateRoute,
-              });
-              this.isLogin = true;
-              if (this.subscriptionObj) this.subscriptionObj.unsubscribe();
-            })
-            .catch((rej) => alert("rejected " + rej));
-        }
-      });
+      .subscribe();
   }
   loginUser() {
-    debugger;
     const user: IUser = {
       email: this.loginRegisterForm.value.email,
       password: this.loginRegisterForm.value.password,
     };
     this.fireBaseAPi
       .loginUser(user)
-      .pipe(takeUntil(this.destroy$))
-      .subscribe((data: any) => {
-        this.service.loggedInUser = data;
-        console.log(data);
-        if (data) this.router.navigate(["/home"]);
-      });
+      .pipe(
+        takeUntil(this.destroy$),
+        switchMap((users: any) => {
+          console.log(users);
+          if (users.length === 0) {
+            alert("User not exist Please register");
+          } else {
+            this.service.loggedInUser = users;
+            this.router.navigate(["/home"]);
+          }
+          return users;
+        })
+      )
+      .subscribe();
     // .get()
     // .subscribe((data) => {
     //   console.log(data);

@@ -18,12 +18,6 @@ export class FirebaseApiService {
   loginUser(user: IUser) {
     return this.firestore
       .collection("user", (ref) => ref.where("email", "==", user.email))
-      .valueChanges()
-      .pipe(
-        flatMap((users) => {
-          console.log(users);
-          return users;
-        })
-      );
+      .valueChanges();
   }
 }
