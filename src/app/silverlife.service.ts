@@ -15,6 +15,7 @@ export class SilverlifeService {
   cartList: IProduct[] = [];
   cartTotalAmount: number;
   loggedInUser: IUser = null;
+  sendUserDetail = new BehaviorSubject<IUser>(null);
   constructor(private router: Router) { }
   navigateToProductListpage(routeLink: string, majorCategory, category: ICategory, subcategory: SubCategory) {
     const queryParams = CATEGORY_QUERY_PARAMETER.query;

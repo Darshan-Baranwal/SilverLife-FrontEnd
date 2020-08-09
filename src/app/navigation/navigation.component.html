@@ -89,7 +89,17 @@
       <img src="../../assets/Search.png" alt="Search" />
     </div>
     <div class="Icon" routerLink="account">
-      <img src="../../assets/Login.png" alt="Login" />
+      <img
+        src="../../assets/Login.png"
+        alt="Login"
+        *ngIf="!service.sendUserDetail.value"
+      />
+      <span *ngIf="!!service.sendUserDetail.value">{{
+        service.sendUserDetail.value.first_name.slice(0, 1)
+      }}</span>
+    </div>
+    <div *ngIf="!!service.sendUserDetail.value" (click)="logout()">
+      Logout
     </div>
     <div class="Icon" (click)="navigateTo('shopping-cart')">
       <img src="../../assets/Cart.png" alt="Cart" />

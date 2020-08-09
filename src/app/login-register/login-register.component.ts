@@ -120,8 +120,9 @@ export class LoginRegisterComponent implements OnInit, OnDestroy {
           if (users.length === 0) {
             alert("User not exist Please register");
           } else {
-            this.service.loggedInUser = users;
+            this.service.loggedInUser = users[0];
             this.router.navigate(["/home"]);
+            this.service.sendUserDetail.next(users[0]);
           }
           return users;
         })
