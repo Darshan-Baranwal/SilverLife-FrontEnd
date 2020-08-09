@@ -79,6 +79,7 @@ export class LoginRegisterComponent implements OnInit, OnDestroy {
         if (data.length > 0) {
           alert("Email id is duplicate");
           this.loginRegisterForm.get("email").setValue("");
+          if (this.subscriptionObj) this.subscriptionObj.unsubscribe();
         } else {
           this.fireBaseAPi
             .createUser({
@@ -92,6 +93,7 @@ export class LoginRegisterComponent implements OnInit, OnDestroy {
                 relativeTo: this.activateRoute,
               });
               this.isLogin = true;
+              if (this.subscriptionObj) this.subscriptionObj.unsubscribe();
             })
             .catch((rej) => alert("rejected " + rej));
         }
@@ -109,6 +111,7 @@ export class LoginRegisterComponent implements OnInit, OnDestroy {
       .subscribe((data: any) => {
         this.service.loggedInUser = data;
         console.log(data);
+        if (data) this.router.navigate(["/home"]);
       });
     // .get()
     // .subscribe((data) => {
