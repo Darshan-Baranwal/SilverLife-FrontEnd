@@ -14,7 +14,7 @@ export class AdvisoryComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get<{articles: {name: "Aging in Place"}[]}>('../assets/Articles/Articles.json')
+    this.http.get<{articles: {name: "Aging in Place"}[]}>('../assets/JsonData/Articles.json')
     .pipe(
         map((response) => {
             return response.articles;
