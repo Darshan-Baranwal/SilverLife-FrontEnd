@@ -119,6 +119,6 @@ export class LoginRegisterComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
-    this.subscriptionObj.unsubscribe();
+    if (this.subscriptionObj) this.subscriptionObj.unsubscribe();
   }
 }
