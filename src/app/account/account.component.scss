@@ -1,96 +1,95 @@
-.Account{
-    background-color: #FAFAFA;
-    position: relative;
-    top:65px;
-    padding: 2% 15%;
-    height: 700px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.Account {
+  background-color: #fafafa;
+  position: relative;
+  top: 65px;
+  padding: 2% 15%;
+  height: 700px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.Account .list{
-    background-color: white;
-    width: 17%;
-    list-style: none;
+.Account .list {
+  background-color: white;
+  width: 17%;
+  list-style: none;
 
-    padding: 3%;
-    float:left;
+  padding: 3%;
+  float: left;
 }
 
-.Account .list li{
-    color: rgb(223, 34, 65);
-    font-size: 18px;
-    padding: 8px;
-    font-weight: 500;
-    border-bottom: 1px solid rgb(224, 224, 224);
+.Account .list li {
+  color: rgb(223, 34, 65);
+  font-size: 18px;
+  padding: 8px;
+  font-weight: 500;
+  border-bottom: 1px solid rgb(224, 224, 224);
 }
 
 .Account .list li:active,
-.Account .list li:hover{
-    color: #333333;
+.Account .list li:hover {
+  color: #333333;
 }
 
-.Account .working{
-    float: right;
-    width: 72%;
-    color:#333333;
-
+.Account .working {
+  float: right;
+  width: 72%;
+  color: #333333;
 }
 
-.Account .working h1{
-    border-bottom: 1px solid rgb(224, 224, 224);
-    padding-bottom: 3%;
+.Account .working h1 {
+  border-bottom: 1px solid rgb(224, 224, 224);
+  padding-bottom: 3%;
 }
 
-.Account .working .login{
-    padding: 2% 10%;
-    text-align: center;
+.Account .working .login {
+  padding: 2% 10%;
+  text-align: center;
 }
 
-.Account .working .login .heading{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
+.Account .working .login .heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.Account .working .login .heading div{
-    margin: 0 10%;
+.Account .working .login .heading div {
+  margin: 0 10%;
 }
 
 .Account .working .login .heading div:hover,
-.Account .working .login .heading div:active{
-    color:rgb(223, 34, 65);
-    border-bottom: 1px solid rgb(223, 34, 65);
+.Account .working .login .heading div.active {
+  color: rgb(223, 34, 65);
+  border-bottom: 1px solid rgb(223, 34, 65);
 }
 
-@media (max-width:785px){
-    .Account{
-        height: 100%;
-        padding: 2%;
-    }
+@media (max-width: 785px) {
+  .Account {
+    height: 100%;
+    padding: 2%;
+  }
 
-    .Account .list{
-        width: 90%;
-        float: none;
-        margin: auto;
-    }
+  .Account .list {
+    width: 90%;
+    float: none;
+    margin: auto;
+  }
 
-    .Account .working{
-        width: 100%;
-        float: none;
-        margin: auto;
-    }
+  .Account .working {
+    width: 100%;
+    float: none;
+    margin: auto;
+  }
 
-    .Account .working h1{
-        text-align: center;
-    }
+  .Account .working h1 {
+    text-align: center;
+  }
 
-    .Account .working .login{
-        padding: 0%;
-    }
+  .Account .working .login {
+    padding: 0%;
+  }
 
-    .form{
-        padding: 4%;
-        margin: 5%;
-    }
+  .form {
+    padding: 4%;
+    margin: 5%;
+  }
 }

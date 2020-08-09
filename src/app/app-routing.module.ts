@@ -12,9 +12,29 @@ import { ItemListComponent } from "./item-list/item-list.component";
 import { UserDetailsComponent } from "./user-details/user-details.component";
 import { OrderConfirmationComponent } from "./order-confirmation/order-confirmation.component";
 import { BlogComponent } from "./blog/blog.component";
+import { LoginRegisterComponent } from "./login-register/login-register.component";
 
 const routes: Routes = [
-  { path: "account", component: AccountComponent },
+  {
+    path: "account",
+    component: AccountComponent,
+    children: [
+      {
+        path: "login",
+        component: LoginRegisterComponent,
+        data: {
+          activatedTab: "login",
+        },
+      },
+      {
+        path: "register",
+        component: LoginRegisterComponent,
+        data: {
+          activatedTab: "register",
+        },
+      },
+    ],
+  },
   { path: "home", component: HomeComponent },
   { path: "shopping-cart", component: ShoppingCartComponent },
   { path: "product-detail/:id", component: ProductDetailComponent },

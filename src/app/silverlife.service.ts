@@ -5,6 +5,7 @@ import { CATEGORY_QUERY_PARAMETER } from './shared/constants';
 import { SubCategory } from './category/sub-category/SubcategoryModel';
 import { IProduct } from './item-list/ProductModel';
 import { BehaviorSubject } from 'rxjs';
+import { IUser } from './iuser.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,7 @@ export class SilverlifeService {
   informCartInNavigation = new BehaviorSubject<IProduct>(null);
   cartList: IProduct[] = [];
   cartTotalAmount: number;
+  loggedInUser: IUser = null;
   constructor(private router: Router) { }
   navigateToProductListpage(routeLink: string, majorCategory, category: ICategory, subcategory: SubCategory) {
     const queryParams = CATEGORY_QUERY_PARAMETER.query;

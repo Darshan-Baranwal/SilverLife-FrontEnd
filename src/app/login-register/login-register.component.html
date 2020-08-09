@@ -1,1 +1,43 @@
-<p>login-register works!</p>
+<form
+  *ngIf="!!service.loggedInUser"
+  class="form"
+  (ngSubmit)="loginRegisterUser()"
+  [formGroup]="loginRegisterForm"
+>
+  <label for="username" *ngIf="!isLogin">
+    Username<span class="required">*</span>
+  </label>
+  <input
+    formControlName="userName"
+    id="username"
+    class="textbox"
+    type="text"
+    *ngIf="!isLogin"
+  />
+  <label for="email">Email address<span class="required">*</span></label>
+  <input type="email" class="textbox" id="email" formControlName="email" />
+  <label for="password"> Password<span class="required">*</span> </label>
+  <input
+    class="textbox"
+    type="password"
+    id="password"
+    formControlName="password"
+  />
+  <label for="rememberMe">
+    <input
+      type="checkbox"
+      id="rememberMe"
+      value=""
+      style="display: inline-block;"
+    />
+    Remember Me
+  </label>
+  <input
+    class="Loginbutton button"
+    type="submit"
+    [value]="isLogin ? 'Log In' : 'Register'"
+    [disabled]="loginRegisterForm.invalid"
+    [class.disabled-input]="loginRegisterForm.invalid"
+  />
+  <a>Forgot Password</a>
+</form>

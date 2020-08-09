@@ -36,10 +36,11 @@ import { OrderConfirmationComponent } from "./order-confirmation/order-confirmat
 import { BlogComponent } from "./blog/blog.component";
 import { ItemOverviewComponent } from "./item-list/item-overview/item-overview.component";
 import { NgMarqueeModule } from "ng-marquee";
-import { FirebaseService } from "./firebase.service";
-import {AngularFireModule} from '@angular/fire';
-import {environment} from '../environments/environment';
-import {AngularFirestoreModule} from '@angular/fire/firestore';
+import { AngularFireModule } from "@angular/fire";
+import { environment } from "../environments/environment";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { FirebaseApiService } from "./firebase-api.service";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,8 +82,10 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
     NgMarqueeModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
-  providers: [SilverlifeService, FirebaseService],
+  providers: [SilverlifeService, FirebaseApiService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
