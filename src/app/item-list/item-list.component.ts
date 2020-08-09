@@ -28,7 +28,7 @@ export class ItemListComponent implements OnInit {
   ngOnInit(): void {
     if (!!this.isPopular || !!this.isSale) {
       this.http
-        .get("../assets/Products/Products.json")
+        .get("../assets/JsonData/Products.json")
         .pipe(catchError((err) => of(err)))
         .subscribe((data) => {
           if (this.isPopular != undefined) {
