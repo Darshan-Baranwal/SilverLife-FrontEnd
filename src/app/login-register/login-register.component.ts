@@ -115,7 +115,7 @@ export class LoginRegisterComponent implements OnInit, OnDestroy {
       .loginUser(user)
       .pipe(
         takeUntil(this.destroy$),
-        switchMap((users: any) => {
+        switchMap((users: IUser[]) => {
           console.log(users);
           if (users.length === 0) {
             alert("User not exist Please register");

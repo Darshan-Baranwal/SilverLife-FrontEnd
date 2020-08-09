@@ -95,7 +95,7 @@
         *ngIf="!service.sendUserDetail.value"
       />
       <span *ngIf="!!service.sendUserDetail.value">{{
-        service.sendUserDetail.value.first_name.slice(0, 1)
+        service.sendUserDetail.value?.user_name?.slice(0, 1)
       }}</span>
     </div>
     <div *ngIf="!!service.sendUserDetail.value" (click)="logout()">

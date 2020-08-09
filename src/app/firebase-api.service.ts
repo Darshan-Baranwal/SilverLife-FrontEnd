@@ -17,7 +17,11 @@ export class FirebaseApiService {
 
   loginUser(user: IUser) {
     return this.firestore
-      .collection("user", (ref) => ref.where("email", "==", user.email))
+      .collection("user", (ref) =>
+        ref
+          .where("email", "==", user.email)
+          .where("password", "==", user.password)
+      )
       .valueChanges();
   }
 }
