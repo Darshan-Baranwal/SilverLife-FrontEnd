@@ -152,7 +152,10 @@
       />
     </div>
   </form>
-  <form *ngIf="newAddressSelected || !!service.selectedAddress">
+  <form
+    *ngIf="newAddressSelected || !!service.selectedAddress"
+    (ngSubmit)="proceedToOrder()"
+  >
     <div>
       <h3>Sub Total</h3>
       <span>₹ {{ service.cartTotalAmount }}</span>
@@ -198,9 +201,8 @@
       <input
         type="submit"
         value="Proceed"
-        class="button ProceedBtn"
-        (click)="proceedToOrder()"
-        [disabled]="userPayment.invalid"
+        class="button proceed-btn"
+        [disabled]="userPayment.invalid || userDetails.invalid"
       />
     </div>
   </form>
