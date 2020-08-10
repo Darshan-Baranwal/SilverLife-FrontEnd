@@ -24,16 +24,43 @@ export class UserDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.userDetails = new FormGroup({
-      first_name: new FormControl("", Validators.required),
-      last_name: new FormControl(""),
-      mobile: new FormControl("", Validators.required),
-      email: new FormControl("", Validators.required),
+      first_name: new FormControl(
+        { value: "", disabled: !this.newAddressSelected },
+        Validators.required
+      ),
+      last_name: new FormControl({
+        value: "",
+        disabled: !this.newAddressSelected,
+      }),
+      mobile: new FormControl(
+        { value: "", disabled: !this.newAddressSelected },
+        Validators.required
+      ),
+      email: new FormControl(
+        { value: "", disabled: !this.newAddressSelected },
+        Validators.required
+      ),
       address: new FormGroup({
-        house_building: new FormControl("", Validators.required),
-        road_area_colony: new FormControl("", Validators.required),
-        city: new FormControl("", Validators.required),
-        state: new FormControl("", Validators.required),
-        pincode: new FormControl("", Validators.required),
+        house_building: new FormControl(
+          { value: "", disabled: !this.newAddressSelected },
+          Validators.required
+        ),
+        road_area_colony: new FormControl(
+          { value: "", disabled: !this.newAddressSelected },
+          Validators.required
+        ),
+        city: new FormControl(
+          { value: "", disabled: !this.newAddressSelected },
+          Validators.required
+        ),
+        state: new FormControl(
+          { value: "", disabled: !this.newAddressSelected },
+          Validators.required
+        ),
+        pincode: new FormControl(
+          { value: "", disabled: !this.newAddressSelected },
+          Validators.required
+        ),
       }),
     });
     this.userPayment = new FormControl("", Validators.required);
@@ -105,7 +132,11 @@ export class UserDetailsComponent implements OnInit {
           : this.service.selectedAddress.address.pincode,
       },
     });
-    this.userDetails.disable();
+    if (!this.newAddressSelected) {
+      this.userDetails.disable();
+    } else {
+      this.userDetails.enable();
+    }
   }
   proceedToOrder() {
     console.log(this.userPayment.value);

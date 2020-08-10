@@ -6,6 +6,9 @@
   <div *ngIf="!!service.loggedInUserAddress" class="stored-address">
     <div
       class="address-block cursor-pointer"
+      [class.selected]="
+        i === service.loggedInUserAddress.indexOf(service.selectedAddress)
+      "
       *ngFor="let userAddress of service.loggedInUserAddress; let i = index"
       (click)="selectStoredAddress(i)"
     >
@@ -15,7 +18,11 @@
       ><br />
       <span>{{ userAddress.address.city }}</span>
     </div>
-    <div class="new-address-block cursor-pointer" (click)="openNewAddress()">
+    <div
+      class="new-address-block cursor-pointer"
+      [class.selected]="newAddressSelected"
+      (click)="openNewAddress()"
+    >
       Enter New Address
     </div>
   </div>
@@ -140,9 +147,8 @@
       <input
         type="submit"
         value="Save Address"
-        class="button ProceedBtn"
-        [disabled]="userDetails.invalid"
-        *ngIf="newAddressSelected"
+        class="button save-address-btn"
+        [disabled]="newAddressSelected ? userDetails.invalid : true"
       />
     </div>
   </form>
