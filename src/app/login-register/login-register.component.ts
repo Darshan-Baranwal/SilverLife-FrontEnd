@@ -4,6 +4,7 @@ import {
   Output,
   EventEmitter,
   OnDestroy,
+  AfterViewInit,
 } from "@angular/core";
 import { FirebaseApiService } from "../firebase-api.service";
 import { ActivatedRoute, Router } from "@angular/router";
@@ -25,7 +26,8 @@ import { SilverlifeService } from "../silverlife.service";
   templateUrl: "./login-register.component.html",
   styleUrls: ["./login-register.component.scss"],
 })
-export class LoginRegisterComponent implements OnInit, OnDestroy {
+export class LoginRegisterComponent
+  implements OnInit, OnDestroy, AfterViewInit {
   subscriptionObj: Subscription;
   isLogin: boolean = false;
   loginRegisterForm: FormGroup;
@@ -41,8 +43,8 @@ export class LoginRegisterComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.loginRegisterForm = new FormGroup({
       userName: new FormControl(""),
-      email: new FormControl("", Validators.required),
-      password: new FormControl("", Validators.required),
+      email: new FormControl("test@test.test", Validators.required),
+      password: new FormControl("test", Validators.required),
     });
     this.activateRoute.data.pipe().subscribe((data) => {
       this.isLogin = data.activatedTab == "login" ? true : false;
@@ -54,6 +56,9 @@ export class LoginRegisterComponent implements OnInit, OnDestroy {
         this.loginRegisterForm.get("userName").setValidators(null);
       }
     });
+  }
+  ngAfterViewInit() {
+    this.loginUser();
   }
   loginRegisterUser() {
     if (this.isLogin) {
@@ -115,14 +120,25 @@ export class LoginRegisterComponent implements OnInit, OnDestroy {
       .loginUser(user)
       .pipe(
         takeUntil(this.destroy$),
-        switchMap((users: IUser[]) => {
-          console.log(users);
+        map((data) => {
+          return data.map((e) => {
+            return {
+              id: e.payload.doc.id,
+              data: e.payload.doc.data(),
+            };
+          });
+        }),
+        switchMap((users: any) => {
           if (users.length === 0) {
             alert("User not exist Please register");
           } else {
-            this.service.loggedInUser = users[0];
+            this.service.loggedInUser = {
+              ...users[0].data,
+              id: users[0].id,
+              password: "",
+            };
             this.router.navigate(["/home"]);
-            this.service.sendUserDetail.next(users[0]);
+            this.service.sendUserDetail.next(this.service.loggedInUser);
           }
           return users;
         })

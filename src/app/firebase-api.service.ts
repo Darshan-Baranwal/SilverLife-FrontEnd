@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { AngularFirestore } from "@angular/fire/firestore";
 import { IUser } from "./iuser.model";
 import { map, flatMap } from "rxjs/operators";
+import { IUserAddress } from "./iuser-address.model";
 
 @Injectable({
   providedIn: "root",
@@ -15,6 +16,10 @@ export class FirebaseApiService {
     return this.firestore.collection("user").add(user);
   }
 
+  createUserAddress(userAddress: IUserAddress) {
+    return this.firestore.collection("user_address").add(userAddress);
+  }
+
   loginUser(user: IUser) {
     return this.firestore
       .collection("user", (ref) =>
@@ -22,6 +27,9 @@ export class FirebaseApiService {
           .where("email", "==", user.email)
           .where("password", "==", user.password)
       )
-      .valueChanges();
+      .snapshotChanges();
+  }
+  getUserAddressInfo(id: string) {
+    return this.firestore.collection("user_address", ref => ref.where("user_id", "==", id)).snapshotChanges();
   }
 }

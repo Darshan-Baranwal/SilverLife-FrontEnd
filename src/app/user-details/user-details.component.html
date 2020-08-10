@@ -1,88 +1,207 @@
-<form class="Address">
-  <div>
-    <h3>Billing Details</h3>
-    <div class="AddressRow">
-      <div>
-        <label for="firstname">
-          First Name<span class="required">*</span>
-        </label>
-        <input id="firstname" class="textbox MediumTextBox" type="text">
-      </div>
-      <div>
-        <label for="lastname">
-          Last Name<span class="required">*</span>
-        </label>
-        <input id="lastname" class="textbox MediumTextBox" type="text">
-      </div>
+<div
+  *ngIf="!!this.service.loggedInUser; else loginTemplate"
+  class="user-details-container"
+>
+  <h3 class="address-heading">Stored Addresses</h3>
+  <div *ngIf="!!service.loggedInUserAddress" class="stored-address">
+    <div
+      class="address-block cursor-pointer"
+      *ngFor="let userAddress of service.loggedInUserAddress; let i = index"
+      (click)="selectStoredAddress(i)"
+    >
+      <b>{{ userAddress.first_name }}</b
+      ><br />
+      <span>{{ userAddress.address.house_building }}</span
+      ><br />
+      <span>{{ userAddress.address.city }}</span>
     </div>
-    <div class="AddressRow">
-      <div>
-        <label for="contactNum">
-          Mobile No.<span class="required">*</span>
-        </label>
-        <input id="contactNum" class="textbox MediumTextBox" type="text">
-      </div>
-      <div>
-        <label for="email">
-          Email<span class="required">*</span>
-        </label>
-        <input id="email" class="textbox MediumTextBox" type="text">
-      </div>
-    </div>
-    <div class="AddressRow">
-      <div>
-        <label for="address1">
-          House No., Building Name<span class="required">*</span>
-        </label>
-        <input id="address1" class="textbox LongtextBox" type="text">
-      </div>
-    </div>
-    <div class="AddressRow">
-      <div>
-        <label for="address2">
-          Road Name, Area, Colony<span class="required">*</span>
-        </label>
-        <input id="address2" class="textbox LongtextBox" type="text">
-      </div>
-    </div>
-    <div class="AddressRow">
-      <div>
-        <label for="city">
-          City<span class="required">*</span>
-        </label>
-        <input id="city" class="textbox MediumTextBox" type="text">
-      </div>
-      <div>
-        <label for="state">
-          State<span class="required">*</span>
-        </label>
-        <input id="state" class="textbox MediumTextBox" type="text">
-      </div>
-    </div>
-    <div class="AddressRow">
-      <div>
-        <label for="PinCode">
-          Pin Code<span class="required">*</span>
-        </label>
-        <input id="pin" class="textbox MediumTextBox" type="text">
-      </div>
+    <div class="new-address-block cursor-pointer" (click)="openNewAddress()">
+      Enter New Address
     </div>
   </div>
-  <div>
-    <h3>Sub Total</h3><span>₹ {{service.cartTotalAmount}}</span>
-    <h3>Payment Mode</h3>
-    <label for="pod">
-      <input type="radio" id="pod" name="PaymentMode" value="pod">
-      Pay on Delivery</label><br>
-    <label for="card">
-      <input type="radio" id="card" name="PaymentMode" value="card">
-      Card</label><br>
-    <label for="wallet">
-      <input type="radio" id="wallet" name="PaymentMode" value="wallet">
-      Wallet</label><br>
-    <label for="UPI">
-      <input type="radio" id="UPI" name="PaymentMode" value="UPI">
-      UPI</label>
-    <input type="button" value="Proceed" class="button ProceedBtn" (click) = "proceedToOrder()">
-  </div>
-</form>
+  <form
+    class="Address"
+    [formGroup]="userDetails"
+    (ngSubmit)="submitBillingInfo()"
+    *ngIf="newAddressSelected || !!service.selectedAddress"
+  >
+    <div>
+      <h3>Billing Details</h3>
+      <div class="AddressRow">
+        <div>
+          <label for="firstname">
+            First Name<span class="required">*</span>
+          </label>
+          <input
+            id="firstname"
+            class="textbox MediumTextBox"
+            type="text"
+            formControlName="first_name"
+          />
+        </div>
+        <div>
+          <label for="lastname">
+            Last Name
+          </label>
+          <input
+            id="lastname"
+            class="textbox MediumTextBox"
+            type="text"
+            name="last_name"
+            formControlName="last_name"
+          />
+        </div>
+      </div>
+      <div class="AddressRow">
+        <div>
+          <label for="contactNum">
+            Mobile No.<span class="required">*</span>
+          </label>
+          <input
+            id="contactNum"
+            class="textbox MediumTextBox"
+            type="number"
+            name="mobile"
+            formControlName="mobile"
+          />
+        </div>
+        <div>
+          <label for="email"> Email<span class="required">*</span> </label>
+          <input
+            id="email"
+            class="textbox MediumTextBox"
+            type="email"
+            name="email"
+            formControlName="email"
+          />
+        </div>
+      </div>
+      <ng-container formGroupName="address">
+        <div class="AddressRow">
+          <div>
+            <label for="address1">
+              House No., Building Name<span class="required">*</span>
+            </label>
+            <input
+              id="address1"
+              class="textbox LongtextBox"
+              type="text"
+              formControlName="house_building"
+            />
+          </div>
+        </div>
+        <div class="AddressRow">
+          <div>
+            <label for="address2">
+              Road Name, Area, Colony<span class="required">*</span>
+            </label>
+            <input
+              id="address2"
+              class="textbox LongtextBox"
+              type="text"
+              formControlName="road_area_colony"
+            />
+          </div>
+        </div>
+        <div class="AddressRow">
+          <div>
+            <label for="city"> City<span class="required">*</span> </label>
+            <input
+              id="city"
+              class="textbox MediumTextBox"
+              type="text"
+              formControlName="city"
+            />
+          </div>
+          <div>
+            <label for="state"> State<span class="required">*</span> </label>
+            <input
+              id="state"
+              class="textbox MediumTextBox"
+              type="text"
+              formControlName="state"
+            />
+          </div>
+        </div>
+        <div class="AddressRow">
+          <div>
+            <label for="PinCode">
+              Pin Code<span class="required">*</span>
+            </label>
+            <input
+              id="pin"
+              class="textbox MediumTextBox"
+              type="text"
+              formControlName="pincode"
+            />
+          </div>
+        </div>
+      </ng-container>
+      <input
+        type="submit"
+        value="Save Address"
+        class="button ProceedBtn"
+        [disabled]="userDetails.invalid"
+        *ngIf="newAddressSelected"
+      />
+    </div>
+  </form>
+  <form *ngIf="newAddressSelected || !!service.selectedAddress">
+    <div>
+      <h3>Sub Total</h3>
+      <span>₹ {{ service.cartTotalAmount }}</span>
+      <h3>Payment Mode</h3>
+      <div class="AddressRow">
+        <label for="pod">
+          <input
+            type="radio"
+            id="pod"
+            [formControl]="userPayment"
+            value="pod"
+          />
+          Pay on Delivery</label
+        ><br />
+        <label for="card">
+          <input
+            type="radio"
+            id="card"
+            [formControl]="userPayment"
+            value="card"
+          />
+          Card</label
+        ><br />
+        <label for="wallet">
+          <input
+            type="radio"
+            id="wallet"
+            [formControl]="userPayment"
+            value="wallet"
+          />
+          Wallet</label
+        ><br />
+        <label for="UPI">
+          <input
+            type="radio"
+            id="UPI"
+            [formControl]="userPayment"
+            value="UPI"
+          />
+          UPI</label
+        >
+      </div>
+      <input
+        type="submit"
+        value="Proceed"
+        class="button ProceedBtn"
+        (click)="proceedToOrder()"
+        [disabled]="userPayment.invalid"
+      />
+    </div>
+  </form>
+</div>
+<ng-template #loginTemplate>
+  <section class="user-login">
+    You are not Login. Please login to proceed further -
+    <a routerLink="/account"> Login</a>
+  </section>
+</ng-template>

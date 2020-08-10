@@ -12,4 +12,5 @@ export interface IUser {
   payment_mode?: string;
   role?: string;
   user_name?: string;
+  id?: string;
 }

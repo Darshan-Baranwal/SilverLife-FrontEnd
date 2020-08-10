@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "assets/baseScss/base.scss";
-
+.cursor-pointer {
+  cursor: pointer;
+}
+div {
+  position: relative;
+}
 input {
   outline: none;
 }

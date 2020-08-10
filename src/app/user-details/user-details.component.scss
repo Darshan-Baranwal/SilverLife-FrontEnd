@@ -1,4 +1,4 @@
-.Address{
+.Address {
   position: relative;
   top: 100px;
   font-family: "Comic Sans MS", cursive, sans-serif;
@@ -8,40 +8,81 @@
   flex-direction: row;
   justify-content: flex-start;
 }
-
-.AddressRow{
-  padding : 1% 0;
+.user-details-container {
+  top: 69px;
+}
+.AddressRow {
+  padding: 1% 0;
   display: flex;
-  width:800px;
+  width: 800px;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.Address label{
+.Address label {
   display: block;
   width: 400px;
   padding-bottom: 10px;
 }
 
-.ProceedBtn{
+.ProceedBtn {
   width: 60%;
   font-size: 20px;
 }
-
-@media (max-width:785px){
-  .Address{
+.user-login {
+  top: 69px;
+  height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+h3.address-heading {
+  position: relative;
+  text-align: center;
+  font-size: large;
+  font-weight: 700;
+  margin: 16px;
+}
+.stored-address {
+  color: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .address-block {
+    margin: 0 16px;
+    width: 100px;
+    margin: 0 16px;
+    width: 100px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 8px;
+  }
+  .new-address-block {
+    margin: 0 16px;
+    width: 100px;
+    margin: 0 16px;
+    width: 100px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 8px;
+  }
+}
+@media (max-width: 785px) {
+  .Address {
     padding: 5%;
     flex-direction: column;
     top: 50px;
   }
 
-  .AddressRow{
+  .AddressRow {
     flex-direction: column;
-    width:100%;
-  } 
-
-  .Address label{
     width: 100%;
   }
 
+  .Address label {
+    width: 100%;
+  }
 }
