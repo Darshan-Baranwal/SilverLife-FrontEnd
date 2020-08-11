@@ -1,6 +1,6 @@
-.OrderConfirmation{
+.OrderConfirmation {
   position: relative;
-  top:150px;
+  top: 150px;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -8,21 +8,22 @@
   align-content: center;
   text-align: center;
   height: 600px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.success{
+.success {
   height: 150px;
   width: 150px;
 }
 
-.details{
+.details {
   border: 1px solid grey;
-  width: 500px;
+  width: 50%;
   margin: 0 auto;
 }
 
-.detailsRow{
+.detailsRow {
   height: 30px;
   padding-top: 5px;
   display: flex;
@@ -30,45 +31,47 @@
   flex-direction: row;
 }
 
-.detailsRow div{
+.detailsRow div {
   text-align: left;
   padding: 0 20px;
   width: 50%;
   margin: auto;
 }
 
-.rightBorder{
+.rightBorder {
   border-right: 1px solid grey;
 }
 
-h2,h4{
+h2,
+h4 {
   //margin-bottom: 5px;
   margin-top: 5px;
 }
 
-.ContnuShpg{
-margin-top: 10px;
-width: 200px;
-font-size: 20px;
+.ContnuShpg {
+  margin-top: 10px;
+  width: 200px;
+  font-size: 20px;
 }
 
-@media (max-width:785px){
-  .OrderConfirmation{
-    top:100px;
+@media (max-width: 785px) {
+  .OrderConfirmation {
+    top: 100px;
   }
-  .success{
+  .success {
     height: 100px;
     width: 100px;
   }
-  .details{
+  .details {
     width: 95%;
     margin: 7px;
   }
-  .detailsRow{
+  .detailsRow {
     height: 50px;
   }
 
-  h2,h4{
+  h2,
+  h4 {
     margin-bottom: 5px;
     margin-top: 5px;
   }

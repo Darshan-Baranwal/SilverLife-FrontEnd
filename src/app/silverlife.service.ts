@@ -7,6 +7,7 @@ import { IProduct } from "./item-list/ProductModel";
 import { BehaviorSubject } from "rxjs";
 import { IUser } from "./iuser.model";
 import { IUserAddress } from "./iuser-address.model";
+import { IOrder } from "./iorder-details.model";
 
 @Injectable({
   providedIn: "root",
@@ -18,6 +19,7 @@ export class SilverlifeService {
   loggedInUser: IUser = null;
   loggedInUserAddress: IUserAddress[] = null;
   selectedAddress: IUserAddress = null;
+  orderDetails: IOrder = null;
   sendUserDetail = new BehaviorSubject<IUser>(null);
   constructor(private router: Router) {}
   navigateToProductListpage(

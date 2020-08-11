@@ -27,9 +27,10 @@ export class ShoppingCartComponent implements OnInit {
         isPopular: false,
         salePercent: "",
         selectedCount: 4,
+        overview: "Tape of Tapes",
       },
     ];
-    //this.cartProductList = this.service.cartList;
+    this.service.cartList = this.cartProductList;
     this.getTotalProductAmount();
     this.deliveryFee = 200;
   }

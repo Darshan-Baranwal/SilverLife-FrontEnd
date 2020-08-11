@@ -9,7 +9,10 @@ export interface IProduct {
   isPopular?: boolean;
   salePercent?: string;
   selectedCount?: number;
-  product_detail?: IProductDetail;
+  overview?: string;
+  usage?: string;
+  specification?: string;
+  precaution?: string;
 }
 
 export interface IProductDetail {

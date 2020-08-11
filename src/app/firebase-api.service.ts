@@ -3,6 +3,7 @@ import { AngularFirestore } from "@angular/fire/firestore";
 import { IUser } from "./iuser.model";
 import { map, flatMap } from "rxjs/operators";
 import { IUserAddress } from "./iuser-address.model";
+import { IOrder } from './iorder-details.model';
 
 @Injectable({
   providedIn: "root",
@@ -31,5 +32,8 @@ export class FirebaseApiService {
   }
   getUserAddressInfo(id: string) {
     return this.firestore.collection("user_address", ref => ref.where("user_id", "==", id)).snapshotChanges();
+  }
+  saveOrderDetails(order: IOrder) {
+    return this.firestore.collection("order").add(order);
   }
 }

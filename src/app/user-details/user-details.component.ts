@@ -6,6 +6,8 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { FirebaseApiService } from "../firebase-api.service";
 import { tap, map } from "rxjs/operators";
 import { IUserAddress } from "../iuser-address.model";
+import { IOrder } from "../iorder-details.model";
+import { SUCCESS_IMAGE_BASE64 } from "../shared/constants";
 declare let Email: any;
 @Component({
   selector: "app-user-details",
@@ -16,6 +18,7 @@ export class UserDetailsComponent implements OnInit {
   userDetails: FormGroup;
   userPayment: FormControl;
   newAddressSelected: boolean = false;
+  successImageSrc = SUCCESS_IMAGE_BASE64.successSrc.src;
   constructor(
     public service: SilverlifeService,
     private router: Router,
@@ -139,10 +142,31 @@ export class UserDetailsComponent implements OnInit {
     }
   }
   proceedToOrder() {
-    console.log(this.userPayment.value);
-    // this.sendEmail().then((message) => {
-    //   this.router.navigate(["/order-successful"]);
-    // });
+    this.service.orderDetails = {
+      user_details: this.service.selectedAddress,
+      product_details: this.service.cartList,
+      payment_mode: this.userPayment.value,
+      total_price: this.getTotalProductAmount(),
+      order_date_time: new Date(),
+    };
+    console.log(this.service.orderDetails);
+    this.firestore
+      .saveOrderDetails(this.service.orderDetails)
+      .then((res) => {
+        this.service.orderDetails.id = res.id;
+        this.sendEmail().then((message) => {
+          this.router.navigate(["/order-successful"]);
+        });
+      })
+      .catch((rej) => {
+        alert("Order Not placed");
+      });
+  }
+  getTotalProductAmount(): number {
+    return this.service.cartList.reduce((a, v) => {
+      a = a + v.selectedCount * v.price;
+      return a;
+    }, 0);
   }
   submitBillingInfo() {
     console.log({
@@ -171,26 +195,104 @@ export class UserDetailsComponent implements OnInit {
 
       Subject: "Test Mail",
 
-      Body: `
-      <div class="OrderConfirmation">
-  <div>
-      <img class="success" src="Images/success.png">
-  </div>
+      Body: this.getMailBody(),
+    });
+  }
+  getMailBody() {
+    const productDetailsHTML = this.service.orderDetails.product_details.reduce(
+      (a, v) => {
+        a =
+          a +
+          `<div class="detailsRow">
+        <div class="rightBorder"> ${v.name} </div>
+          <div>Price: ${v.selectedCount} * ${v.price} Rs = ${
+            v.price * v.selectedCount
+          } Rs </div>
+            </div>`;
+        return a;
+      },
+      ""
+    );
+    return `
+      <style>
+.OrderConfirmation{
+  position: relative;
+  top:150px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  align-content: center;
+  text-align: center;
+  height: 600px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.success{
+  height: 150px;
+  width: 150px;
+}
+
+.details{
+  border: 1px solid grey;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.detailsRow{
+  height: 30px;
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.detailsRow div{
+  text-align: left;
+  padding: 0 20px;
+  width: 50%;
+  margin: auto;
+}
+
+.rightBorder{
+  border-right: 1px solid grey;
+}
+
+h2,h4{
+  margin-top: 5px;
+}
+
+.ContnuShpg{
+margin-top: 10px;
+width: 200px;
+font-size: 20px;
+}
+</style>
+<div class="OrderConfirmation">
   <h2>Your order has been confirmed!</h2>
   <h4>Below are order details</h4>
+  <div>
+<img src=${this.successImageSrc} alt="Success Image" class = "success">
+  </div>
   <div>
   <div class="details">
       <div class="detailsRow">
           <div class="rightBorder">Order Number</div>
-          <div>110022333</div>
+          <div>${this.service.orderDetails.id}</div>
       </div>
       <div class="detailsRow">
+          <div class="rightBorder">Products Details</div>
+      </div>
+      ${productDetailsHTML}
+      <div class="detailsRow">
           <div class="rightBorder">Order Date</div>
-          <div>24 June 2020</div>
+          <div>${this.service.orderDetails.order_date_time.toLocaleDateString()}</div>
       </div>
       <div class="detailsRow">
           <div class="rightBorder">Expected Delivery Date</div>
-          <div>1 July 2020</div>
+          <div>${new Date(
+            new Date().getTime() + 5 * 24 * 60 * 60 * 1000
+          ).toLocaleDateString()}</div>
       </div>
       <div class="detailsRow">
           <div class="rightBorder">Total Amount</div>
@@ -198,7 +300,9 @@ export class UserDetailsComponent implements OnInit {
       </div>
   </div>
 </div>
-      `,
-    });
+<div>
+<a href="https://silverlife.herokuapp.com/">Continue Shopping</a>
+</div>
+      `;
   }
 }

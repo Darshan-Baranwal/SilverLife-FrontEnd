@@ -85,23 +85,30 @@
   <div
     style="display: flex; flex-direction: row; height: 100%; margin-top: 10px;"
   >
-    <div class="Icon" (click)="openCloseSearchModal = !openCloseSearchModal">
+    <div
+      class="Icon cursor-pointer"
+      (click)="openCloseSearchModal = !openCloseSearchModal"
+    >
       <img src="../../assets/Search.png" alt="Search" />
     </div>
-    <div class="Icon" routerLink="account">
+    <div class="Icon cursor-pointer" routerLink="account">
       <img
         src="../../assets/Login.png"
         alt="Login"
         *ngIf="!service.sendUserDetail.value"
       />
-      <span *ngIf="!!service.sendUserDetail.value">{{
-        service.sendUserDetail.value?.user_name?.slice(0, 1)
+      <span *ngIf="!!service.sendUserDetail.value" class="signature">{{
+        service.sendUserDetail.value?.first_name?.slice(0, 1).toUpperCase()
       }}</span>
     </div>
-    <div *ngIf="!!service.sendUserDetail.value" (click)="logout()">
-      Logout
+    <div
+      *ngIf="!!service.sendUserDetail.value"
+      (click)="logout()"
+      class="logout-link cursor-pointer"
+    >
+      <a>Logout</a>
     </div>
-    <div class="Icon" (click)="navigateTo('shopping-cart')">
+    <div class="Icon cursor-pointer" (click)="navigateTo('shopping-cart')">
       <img src="../../assets/Cart.png" alt="Cart" />
       <div class="modal cart-info" *ngIf="toggleNewItemAddedToCartModal">
         {{ newAddedProduct.name }}
