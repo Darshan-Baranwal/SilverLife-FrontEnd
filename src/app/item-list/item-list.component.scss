@@ -6,6 +6,7 @@
     justify-content: center;
     flex-flow: column;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #F9F9F9;
 }
 
 .Justarrived h1{
@@ -19,25 +20,25 @@
 
 .Justarrived ul{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 10%;
+    padding: 0 10%;
     /* padding: 1% 10% 0 15%; */
-    width: 75%;
+    // width: 90%;
     margin-top: 3%;
     
 }
 
 .Justarrived ul li{
-    border: rgb(211, 211, 211) solid 1px;
-    padding: 2% 0 0 2%;
+    margin: 2% 0 0 2%;
     list-style: none;
     width: 20%;
     height: 300px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
+    background-color: white;
 }
 
  .Justarrived ul li img{
@@ -45,19 +46,20 @@
     max-height: 75%;
     height: 60%;
     width: 75%;
+    margin: auto;
 }
 
 .Justarrived ul li h3{
     height: 20%;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    width: 80%;
+    margin: 10px;
+    //width: 80%;
     font-weight: normal;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-bottom: 2px;
 }
 
 .Justarrived ul li span{
+    margin: 0 10px;
     height: 10%;
     color: red;
     font-weight: bold;
