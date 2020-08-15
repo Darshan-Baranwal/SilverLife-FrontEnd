@@ -1,6 +1,9 @@
 .AboutUs{
     height: 1200px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    top: 65px;
+    font-family: Optima, sans-serif;
+    //'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .AboutUs .bnrImg{
@@ -42,4 +45,21 @@
 .AboutUs h4{
     font-size: 24px;
     margin-bottom: 0px;
+    font-weight: lighter;
 }
+
+p{
+    font-weight: 100;
+}
+
+@media (max-width: 785px) {
+    .AboutUs .bnrImg{
+        height: 240px;
+    }
+    .WriteUp{
+        width: 100%;
+    }
+    .MobileMargin{
+        margin: 30px;
+    }
+  }
