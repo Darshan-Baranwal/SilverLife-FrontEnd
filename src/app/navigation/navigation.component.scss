@@ -131,18 +131,7 @@
   display: inline-block;
 }
 
-.BroadCategory {
-  list-style: none;
-  padding: 0;
-}
-
-.BroadCategory li {
-  font-size: 15px;
-  padding: 7px 0;
-}
-
-.BroadCategories li:hover h5,
-.BroadCategory li:hover {
+.BroadCategories li:hover h5{
   color: #dd1336;
 }
 
