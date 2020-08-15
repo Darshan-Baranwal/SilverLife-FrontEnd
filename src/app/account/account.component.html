@@ -1,12 +1,9 @@
 <div class="Account">
   <div>
     <ul class="list">
-      <li>Dashboard</li>
-      <li>My Orders</li>
-      <li>Order Tracking</li>
-      <li>WishList</li>
-      <li>Edit Profile</li>
-      <li>Forgot Password</li>
+      <li *ngIf="service.loggedInUser">My Orders</li>
+      <li *ngIf="service.loggedInUser">Edit Profile</li>
+      <li *ngIf="service.loggedInUser">Change Password</li>
       <li>Contact Us</li>
     </ul>
   </div>

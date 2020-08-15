@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Gauze (5cm X 5cm) - pk of 100",
       "subCategoryId": 3,
-      "price": 1000,
+      "price": 500,
       "currency": "Rs",
       "imgAddress": "",
       "details": "",
@@ -14,13 +14,16 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "To cover the open wounds along with antiseptic",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 1,
+      "variantDesc": "5cm X 5cm"
     },
     {
       "id": 2,
       "name": "Gauze (7.5cm X 7.5cm) - pk of 100",
       "subCategoryId": 3,
-      "price": 1000,
+      "price": 700,
       "currency": "Rs",
       "imgAddress": "",
       "details": "",
@@ -30,13 +33,16 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "To cover the open wounds along with antiseptic",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 1,
+      "variantDesc": "7.5cm X 7.5cm"
     },
     {
       "id": 3,
       "name": "Gauze (10cm X 10cm) - pk of 100",
       "subCategoryId": 3,
-      "price": 1000,
+      "price": 800,
       "currency": "Rs",
       "imgAddress": "",
       "details": "",
@@ -46,7 +52,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "To cover the open wounds along with antiseptic",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 1,
+      "variantDesc": "10cm X 10cm"
     },
     {
       "id": 4,
@@ -142,7 +151,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For holding gauze pc and cotton",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 10,
@@ -158,7 +170,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For holding gauze pc and cotton",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 11,
@@ -238,7 +253,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For holding gauze pc and cotton",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 16,
@@ -254,7 +272,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For holding gauze pc and cotton",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 17,
@@ -270,7 +291,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For holding gauze pc and cotton",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 18,
@@ -286,7 +310,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For holding gauze pc and cotton",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 19,
@@ -302,7 +329,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For holding gauze pc and cotton",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 20,
@@ -318,7 +348,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "To cover the wound",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 21,
@@ -334,7 +367,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Provides comfort in blisters",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 22,
@@ -350,7 +386,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Provides comfort in blisters",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 23,
@@ -494,7 +533,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "To be put on the cuts on the skin",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 32,
@@ -510,7 +552,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Used for dry bedsores",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 33,
@@ -526,7 +571,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Used for dry bedsores",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 34,
@@ -542,7 +590,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Small size bed sore",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 35,
@@ -558,7 +609,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Large size bed sore",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 36,
@@ -574,7 +628,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For bedsore on lower back / Buttock area",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 37,
@@ -590,7 +647,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For bedsore in Heel area",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 38,
@@ -606,7 +666,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Silver containing anti microbial bedsore dressing",
-      "Precautions": "Single use"
+      "Precautions": "Single use",
+      "hasVariant": true,
+      "variantId": 12,
+      "variantDesc": "variantDesc"
     },
     {
       "id": 39,
