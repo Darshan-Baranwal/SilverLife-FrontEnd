@@ -58,7 +58,7 @@ export class LoginRegisterComponent
     });
   }
   ngAfterViewInit() {
-    this.loginUser();
+    //this.loginUser();
   }
   loginRegisterUser() {
     if (this.isLogin) {

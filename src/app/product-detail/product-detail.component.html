@@ -29,9 +29,11 @@
       </div> -->
       <div>
         <select class="SizeSelect">
-          <option>1 inch X 10 yards</option>
-          <option>2 inch X 10 yards</option>
-          <option>3 inch X 10 yards</option>
+          <option
+            *ngFor="let variant of productVariants"
+            (click)="loadSelelectedVariant(variant)"
+            >{{ variant.variantDesc }}</option
+          >
         </select>
       </div>
       <div class="Quantity">
@@ -59,7 +61,5 @@
       </div>
     </div>
   </div>
-  <app-item-overview
-    [details]="productDetail"
-  ></app-item-overview>
+  <app-item-overview [details]="productDetail"></app-item-overview>
 </div>

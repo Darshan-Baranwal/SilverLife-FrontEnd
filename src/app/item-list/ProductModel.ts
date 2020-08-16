@@ -13,6 +13,9 @@ export interface IProduct {
   usage?: string;
   specification?: string;
   precaution?: string;
+  hasVariant?: string;
+  variantId?: number;
+  variantDesc?: string;
 }
 
 export interface IProductDetail {

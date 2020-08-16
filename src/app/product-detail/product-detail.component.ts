@@ -1,10 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { SilverlifeService } from "../silverlife.service";
-import { filter, switchMap, catchError, map } from "rxjs/operators";
+import { filter, switchMap, catchError, map, tap } from "rxjs/operators";
 import { combineLatest, of } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 import { IProduct } from "../item-list/ProductModel";
+import { Key } from "protractor";
 
 @Component({
   selector: "app-product-detail",
@@ -14,6 +15,7 @@ import { IProduct } from "../item-list/ProductModel";
 export class ProductDetailComponent implements OnInit {
   count: number;
   productDetail: IProduct;
+  productVariants: IProduct[] = [];
   constructor(
     private activateRoute: ActivatedRoute,
     public service: SilverlifeService,
@@ -39,15 +41,25 @@ export class ProductDetailComponent implements OnInit {
               .pipe(catchError((err) => of(err))),
           ]);
         }),
-        map(([params, products]) => {
+
+        map(([params, products]: [any, { [key: string]: IProduct[] }]) => {
           //return products.products.filter(v => v.subCategoryId === category[0].params.subcategory);
-          return products.products.filter((v) => v.id == params[0].get("id"));
+          const selectedProduct: IProduct = products.products.filter(
+            (v) => v.id == params[0].get("id")
+          )[0];
+          if (selectedProduct.hasVariant) {
+            this.productVariants = products.products.filter(
+              (v) => v.hasVariant && v.variantId === selectedProduct.variantId
+            );
+          }
+          return selectedProduct;
         }),
         catchError((err) => of(err))
       )
       .subscribe((data) => {
-        this.productDetail = data[0];
+        this.productDetail = data;
         console.log(data);
+        console.log(this.productVariants);
       });
   }
   changeProductCount(action: number) {
@@ -65,5 +77,9 @@ export class ProductDetailComponent implements OnInit {
       selectedCount: this.count,
     });
     this.router.navigate(["/shopping-cart"]);
+  }
+
+  loadSelelectedVariant(selectedProduct: IProduct) {
+    this.productDetail = selectedProduct;
   }
 }
