@@ -5,14 +5,14 @@
   </div>
   <div class="ProductDisplay">
     <div class="MobileOnly">
-      <h1>{{ productDetail?.overview }}</h1>
+      <h1>{{ productDetail?.name }}</h1>
     </div>
     <div>
       <img [src]="productDetail?.imgAddress" />
     </div>
     <div class="DisplayDetails">
       <div class="DesktopOnly">
-        <h1>{{ productDetail?.overview }}</h1>
+        <h1>{{ productDetail?.name }}</h1>
       </div>
       <div>
         <h2 class="Price">₹ {{ productDetail?.price }}</h2>
