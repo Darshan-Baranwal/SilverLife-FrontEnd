@@ -28,7 +28,9 @@
         </ul>
       </div> -->
       <div>
+        <label for="variant">Variants: </label>
         <select
+          name="variant"
           class="SizeSelect"
           (change)="loadSelelectedVariant(selectedVarianted)"
           [(ngModel)]="selectedVarianted"
