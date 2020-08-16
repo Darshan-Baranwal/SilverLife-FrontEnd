@@ -1,7 +1,4 @@
-<div
-  *ngIf="!!this.service.loggedInUser; else loginTemplate"
-  class="user-details-container"
->
+<div *ngIf="!!this.service.loggedInUser" class="user-details-container">
   <h3 class="address-heading">Stored Addresses</h3>
   <div *ngIf="!!service.loggedInUserAddress" class="stored-address">
     <div
@@ -207,9 +204,3 @@
     </div>
   </form>
 </div>
-<ng-template #loginTemplate>
-  <section class="user-login">
-    You are not Login. Please login to proceed further -
-    <a routerLink="/account"> Login</a>
-  </section>
-</ng-template>

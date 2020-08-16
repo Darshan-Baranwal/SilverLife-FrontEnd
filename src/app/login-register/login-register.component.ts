@@ -8,7 +8,12 @@ import {
 } from "@angular/core";
 import { FirebaseApiService } from "../firebase-api.service";
 import { ActivatedRoute, Router } from "@angular/router";
-import { FormGroup, FormControl, Validators } from "@angular/forms";
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  AbstractControl,
+} from "@angular/forms";
 import { IUser } from "../iuser.model";
 import {
   map,
@@ -20,6 +25,7 @@ import {
 } from "rxjs/operators";
 import { of, Subject, Subscription } from "rxjs";
 import { SilverlifeService } from "../silverlife.service";
+import { validateConfirmPassword } from "../shared/constants";
 
 @Component({
   selector: "app-login-register",
@@ -39,12 +45,15 @@ export class LoginRegisterComponent
     public activateRoute: ActivatedRoute,
     public service: SilverlifeService
   ) {}
-
   ngOnInit(): void {
     this.loginRegisterForm = new FormGroup({
       userName: new FormControl(""),
-      email: new FormControl("test@test.test", Validators.required),
-      password: new FormControl("test", Validators.required),
+      email: new FormControl("", Validators.required),
+      password: new FormControl("", Validators.required),
+      confirmPassword: new FormControl("", [
+        validateConfirmPassword.bind(this),
+      ]),
+      phoneNumber: new FormControl("", Validators.pattern("^[0-9_-]{10,12}")),
     });
     this.activateRoute.data.pipe().subscribe((data) => {
       this.isLogin = data.activatedTab == "login" ? true : false;
@@ -54,9 +63,18 @@ export class LoginRegisterComponent
           .setValidators(Validators.required);
       } else {
         this.loginRegisterForm.get("userName").setValidators(null);
+        this.loginRegisterForm.get("confirmPassword").setValidators(null);
       }
     });
+
+    this.loginRegisterForm.get("phoneNumber").valueChanges.subscribe((data) => {
+      if ((data + "").split("").length > 10)
+        this.loginRegisterForm.patchValue({
+          phoneNumber: (data + "").split("").slice(0, 10).join(""),
+        });
+    });
   }
+
   ngAfterViewInit() {
     //this.loginUser();
   }
@@ -97,6 +115,7 @@ export class LoginRegisterComponent
                 first_name: this.loginRegisterForm.value.userName,
                 email: this.loginRegisterForm.value.email,
                 password: this.loginRegisterForm.value.password,
+                mobile: this.loginRegisterForm.value.phoneNumber,
               })
               .then((res) => {
                 alert("user registered successfully");
@@ -144,10 +163,6 @@ export class LoginRegisterComponent
         })
       )
       .subscribe();
-    // .get()
-    // .subscribe((data) => {
-    //   console.log(data);
-    // });
   }
 
   ngOnDestroy() {

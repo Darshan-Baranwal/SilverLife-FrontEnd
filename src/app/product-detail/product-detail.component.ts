@@ -16,6 +16,8 @@ export class ProductDetailComponent implements OnInit {
   count: number;
   productDetail: IProduct;
   productVariants: IProduct[] = [];
+  selectedVarianted: IProduct;
+  btnText: string = "Add to Cart";
   constructor(
     private activateRoute: ActivatedRoute,
     public service: SilverlifeService,
@@ -47,6 +49,7 @@ export class ProductDetailComponent implements OnInit {
           const selectedProduct: IProduct = products.products.filter(
             (v) => v.id == params[0].get("id")
           )[0];
+          this.selectedVarianted = selectedProduct;
           if (selectedProduct.hasVariant) {
             this.productVariants = products.products.filter(
               (v) => v.hasVariant && v.variantId === selectedProduct.variantId
@@ -67,19 +70,18 @@ export class ProductDetailComponent implements OnInit {
       this.count += action;
     }
   }
-  addTocart() {
-    this.service.cartList.push({
-      name: "sample product",
-      selectedCount: this.count,
-    });
-    this.service.informCartInNavigation.next({
-      name: "sample product",
-      selectedCount: this.count,
-    });
-    this.router.navigate(["/shopping-cart"]);
+  addGOTocart() {
+    this.service.cartList.push(this.productDetail);
+    this.service.informCartInNavigation.next(this.productDetail);
+    if (this.btnText === "Add to Cart") {
+      this.btnText = "Go to Cart";
+    } else {
+      this.btnText = "Add to Cart";
+      this.router.navigate(["/shopping-cart"]);
+    }
   }
 
   loadSelelectedVariant(selectedProduct: IProduct) {
-    this.productDetail = selectedProduct;
+    this.productDetail = this.selectedVarianted;
   }
 }

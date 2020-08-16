@@ -54,7 +54,11 @@ export class ShoppingCartComponent implements OnInit {
   }
   navigateToUserInfoPage() {
     this.service.cartTotalAmount = this.getTotalAmount();
-    this.router.navigate(["/user-details"]);
+    if(!!this.service.loggedInUser){
+      this.router.navigate(["/user-details"]);
+    } else {
+      this.router.navigate(["/account"]);
+    }
   }
 
   getTotalAmount() {

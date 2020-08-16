@@ -12,16 +12,96 @@
     class="textbox"
     type="text"
     *ngIf="!isLogin"
+    placeholder="Enter your name"
   />
   <label for="email">Email address<span class="required">*</span></label>
-  <input type="email" class="textbox" id="email" formControlName="email" />
+  <input
+    type="email"
+    class="textbox"
+    id="email"
+    formControlName="email"
+    email="true"
+    placeholder="Enter your email"
+  />
+  <div
+    *ngIf="
+      loginRegisterForm.get('email').dirty &&
+      loginRegisterForm.get('email')?.invalid
+    "
+    class="required"
+  >
+    Email is invalid
+  </div>
+  <label for="phoneNumber" *ngIf="!isLogin">Mobile Number(+91-)</label>
+  <input
+    placeholder="Mobile number with 10 digits"
+    type="number"
+    class="textbox"
+    id="phoneNumber"
+    formControlName="phoneNumber"
+    minlength="10"
+    maxlength="10"
+    *ngIf="!isLogin"
+  />
+  <div
+    *ngIf="
+      loginRegisterForm.get('phoneNumber').dirty &&
+      loginRegisterForm.get('phoneNumber').invalid
+    "
+    class="required"
+  >
+    10 digit mobile number required
+  </div>
   <label for="password"> Password<span class="required">*</span> </label>
   <input
     class="textbox"
     type="password"
     id="password"
     formControlName="password"
+    minlength="6"
+    maxlength="15"
+    placeholder="Enter your password"
   />
+  <div
+    *ngIf="
+      loginRegisterForm.get('password').dirty &&
+      loginRegisterForm.get('password')?.errors?.minlength
+    "
+    class="required"
+  >
+    Password is required with minlength 6 characters
+  </div>
+  <div
+    *ngIf="
+      loginRegisterForm.get('password').dirty &&
+      loginRegisterForm.get('password')?.errors?.maxlength
+    "
+    class="required"
+  >
+    Password is required with maxlength 15 characters
+  </div>
+  <label for="confirmPassword" *ngIf="!isLogin"
+    >Confirm Password<span class="required">*</span>
+  </label>
+  <input
+    class="textbox"
+    type="password"
+    id="confirmPassword"
+    formControlName="confirmPassword"
+    minlength="6"
+    maxlength="15"
+    *ngIf="!isLogin"
+    placeholder="Confirm your password"
+  />
+  <div
+    *ngIf="
+      loginRegisterForm.get('confirmPassword').dirty &&
+      loginRegisterForm.get('confirmPassword')?.errors?.mismatchConfirmPassword
+    "
+    class="required"
+  >
+    Confirm password is not same as password
+  </div>
   <label for="rememberMe">
     <input
       type="checkbox"

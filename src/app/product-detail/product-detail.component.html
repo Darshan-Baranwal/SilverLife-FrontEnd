@@ -5,17 +5,17 @@
   </div>
   <div class="ProductDisplay">
     <div class="MobileOnly">
-      <h1>Datt Velpore Paper Surgical Tape, Dispenser Pack</h1>
+      <h1>{{ productDetail?.overview }}</h1>
     </div>
     <div>
-      <img src="../../assets/SurgicalTape.jpg" />
+      <img [src]="productDetail?.imgAddress" />
     </div>
     <div class="DisplayDetails">
       <div class="DesktopOnly">
-        <h1>Datt Velpore Paper Surgical Tape, Dispenser Pack</h1>
+        <h1>{{ productDetail?.overview }}</h1>
       </div>
       <div>
-        <h2 class="Price">₹ 537</h2>
+        <h2 class="Price">₹ {{ productDetail?.price }}</h2>
       </div>
       <!-- <div>
         <h4>Key Features</h4>
@@ -28,12 +28,14 @@
         </ul>
       </div> -->
       <div>
-        <select class="SizeSelect">
-          <option
-            *ngFor="let variant of productVariants"
-            (click)="loadSelelectedVariant(variant)"
-            >{{ variant.variantDesc }}</option
-          >
+        <select
+          class="SizeSelect"
+          (change)="loadSelelectedVariant(selectedVarianted)"
+          [(ngModel)]="selectedVarianted"
+        >
+          <option *ngFor="let variant of productVariants" [ngValue]="variant">{{
+            variant.variantDesc
+          }}</option>
         </select>
       </div>
       <div class="Quantity">
@@ -54,9 +56,9 @@
       <div>
         <input
           type="button"
-          value="Add to Cart"
+          [value]="btnText"
           class="SizeSelect"
-          (click)="addTocart()"
+          (click)="addGOTocart()"
         />
       </div>
     </div>

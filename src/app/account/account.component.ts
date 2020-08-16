@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute, NavigationEnd } from "@angular/router";
 import { filter } from "rxjs/operators";
-import { SilverlifeService } from '../silverlife.service';
+import { SilverlifeService } from "../silverlife.service";
 @Component({
   selector: "app-account",
   templateUrl: "./account.component.html",
@@ -9,7 +9,11 @@ import { SilverlifeService } from '../silverlife.service';
 })
 export class AccountComponent implements OnInit {
   isLoginSelected: boolean = true;
-  constructor(private router: Router, private activateRoute: ActivatedRoute, public service: SilverlifeService) {}
+  constructor(
+    private router: Router,
+    private activateRoute: ActivatedRoute,
+    public service: SilverlifeService
+  ) {}
   ngOnInit() {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))

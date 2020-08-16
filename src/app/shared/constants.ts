@@ -1,3 +1,5 @@
+import { AbstractControl } from "@angular/forms";
+
 export enum PRODUCT_TYPE {
   SeasonalBanner = "seasonal-items",
 }
@@ -15,3 +17,16 @@ const successSrc = {
 export const SUCCESS_IMAGE_BASE64 = {
   successSrc,
 };
+export function validateConfirmPassword(
+  control: AbstractControl
+): { [key: string]: boolean } | null {
+  if (
+    control.value &&
+    control.valid &&
+    control.value === this.loginRegisterForm.get("password").value
+  ) {
+    return null;
+  } else {
+    return { mismatchConfirmPassword: true };
+  }
+}
