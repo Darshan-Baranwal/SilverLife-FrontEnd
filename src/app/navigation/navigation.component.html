@@ -69,6 +69,7 @@
       <a>Logout</a>
     </div>
     <div class="Icon cursor-pointer" (click)="navigateTo('shopping-cart')">
+      <div class="number">3</div>
       <img src="../../assets/Cart.png" alt="Cart" />
       <div class="modal cart-info" *ngIf="toggleNewItemAddedToCartModal">
         {{ newAddedProduct.name }}
