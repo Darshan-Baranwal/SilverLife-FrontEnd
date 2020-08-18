@@ -71,9 +71,9 @@ export class ProductDetailComponent implements OnInit {
     }
   }
   addGOTocart() {
-    this.service.cartList.push(this.productDetail);
-    this.service.informCartInNavigation.next(this.productDetail);
     if (this.btnText === "Add to Cart") {
+      this.service.cartList.push(this.productDetail);
+      this.service.informCartInNavigation.next(this.productDetail);
       this.btnText = "Go to Cart";
     } else {
       this.btnText = "Add to Cart";

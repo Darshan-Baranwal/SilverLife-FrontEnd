@@ -1,22 +1,28 @@
 <div id="main-container" #mainContainer [class.with-drawer]="toggleSideDrawer">
-    <div class="close-icon-container" (click)="toggleDrawerForSideDrawer($event)"  *ngIf="toggleSideDrawer">
-        <div class="close-icon">
-            <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
+  <div
+    class="close-icon-container"
+    (click)="toggleDrawerForSideDrawer($event)"
+    *ngIf="toggleSideDrawer"
+  >
+    <div class="close-icon">
+      <i class="fa fa-times" aria-hidden="true"></i>
     </div>
-    <app-navigation (toggleDrawer) = "toggleDrawerForSideDrawer($event)"></app-navigation>
-    <router-outlet></router-outlet>
-    <app-qualities></app-qualities>
-    <app-footer></app-footer>
+  </div>
+  <app-navigation
+    (toggleDrawer)="toggleDrawerForSideDrawer($event)"
+  ></app-navigation>
+  <router-outlet></router-outlet>
+  <app-qualities></app-qualities>
+  <app-footer></app-footer>
 </div>
 <div class="side-drawer-content" id="side-drawer-div" *ngIf="toggleSideDrawer">
-    <ul>
-        <li class="MobileOnly">Categories</li>
-        <li class="MobileOnly">Popular</li>
-        <li class="MobileOnly">Sale</li>
-        <li class="MobileOnly">Blog</li>
-        <li>Login</li>
-        <li>Account</li>
-        <li>About us</li>
-    </ul>
+  <ul>
+    <li class="MobileOnly">Categories</li>
+    <li class="MobileOnly">Popular</li>
+    <li class="MobileOnly">Sale</li>
+    <li class="MobileOnly">Blog</li>
+    <li>Login</li>
+    <li>Account</li>
+    <li>About us</li>
+  </ul>
 </div>

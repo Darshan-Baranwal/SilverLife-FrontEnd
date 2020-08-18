@@ -7,7 +7,7 @@ import {
   AfterViewInit,
 } from "@angular/core";
 import { FirebaseApiService } from "../firebase-api.service";
-import { ActivatedRoute, Router } from "@angular/router";
+import { ActivatedRoute, Router, NavigationEnd } from "@angular/router";
 import {
   FormGroup,
   FormControl,
@@ -26,6 +26,7 @@ import {
 import { of, Subject, Subscription } from "rxjs";
 import { SilverlifeService } from "../silverlife.service";
 import { validateConfirmPassword } from "../shared/constants";
+import { UrlStateService } from "../url-state.service";
 
 @Component({
   selector: "app-login-register",
@@ -39,11 +40,14 @@ export class LoginRegisterComponent
   loginRegisterForm: FormGroup;
   usersList = [];
   destroy$ = new Subject();
+  previousUrl: string = null;
+  currentUrl: string = null;
   constructor(
     private router: Router,
     public fireBaseAPi: FirebaseApiService,
     public activateRoute: ActivatedRoute,
-    public service: SilverlifeService
+    public service: SilverlifeService,
+    public urlService: UrlStateService
   ) {}
   ngOnInit(): void {
     this.loginRegisterForm = new FormGroup({
@@ -156,7 +160,8 @@ export class LoginRegisterComponent
               id: users[0].id,
               password: "",
             };
-            this.router.navigate(["/home"]);
+
+            this.router.navigate([this.urlService.previousUrls[0]]);
             this.service.sendUserDetail.next(this.service.loggedInUser);
           }
           return users;
