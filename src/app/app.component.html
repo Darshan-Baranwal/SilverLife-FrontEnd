@@ -17,12 +17,54 @@
 </div>
 <div class="side-drawer-content" id="side-drawer-div" *ngIf="toggleSideDrawer">
   <ul>
-    <li class="MobileOnly">Categories</li>
-    <li class="MobileOnly">Popular</li>
-    <li class="MobileOnly">Sale</li>
-    <li class="MobileOnly">Blog</li>
-    <li>Login</li>
-    <li>Account</li>
-    <li>About us</li>
+    <li
+      class="MobileOnly cursor-pointer"
+      routerLink="categories"
+      (click)="toggleSideDrawer = false"
+    >
+      Categories
+    </li>
+    <li
+      class="MobileOnly cursor-pointer"
+      routerLink="popular"
+      (click)="toggleSideDrawer = false"
+    >
+      Popular
+    </li>
+    <li
+      class="MobileOnly cursor-pointer"
+      routerLink="sale"
+      (click)="toggleSideDrawer = false"
+    >
+      Sale
+    </li>
+    <li
+      class="MobileOnly cursor-pointer"
+      routerLink="blog"
+      (click)="toggleSideDrawer = false"
+    >
+      Blog
+    </li>
+    <li
+      class="cursor-pointer"
+      routerLink="account/login"
+      (click)="toggleSideDrawer = false"
+    >
+      Login
+    </li>
+    <li
+      class="cursor-pointer"
+      routerLink="account"
+      (click)="toggleSideDrawer = false"
+    >
+      Account
+    </li>
+    <li
+      class="cursor-pointer"
+      routerLink="aboutUs"
+      (click)="toggleSideDrawer = false"
+    >
+      About us
+    </li>
   </ul>
 </div>

@@ -8,13 +8,17 @@ import { BehaviorSubject } from "rxjs";
 import { IUser } from "./iuser.model";
 import { IUserAddress } from "./iuser-address.model";
 import { IOrder } from "./iorder-details.model";
+import { CartProducts } from "./item-list/CartProducts.model";
 
 @Injectable({
   providedIn: "root",
 })
 export class SilverlifeService {
   informCartInNavigation = new BehaviorSubject<IProduct>(null);
-  cartList: IProduct[] = [];
+  cartList: CartProducts = {
+    cartProducts: [],
+    userId: "",
+  };
   cartTotalAmount: number;
   loggedInUser: IUser = null;
   loggedInUserAddress: IUserAddress[] = null;

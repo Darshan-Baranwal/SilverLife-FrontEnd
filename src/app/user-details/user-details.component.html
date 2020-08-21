@@ -41,6 +41,7 @@
             class="textbox MediumTextBox"
             type="text"
             formControlName="first_name"
+            #firstNameInput
           />
         </div>
         <div>
@@ -146,6 +147,7 @@
         value="Save Address"
         class="button save-address-btn"
         [disabled]="newAddressSelected ? userDetails.invalid : true"
+        *ngIf="newAddressSelected"
       />
     </div>
   </form>

@@ -5,20 +5,10 @@
       <li class="NavigationItem DesktopOnly">
         <a routerLink="categories">Categories</a>
         <ul class="BroadCategories">
-          <li>
-            <h5>Wound dressing</h5>
-          </li>
-          <li>
-            <h5>Personal Hygiene</h5>
-          </li>
-          <li>
-            <h5>Mobility</h5>
-          </li>
-          <li>
-            <h5>Home care Accessories</h5> 
-          </li>
-          <li>
-            <h5>Medical devices</h5>
+          <li *ngFor="let category of categories">
+            <h5 class="cursor-pointer" (click)="openSubCategory(category)">
+              {{ category.name }}
+            </h5>
           </li>
         </ul>
       </li>
@@ -69,7 +59,7 @@
       <a>Logout</a>
     </div>
     <div class="Icon cursor-pointer" (click)="navigateTo('shopping-cart')">
-      <div class="number">3</div>
+      <div class="number">{{ service.cartList?.cartProducts.length }}</div>
       <img src="../../assets/Cart.png" alt="Cart" />
       <div class="modal cart-info" *ngIf="toggleNewItemAddedToCartModal">
         {{ newAddedProduct.name }}
@@ -102,3 +92,8 @@
     </div>
   </div>
 </div>
+<app-subcategories-modal
+  [selectedCategory]="selectedCategory"
+  (toggleSubCategoryModal)="toggleSubCategoryList = false"
+  *ngIf="toggleSubCategoryList"
+></app-subcategories-modal>

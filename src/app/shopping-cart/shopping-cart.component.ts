@@ -9,28 +9,11 @@ import { Router } from "@angular/router";
   styleUrls: ["./shopping-cart.component.scss"],
 })
 export class ShoppingCartComponent implements OnInit {
-  cartProductList: IProduct[] = [];
   calculateTotalAmount: number;
   deliveryFee: number;
   constructor(public service: SilverlifeService, private router: Router) {}
 
   ngOnInit(): void {
-    this.cartProductList = [
-      {
-        id: 12,
-        name: "Medical Tape - 3 inch",
-        subCategoryId: 4,
-        price: 500,
-        imgAddress: "",
-        details: "",
-        isSale: false,
-        isPopular: false,
-        salePercent: "",
-        selectedCount: 4,
-        overview: "Tape of Tapes",
-      },
-    ];
-    this.service.cartList = this.cartProductList;
     this.getTotalProductAmount();
     this.deliveryFee = 200;
   }
@@ -41,20 +24,23 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   getTotalProductAmount(): number {
-    return this.cartProductList.reduce((a, v) => {
+    return this.service.cartList.cartProducts.reduce((a, v) => {
       a = a + v.selectedCount * v.price;
       return a;
     }, 0);
   }
 
   removeProduct(product: IProduct) {
-    this.cartProductList = this.cartProductList.filter(
-      (v) => v.id !== product.id
-    );
+    this.service.cartList = {
+      ...this.service.cartList,
+      cartProducts: this.service.cartList.cartProducts.filter(
+        (v) => v.id !== product.id
+      ),
+    };
   }
   navigateToUserInfoPage() {
     this.service.cartTotalAmount = this.getTotalAmount();
-    if(!!this.service.loggedInUser){
+    if (!!this.service.loggedInUser) {
       this.router.navigate(["/user-details"]);
     } else {
       this.router.navigate(["/account"]);

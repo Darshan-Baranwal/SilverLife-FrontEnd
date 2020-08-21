@@ -9,8 +9,11 @@ import {
 } from "@angular/core";
 import { Router } from "@angular/router";
 import { SilverlifeService } from "../silverlife.service";
-import { filter } from "rxjs/operators";
+import { filter, map, catchError } from "rxjs/operators";
 import { IProduct } from "../item-list/ProductModel";
+import { HttpClient } from "@angular/common/http";
+import { of } from "rxjs";
+import { ICategory } from "../category/CategoryModel";
 
 @Component({
   selector: "app-navigation",
@@ -19,12 +22,38 @@ import { IProduct } from "../item-list/ProductModel";
 })
 export class NavigationComponent implements OnInit {
   openCloseSearchModal: boolean = false;
+  categories: ICategory[] = [];
+  selectedCategory: ICategory;
   @Output() toggleDrawer = new EventEmitter<void>();
   newAddedProduct: IProduct;
   toggleNewItemAddedToCartModal: boolean = false;
-  constructor(private router: Router, public service: SilverlifeService) {}
+  toggleSubCategoryList: boolean = false;
+  constructor(
+    private router: Router,
+    public service: SilverlifeService,
+    private http: HttpClient
+  ) {}
 
   ngOnInit(): void {
+    this.getCartInfo();
+    this.getCategoriesList();
+  }
+  getCategoriesList() {
+    this.http
+      .get("../assets/JsonData/Categories.json")
+      .pipe(
+        map((response: Response) => {
+          return response;
+        }),
+        catchError((err) => {
+          return of(err);
+        })
+      )
+      .subscribe((data) => {
+        this.categories = data.categories;
+      });
+  }
+  getCartInfo() {
     this.service.informCartInNavigation
       .pipe(filter((data) => !!data))
       .subscribe((data) => {
@@ -45,6 +74,14 @@ export class NavigationComponent implements OnInit {
   logout() {
     this.service.sendUserDetail.next(null);
     this.service.loggedInUser = null;
+    this.service.cartList = {
+      cartProducts: [],
+      userId: "",
+    };
     this.router.navigate(["/home"]);
+  }
+  openSubCategory(selectedCategory: ICategory) {
+    this.selectedCategory = selectedCategory;
+    this.toggleSubCategoryList = !this.toggleSubCategoryList;
   }
 }

@@ -22,6 +22,7 @@ import {
   takeUntil,
   flatMap,
   tap,
+  catchError,
 } from "rxjs/operators";
 import { of, Subject, Subscription } from "rxjs";
 import { SilverlifeService } from "../silverlife.service";
@@ -160,7 +161,25 @@ export class LoginRegisterComponent
               id: users[0].id,
               password: "",
             };
-
+            this.fireBaseAPi
+              .getAllCartList(users[0].id)
+              .pipe(
+                takeUntil(this.destroy$),
+                map((data) => {
+                  return data.map((e) => {
+                    return {
+                      id: e.payload.doc.id,
+                      data: e.payload.doc.data(),
+                    };
+                  });
+                }),
+                tap((data) => console.log(data)),
+                catchError((err) => {
+                  console.log(err);
+                  return of(err);
+                })
+              )
+              .subscribe();
             this.router.navigate([this.urlService.previousUrls[0]]);
             this.service.sendUserDetail.next(this.service.loggedInUser);
           }

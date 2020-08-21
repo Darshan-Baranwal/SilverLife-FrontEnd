@@ -27,8 +27,6 @@ export class AppComponent implements OnInit {
       .subscribe((event: NavigationEnd) => {
         this.previousUrl = this.currentUrl;
         this.currentUrl = event.url;
-        console.log(this.previousUrl);
-        console.log(this.currentUrl);
         this.urlService.previousUrls.push(this.previousUrl);
         this.urlService.previousUrls.push(this.currentUrl);
         if (this.urlService.previousUrls.length > 4) {
@@ -37,5 +35,8 @@ export class AppComponent implements OnInit {
         }
         this.urlService.setPreviousUrl(this.previousUrl);
       });
+  }
+  navigateTo() {
+    alert("navigate working");
   }
 }

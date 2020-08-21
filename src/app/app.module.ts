@@ -41,7 +41,8 @@ import { environment } from "../environments/environment";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { FirebaseApiService } from "./firebase-api.service";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { ProductUploadComponent } from './product-upload/product-upload.component';
+import { ProductUploadComponent } from "./product-upload/product-upload.component";
+import { SubcategoriesModalComponent } from "./subcategories-modal/subcategories-modal.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,6 +77,7 @@ import { ProductUploadComponent } from './product-upload/product-upload.componen
     BlogComponent,
     ItemOverviewComponent,
     ProductUploadComponent,
+    SubcategoriesModalComponent,
   ],
   imports: [
     BrowserModule,

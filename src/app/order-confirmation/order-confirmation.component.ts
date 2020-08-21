@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { SilverlifeService } from "../silverlife.service";
+import { LocationStrategy } from "@angular/common";
 
 @Component({
   selector: "app-order-confirmation",
@@ -8,7 +9,16 @@ import { SilverlifeService } from "../silverlife.service";
 })
 export class OrderConfirmationComponent implements OnInit {
   base64textString: string;
-  constructor(public service: SilverlifeService) {}
+  constructor(
+    public service: SilverlifeService,
+    private location: LocationStrategy
+  ) {
+    history.pushState(null, null, window.location.href);
+    this.location.onPopState(() => {
+      debugger;
+      history.pushState(null, null, window.location.href);
+    });
+  }
 
   ngOnInit(): void {}
   openfile(evt) {
@@ -27,7 +37,6 @@ export class OrderConfirmationComponent implements OnInit {
 
   _handleReaderLoaded(e) {
     var binaryString = e.target.result;
-    this.base64textString = 'data:image/png;base64,' + btoa(e.target.result);
-    console.log(btoa(binaryString));
+    this.base64textString = "data:image/png;base64," + btoa(e.target.result);
   }
 }

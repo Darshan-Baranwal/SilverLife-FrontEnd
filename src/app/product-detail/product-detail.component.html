@@ -27,7 +27,7 @@
           <li class="KeyFeature">Latex free</li>
         </ul>
       </div> -->
-      <div>
+      <div *ngIf="productVariants.length > 0">
         <label for="variant"></label>
         <select
           name="variant"
@@ -47,7 +47,11 @@
           class="minus"
           (click)="changeProductCount(-1)"
         />
-        <input type="button" [value]="count" class="number" />
+        <input
+          type="button"
+          [value]="productDetail?.selectedCount"
+          class="number"
+        />
         <input
           type="button"
           value="+"

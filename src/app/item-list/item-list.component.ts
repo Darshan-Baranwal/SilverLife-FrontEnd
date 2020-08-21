@@ -36,7 +36,6 @@ export class ItemListComponent implements OnInit {
           } else {
             this.productList = data.products.filter((v) => v.isSale);
           }
-          console.log(this.productList);
         });
     } else {
       this.activatedRoute.queryParamMap
@@ -59,17 +58,17 @@ export class ItemListComponent implements OnInit {
           }),
           map(([category, products, subcategories]) => {
             this.overviewOfSubcategory = subcategories.subCategories.filter(
-              (v) => v.id === 3
+              (v) => v.categoryId === category[0].params.category
             )[0];
-            console.log(this.overviewOfSubcategory);
-            //return products.products.filter(v => v.subCategoryId === category[0].params.subcategory);
-            return products.products.filter((v) => v.subCategoryId === 3);
+            return products.products.filter(
+              (v) => v.subCategoryId == category[0].params.subcategory
+            );
+            //return products.products.filter((v) => v.subCategoryId === 3);
           }),
           catchError((err) => of(err))
         )
         .subscribe((data) => {
           this.productList = data;
-          console.log(data);
         });
     }
   }

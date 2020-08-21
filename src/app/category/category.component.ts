@@ -14,8 +14,8 @@ import { SubCategory } from "./sub-category/SubcategoryModel";
 export class CategoryComponent implements OnInit {
   toggleSubCategoryList: boolean = false;
   categories: ICategory[] = [];
-  selectedCategorySubCategories: SubCategory[];
   selectedCategory: ICategory;
+  selectedCategorySubCategories: SubCategory[];
   constructor(
     private http: HttpClient,
     private router: Router,
@@ -30,7 +30,6 @@ export class CategoryComponent implements OnInit {
           return response;
         }),
         catchError((err) => {
-          console.log(err);
           return of(err);
         })
       )
@@ -40,25 +39,6 @@ export class CategoryComponent implements OnInit {
   }
   openSubCategoryList(category: ICategory) {
     this.selectedCategory = category;
-    this.http
-      .get<{ subCategories: SubCategory[] }>(
-        "../assets/JsonData/SubCategories.json"
-      )
-      .pipe(
-        map((response) => {
-          return response.subCategories;
-        }),
-        filter((data) => !!data),
-        catchError((err) => {
-          console.log(err);
-          return of(err);
-        })
-      )
-      .subscribe((data) => {
-        this.selectedCategorySubCategories = data.filter(
-          (v: SubCategory) => v.categoryId === category.id
-        );
-      });
     this.toggleSubCategoryList = !this.toggleSubCategoryList;
   }
   navigateToProductListpage(subcategory: SubCategory) {

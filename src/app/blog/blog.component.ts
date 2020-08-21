@@ -15,7 +15,6 @@ export class BlogComponent implements OnInit {
     this.blogName = this.activateRoute.snapshot.paramMap.get("id");
     if (this.blogName == undefined) {
       this.blogName = "Blog section";
-      console.log("show all blog");
     }
   }
 }

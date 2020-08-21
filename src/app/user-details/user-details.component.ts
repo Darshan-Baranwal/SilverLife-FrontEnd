@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, AfterViewInit, ViewChild } from "@angular/core";
 import { SilverlifeService } from "../silverlife.service";
 import { Router } from "@angular/router";
 import "../../assets/js/smtp.js";
@@ -19,6 +19,7 @@ export class UserDetailsComponent implements OnInit {
   userPayment: FormControl;
   newAddressSelected: boolean = false;
   successImageSrc = SUCCESS_IMAGE_BASE64.successSrc.src;
+  @ViewChild("firstNameInput", { static: false }) firstNameInput;
   constructor(
     public service: SilverlifeService,
     private router: Router,
@@ -85,11 +86,16 @@ export class UserDetailsComponent implements OnInit {
               v.data.user_id = v.id;
               return v.data;
             });
-            console.log(this.service.loggedInUserAddress);
+            this.showFirstAddress();
           })
         )
         .subscribe();
     }
+  }
+  showFirstAddress() {
+    this.service.selectedAddress = this.service.loggedInUserAddress[0];
+    this.newAddressSelected = false;
+    this.setFormValuesAndDisableState();
   }
   selectStoredAddress(selectedAddressIndex: number) {
     this.service.selectedAddress = this.service.loggedInUserAddress[
@@ -103,6 +109,7 @@ export class UserDetailsComponent implements OnInit {
     this.newAddressSelected = true;
     this.service.selectedAddress = null;
     this.setFormValuesAndDisableState();
+    this.firstNameInput.nativeElement.focus();
   }
 
   setFormValuesAndDisableState() {
@@ -144,17 +151,18 @@ export class UserDetailsComponent implements OnInit {
   proceedToOrder() {
     this.service.orderDetails = {
       user_details: this.service.selectedAddress,
-      product_details: this.service.cartList,
+      product_details: this.service.cartList.cartProducts,
       payment_mode: this.userPayment.value,
       total_price: this.getTotalProductAmount(),
       order_date_time: new Date(),
     };
-    console.log(this.service.orderDetails);
     this.firestore
       .saveOrderDetails(this.service.orderDetails)
       .then((res) => {
         this.service.orderDetails.id = res.id;
         this.sendEmail().then((message) => {
+          this.service.cartList.cartProducts = [];
+          this.service.cartList.userId = "";
           this.router.navigate(["/order-successful"]);
         });
       })
@@ -163,16 +171,12 @@ export class UserDetailsComponent implements OnInit {
       });
   }
   getTotalProductAmount(): number {
-    return this.service.cartList.reduce((a, v) => {
+    return this.service.cartList.cartProducts.reduce((a, v) => {
       a = a + v.selectedCount * v.price;
       return a;
     }, 0);
   }
   submitBillingInfo() {
-    console.log({
-      ...this.userDetails.value,
-      user_id: this.service.loggedInUser.id,
-    });
     this.firestore
       .createUserAddress({
         ...this.userDetails.value,

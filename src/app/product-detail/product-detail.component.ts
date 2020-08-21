@@ -5,7 +5,8 @@ import { filter, switchMap, catchError, map, tap } from "rxjs/operators";
 import { combineLatest, of } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 import { IProduct } from "../item-list/ProductModel";
-import { Key } from "protractor";
+import { FirebaseApiService } from "../firebase-api.service";
+import { CartProducts } from "../item-list/CartProducts.model";
 
 @Component({
   selector: "app-product-detail",
@@ -22,13 +23,13 @@ export class ProductDetailComponent implements OnInit {
     private activateRoute: ActivatedRoute,
     public service: SilverlifeService,
     private router: Router,
-    private http: HttpClient
+    private http: HttpClient,
+    private firestore: FirebaseApiService
   ) {}
   productId: string;
   ngOnInit(): void {
     this.count = 1;
     this.productId = this.activateRoute.snapshot.paramMap.get("id");
-    console.log(this.productId);
     this.activateRoute.paramMap
       .pipe(
         filter((params: any) => !!params && !!params.get("id")),
@@ -61,19 +62,39 @@ export class ProductDetailComponent implements OnInit {
       )
       .subscribe((data) => {
         this.productDetail = data;
-        console.log(data);
-        console.log(this.productVariants);
       });
   }
   changeProductCount(action: number) {
-    if (this.count + action !== 0) {
-      this.count += action;
+    if (this.productDetail.selectedCount + action !== 0) {
+      this.productDetail.selectedCount += action;
     }
   }
   addGOTocart() {
     if (this.btnText === "Add to Cart") {
-      this.service.cartList.push(this.productDetail);
-      this.service.informCartInNavigation.next(this.productDetail);
+      if (!this.service.loggedInUser) {
+        this.router.navigate(["/account"]);
+      } else {
+        this.service.cartList.cartProducts.push(this.productDetail);
+        this.service.informCartInNavigation.next(this.productDetail);
+        this.firestore
+          .updateCart(this.service.cartList, this.service.loggedInUser.id)
+          .then((res) => {
+            console.log(res);
+            this.firestore
+              .getAllCartList(this.service.loggedInUser.id)
+              .pipe(
+                map((data) => {
+                  return data.map((e) => {
+                    return {
+                      id: e.payload.doc.id,
+                      data: e.payload.doc.data(),
+                    };
+                  });
+                })
+              )
+              .subscribe((data) => console.log(data));
+          });
+      }
       this.btnText = "Go to Cart";
     } else {
       this.btnText = "Add to Cart";

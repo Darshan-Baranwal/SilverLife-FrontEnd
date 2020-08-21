@@ -20,7 +20,7 @@ export class AdvisoryComponent implements OnInit {
             return response.articles;
         }
     ),
-    catchError(err => {console.log(err); return of(err)})
+    catchError(err => { return of(err)})
     ).subscribe(data => {
       this.advisories = data;
     })
