@@ -1,0 +1,40 @@
+<div class="modal sub-category-container">
+  <div
+    class="modal-content"
+    appAutoClose
+    (autoCloseOnclickOutside)="toggleSubCategoryModal.emit()"
+  >
+    <div id="close">
+      <a class="close-link" (click)="toggleSubCategoryModal.emit()">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </a>
+    </div>
+    <h3 class="modal-header">
+      Items available for {{ selectedCategory.name }}
+    </h3>
+    <div
+      class="sub-category-list"
+      *ngIf="selectedCategorySubCategories?.length > 0; else noSubCategory"
+    >
+      <div
+        *ngFor="let subCategory of selectedCategorySubCategories"
+        class="sub-category-cards"
+        style="
+          background-image: linear-gradient(
+            to right,
+            #f6dfbe,
+            rgb(250, 239, 225)
+          );
+        "
+        (click)="navigateToProductListpage(subCategory)"
+      >
+        <div>
+          <a>{{ subCategory.name }}</a>
+        </div>
+      </div>
+    </div>
+    <ng-template #noSubCategory>
+      <h2 style="text-align: center;">No Subcategory Available</h2>
+    </ng-template>
+  </div>
+</div>
