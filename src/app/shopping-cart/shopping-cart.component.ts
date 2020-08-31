@@ -3,8 +3,9 @@ import { IProduct } from "../item-list/ProductModel";
 import { SilverlifeService } from "../silverlife.service";
 import { Router } from "@angular/router";
 import { HttpClient } from '@angular/common/http';
-import { catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { of } from 'rxjs';
+import { FirebaseApiService } from '../firebase-api.service';
 
 @Component({
   selector: "app-shopping-cart",
@@ -16,7 +17,8 @@ export class ShoppingCartComponent implements OnInit {
   deliveryFee: number;
   constructor(public service: SilverlifeService, 
               private router: Router,
-              private http: HttpClient) {}
+              private http: HttpClient,
+              private firestore: FirebaseApiService) {}
 
   ngOnInit(): void {
     this.getTotalProductAmount();
@@ -54,7 +56,29 @@ export class ShoppingCartComponent implements OnInit {
         (v) => v.id !== product.id
       ),
     };
+    this.updateShoppingCartList();
   }
+  updateShoppingCartList() {
+    this.firestore
+          .updateCart(this.service.cartList)
+          .then((res) => {
+            console.log(res);
+            this.firestore
+              .getAllCartList(this.service.loggedInUser.id)
+              .pipe(
+                map((data) => {
+                  return data.map((e) => {
+                    return {
+                      id: e.payload.doc.id,
+                      data: e.payload.doc.data(),
+                    };
+                  });
+                })
+              )
+              .subscribe((data) => console.log(data));
+          });
+  }
+
   navigateToUserInfoPage() {
     this.service.cartTotalAmount = this.getTotalAmount();
     if (!!this.service.loggedInUser) {
