@@ -18,6 +18,7 @@ export class SilverlifeService {
   cartList: CartProducts = {
     cartProducts: [],
     userId: "",
+    cartId: ""
   };
   cartTotalAmount: number;
   loggedInUser: IUser = null;

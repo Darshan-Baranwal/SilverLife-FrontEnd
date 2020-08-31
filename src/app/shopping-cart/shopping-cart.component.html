@@ -43,7 +43,9 @@
     </ul>
   </div>
   <ng-template #noItemInCart>
-    <div class="no-item-cart">You Don't have any item into your card.</div>
+    <div class="no-item-cart">You don't have any item into your card. 
+      <a routerLink="/home">Continue Shopping...</a>
+    </div>
   </ng-template>
   <div class="Pricetable" *ngIf="service.cartList.cartProducts.length > 0">
     <ul class="tableRow priceRow">

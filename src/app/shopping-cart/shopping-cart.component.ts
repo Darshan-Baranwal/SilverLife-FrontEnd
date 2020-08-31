@@ -2,6 +2,9 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { IProduct } from "../item-list/ProductModel";
 import { SilverlifeService } from "../silverlife.service";
 import { Router } from "@angular/router";
+import { HttpClient } from '@angular/common/http';
+import { catchError } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 @Component({
   selector: "app-shopping-cart",
@@ -11,11 +14,25 @@ import { Router } from "@angular/router";
 export class ShoppingCartComponent implements OnInit {
   calculateTotalAmount: number;
   deliveryFee: number;
-  constructor(public service: SilverlifeService, private router: Router) {}
+  constructor(public service: SilverlifeService, 
+              private router: Router,
+              private http: HttpClient) {}
 
   ngOnInit(): void {
     this.getTotalProductAmount();
     this.deliveryFee = 200;
+    this.getProductList();
+  }
+
+  getProductList() {
+    return this.http
+    .get("../assets/JsonData/Products.json")
+    .pipe(catchError((err) => of(err)))
+    .subscribe((data) => {
+      this.service.cartList.cartProducts = this.service.cartList.cartProducts.map(v => {
+      return {...data.products.find((data) => data.id == v.id), selectedCount: v.selectedCount};
+      });
+    });
   }
   changeProductCount(product: IProduct, action: number) {
     if (product.selectedCount + action !== 0) {

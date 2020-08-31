@@ -5,16 +5,16 @@ import {
   EventEmitter,
   OnDestroy,
   AfterViewInit,
-} from "@angular/core";
-import { FirebaseApiService } from "../firebase-api.service";
-import { ActivatedRoute, Router, NavigationEnd } from "@angular/router";
+} from '@angular/core';
+import { FirebaseApiService } from '../firebase-api.service';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import {
   FormGroup,
   FormControl,
   Validators,
   AbstractControl,
-} from "@angular/forms";
-import { IUser } from "../iuser.model";
+} from '@angular/forms';
+import { IUser } from '../iuser.model';
 import {
   map,
   filter,
@@ -23,21 +23,22 @@ import {
   flatMap,
   tap,
   catchError,
-} from "rxjs/operators";
-import { of, Subject, Subscription } from "rxjs";
-import { SilverlifeService } from "../silverlife.service";
-import { validateConfirmPassword } from "../shared/constants";
-import { UrlStateService } from "../url-state.service";
+  mergeMap,
+} from 'rxjs/operators';
+import { of, Subject, Subscription } from 'rxjs';
+import { SilverlifeService } from '../silverlife.service';
+import { validateConfirmPassword } from '../shared/constants';
+import { UrlStateService } from '../url-state.service';
 
 @Component({
-  selector: "app-login-register",
-  templateUrl: "./login-register.component.html",
-  styleUrls: ["./login-register.component.scss"],
+  selector: 'app-login-register',
+  templateUrl: './login-register.component.html',
+  styleUrls: ['./login-register.component.scss'],
 })
 export class LoginRegisterComponent
   implements OnInit, OnDestroy, AfterViewInit {
   subscriptionObj: Subscription;
-  isLogin: boolean = false;
+  isLogin = false;
   loginRegisterForm: FormGroup;
   usersList = [];
   destroy$ = new Subject();
@@ -52,36 +53,37 @@ export class LoginRegisterComponent
   ) {}
   ngOnInit(): void {
     this.loginRegisterForm = new FormGroup({
-      userName: new FormControl(""),
-      email: new FormControl("", Validators.required),
-      password: new FormControl("", Validators.required),
-      confirmPassword: new FormControl("", [
+      userName: new FormControl(''),
+      email: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required),
+      confirmPassword: new FormControl('', [
         validateConfirmPassword.bind(this),
       ]),
-      phoneNumber: new FormControl("", Validators.pattern("^[0-9_-]{10,12}")),
+      phoneNumber: new FormControl('', Validators.pattern('^[0-9_-]{10,12}')),
     });
     this.activateRoute.data.pipe().subscribe((data) => {
-      this.isLogin = data.activatedTab == "login" ? true : false;
+      this.isLogin = data.activatedTab == 'login' ? true : false;
       if (!this.isLogin) {
         this.loginRegisterForm
-          .get("userName")
+          .get('userName')
           .setValidators(Validators.required);
       } else {
-        this.loginRegisterForm.get("userName").setValidators(null);
-        this.loginRegisterForm.get("confirmPassword").setValidators(null);
+        this.loginRegisterForm.get('userName').setValidators(null);
+        this.loginRegisterForm.get('confirmPassword').setValidators(null);
       }
     });
 
-    this.loginRegisterForm.get("phoneNumber").valueChanges.subscribe((data) => {
-      if ((data + "").split("").length > 10)
+    this.loginRegisterForm.get('phoneNumber').valueChanges.subscribe((data) => {
+      if ((data + '').split('').length > 10) {
         this.loginRegisterForm.patchValue({
           phoneNumber: (data + "").split("").slice(0, 10).join(""),
         });
+      }
     });
   }
 
   ngAfterViewInit() {
-    //this.loginUser();
+    // this.loginUser();
   }
   loginRegisterUser() {
     if (this.isLogin) {
@@ -110,11 +112,11 @@ export class LoginRegisterComponent
         }),
         tap((data) => {
           if (data.length > 0) {
-            if (this.subscriptionObj) this.subscriptionObj.unsubscribe();
-            alert("Email id is duplicate");
-            this.loginRegisterForm.get("email").setValue("");
+            if (this.subscriptionObj) { this.subscriptionObj.unsubscribe(); }
+            alert('Email id is duplicate');
+            this.loginRegisterForm.get('email').setValue('');
           } else {
-            if (this.subscriptionObj) this.subscriptionObj.unsubscribe();
+            if (this.subscriptionObj) { this.subscriptionObj.unsubscribe(); }
             this.fireBaseAPi
               .createUser({
                 first_name: this.loginRegisterForm.value.userName,
@@ -123,13 +125,13 @@ export class LoginRegisterComponent
                 mobile: this.loginRegisterForm.value.phoneNumber,
               })
               .then((res) => {
-                alert("user registered successfully");
-                this.router.navigate(["../login"], {
+                alert('user registered successfully');
+                this.router.navigate(['../login'], {
                   relativeTo: this.activateRoute,
                 });
                 this.isLogin = true;
               })
-              .catch((rej) => alert("rejected " + rej));
+              .catch((rej) => alert('rejected ' + rej));
           }
         })
       )
@@ -152,16 +154,16 @@ export class LoginRegisterComponent
             };
           });
         }),
-        switchMap((users: any) => {
+        mergeMap((users: any) => {
           if (users.length === 0) {
-            alert("User not exist Please register");
+            alert('User not exist Please register');
           } else {
             this.service.loggedInUser = {
               ...users[0].data,
               id: users[0].id,
-              password: "",
+              password: '',
             };
-            this.fireBaseAPi
+            return this.fireBaseAPi
               .getAllCartList(users[0].id)
               .pipe(
                 takeUntil(this.destroy$),
@@ -173,25 +175,28 @@ export class LoginRegisterComponent
                     };
                   });
                 }),
-                tap((data) => console.log(data)),
+                tap((data: any) => {
+                  this.service.cartList = data[0].data;
+                  this.service.cartList.cartId = data[0].id;
+                  console.log(this.service.cartList);
+                }),
                 catchError((err) => {
                   console.log(err);
                   return of(err);
                 })
-              )
-              .subscribe();
-            this.router.navigate([this.urlService.previousUrls[0]]);
-            this.service.sendUserDetail.next(this.service.loggedInUser);
+              );
           }
-          return users;
         })
       )
-      .subscribe();
+      .subscribe(data => {
+        this.router.navigate([this.urlService.previousUrls[0]]);
+        this.service.sendUserDetail.next(this.service.loggedInUser);
+      });
   }
 
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
-    if (this.subscriptionObj) this.subscriptionObj.unsubscribe();
+    if (this.subscriptionObj) { this.subscriptionObj.unsubscribe(); }
   }
 }

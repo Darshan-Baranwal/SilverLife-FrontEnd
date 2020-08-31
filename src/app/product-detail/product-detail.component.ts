@@ -77,7 +77,7 @@ export class ProductDetailComponent implements OnInit {
         this.service.cartList.cartProducts.push(this.productDetail);
         this.service.informCartInNavigation.next(this.productDetail);
         this.firestore
-          .updateCart(this.service.cartList, this.service.loggedInUser.id)
+          .updateCart(this.service.cartList)
           .then((res) => {
             console.log(res);
             this.firestore

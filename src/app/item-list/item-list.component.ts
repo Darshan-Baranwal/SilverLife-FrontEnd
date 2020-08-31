@@ -1,9 +1,8 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
-import { PRODUCT_TYPE } from "../shared/constants";
 import { switchMap, map, filter, catchError } from "rxjs/operators";
 import { HttpClient } from "@angular/common/http";
-import { zip, of, combineLatest } from "rxjs";
+import { of, combineLatest } from "rxjs";
 import { SubCategory } from "../category/sub-category/SubcategoryModel";
 @Component({
   selector: "app-item-list",
