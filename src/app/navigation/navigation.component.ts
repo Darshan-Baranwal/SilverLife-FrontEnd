@@ -3,9 +3,6 @@ import {
   OnInit,
   Output,
   EventEmitter,
-  ViewChild,
-  ElementRef,
-  HostListener,
 } from "@angular/core";
 import { Router } from "@angular/router";
 import { SilverlifeService } from "../silverlife.service";
@@ -83,5 +80,11 @@ export class NavigationComponent implements OnInit {
   openSubCategory(selectedCategory: ICategory) {
     this.selectedCategory = selectedCategory;
     this.toggleSubCategoryList = !this.toggleSubCategoryList;
+  }
+  focusToAdvisory() {
+    setTimeout(() => {
+      this.service.focusToAdvisory.next('advisory');
+      this.router.navigate(["/home"]);
+    }, 10);
   }
 }

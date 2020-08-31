@@ -2,6 +2,7 @@ import { Component, ViewChild, OnInit } from "@angular/core";
 import { Router, NavigationEnd } from "@angular/router";
 import { filter } from "rxjs/operators";
 import { UrlStateService } from "./url-state.service";
+import { SilverlifeService } from './silverlife.service';
 
 @Component({
   selector: "app-root",
@@ -17,7 +18,8 @@ export class AppComponent implements OnInit {
   toggleDrawerForSideDrawer(event) {
     this.toggleSideDrawer = !this.toggleSideDrawer;
   }
-  constructor(private router: Router, private urlService: UrlStateService) {}
+  constructor(private router: Router, private urlService: UrlStateService,
+    private service: SilverlifeService) {}
   ngOnInit() {
     this.getPreviousUrl();
   }
@@ -38,5 +40,12 @@ export class AppComponent implements OnInit {
   }
   navigateTo() {
     alert("navigate working");
+  }
+  focusToAdvisory() {
+    this.toggleSideDrawer = false;
+    setTimeout(() => {
+      this.service.focusToAdvisory.next('advisory');
+      this.router.navigate(["/home"]);
+    }, 10);
   }
 }
