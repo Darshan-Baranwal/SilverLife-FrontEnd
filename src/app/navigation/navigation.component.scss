@@ -107,40 +107,10 @@
   height: 2px;
   background-color: black;
 }
-.BroadCategories {
-  background-color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  position: absolute;
-  top: 65px;
-  width: 100%;
-  left: 0px;
-  list-style: none;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: rgb(100, 100, 100);
-  padding: 0 0 2% 0;
-  visibility: hidden;
-  border-top: 1px solid rgb(218, 217, 217);
-}
 
-.BroadCategories img {
-  height: 25px;
-}
-.BroadCategories h5 {
-  margin: 20px 0;
-  display: inline-block;
-}
-
-.BroadCategories li:hover h5 {
-  color: #dd1336;
-}
-
-.BroadCategories:hover {
-  visibility: visible;
-}
+// .BroadCategories:hover {
+//   visibility: visible;
+// }
 .Logo {
   padding: 0px 10px;
   height: 100%;

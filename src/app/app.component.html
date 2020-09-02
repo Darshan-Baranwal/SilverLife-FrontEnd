@@ -19,8 +19,7 @@
   <ul>
     <li
       class="MobileOnly cursor-pointer"
-      routerLink="categories"
-      (click)="toggleSideDrawer = false"
+      (click)="listItemClicked('category')"
     >
       Categories
     </li>
@@ -40,7 +39,7 @@
     </li>
     <li
       class="MobileOnly cursor-pointer"
-      (click)="focusToAdvisory()"
+      (click)="listItemClicked('blog')"
     >
       Blog
     </li>

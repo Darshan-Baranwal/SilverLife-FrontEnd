@@ -21,6 +21,8 @@ export class NavigationComponent implements OnInit {
   openCloseSearchModal: boolean = false;
   categories: ICategory[] = [];
   selectedCategory: ICategory;
+  isCategoryHovered: boolean = false;
+  isCategoryClickedFromMobile = false;
   @Output() toggleDrawer = new EventEmitter<void>();
   newAddedProduct: IProduct;
   toggleNewItemAddedToCartModal: boolean = false;
@@ -34,6 +36,19 @@ export class NavigationComponent implements OnInit {
   ngOnInit(): void {
     this.getCartInfo();
     this.getCategoriesList();
+    this.getCategoryModalForMobile();
+    this.isCategoryClickedFromMobile = false;
+    this.isCategoryHovered = false;
+  }
+  toggleCategoryModal() {
+    this.isCategoryClickedFromMobile = false;
+    document.body.style.position = '';
+    document.body.style.top = '';
+  }
+  getCategoryModalForMobile() {
+    this.service.showCategoryListModalForMobile.subscribe(data => {
+      this.isCategoryClickedFromMobile = true;
+    });
   }
   getCategoriesList() {
     this.http
@@ -78,6 +93,7 @@ export class NavigationComponent implements OnInit {
     this.router.navigate(["/home"]);
   }
   openSubCategory(selectedCategory: ICategory) {
+    this.isCategoryClickedFromMobile = false;
     this.selectedCategory = selectedCategory;
     this.toggleSubCategoryList = !this.toggleSubCategoryList;
   }

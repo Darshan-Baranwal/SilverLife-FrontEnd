@@ -16,6 +16,7 @@ import { CartProducts } from "./item-list/CartProducts.model";
 export class SilverlifeService {
   informCartInNavigation = new BehaviorSubject<IProduct>(null);
   focusToAdvisory = new BehaviorSubject<string>(null);
+  showCategoryListModalForMobile = new BehaviorSubject<string>(null);
   cartList: CartProducts = {
     cartProducts: [],
     userId: "",

@@ -1,25 +1,25 @@
-import { Component, ViewChild, OnInit } from "@angular/core";
-import { Router, NavigationEnd } from "@angular/router";
-import { filter } from "rxjs/operators";
-import { UrlStateService } from "./url-state.service";
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
+import { UrlStateService } from './url-state.service';
 import { SilverlifeService } from './silverlife.service';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"],
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = "SilverLife";
-  toggleSideDrawer: boolean = false;
+  title = 'SilverLife';
+  toggleSideDrawer = false;
   previousUrl: string = null;
   currentUrl: string = null;
-  @ViewChild("mainContainer", { static: false }) mainContainer;
+  @ViewChild('mainContainer', { static: false }) mainContainer;
   toggleDrawerForSideDrawer(event) {
     this.toggleSideDrawer = !this.toggleSideDrawer;
   }
   constructor(private router: Router, private urlService: UrlStateService,
-    private service: SilverlifeService) {}
+              private service: SilverlifeService) {}
   ngOnInit() {
     this.getPreviousUrl();
   }
@@ -39,13 +39,17 @@ export class AppComponent implements OnInit {
       });
   }
   navigateTo() {
-    alert("navigate working");
+    alert('navigate working');
   }
-  focusToAdvisory() {
+  listItemClicked(listItemName: string) {
     this.toggleSideDrawer = false;
+    if (listItemName === 'blog') {
     setTimeout(() => {
       this.service.focusToAdvisory.next('advisory');
-      this.router.navigate(["/home"]);
+      this.router.navigate(['/home']);
     }, 10);
+  } else if (listItemName === 'category') {
+    this.service.showCategoryListModalForMobile.next('category');
+  }
   }
 }

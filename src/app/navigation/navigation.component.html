@@ -1,16 +1,12 @@
 <div class="Toolbar">
   <div class="EmptyTool DesktopOnly"></div>
-  <nav>
+  <nav class="">
     <ul class="NavigationItems">
-      <li class="NavigationItem DesktopOnly">
-        <a routerLink="categories">Categories</a>
-        <ul class="BroadCategories">
-          <li *ngFor="let category of categories">
-            <h5 class="cursor-pointer" (click)="openSubCategory(category)">
-              {{ category.name }}
-            </h5>
-          </li>
-        </ul>
+      <li class="NavigationItem DesktopOnly" (mouseover)="isCategoryHovered=true" 
+      (mouseleave)="isCategoryHovered=false">
+        <a routerLink="categories" >Categories</a>
+        <app-categories-modal *ngIf="isCategoryHovered" [modal]="false" 
+        [categories]="categories" (openSubCategory)= "openSubCategory($event)"></app-categories-modal>
       </li>
       <li class="NavigationItem DesktopOnly">
         <a routerLink="popular">Popular</a>
@@ -97,3 +93,5 @@
   (toggleSubCategoryModal)="toggleSubCategoryList = false"
   *ngIf="toggleSubCategoryList"
 ></app-subcategories-modal>
+<app-categories-modal class="MobileOnly" [modal]="true" *ngIf="isCategoryClickedFromMobile" 
+[categories]="categories" (toggleCategoryModal)="toggleCategoryModal()" (openSubCategory)= "openSubCategory($event)"></app-categories-modal>

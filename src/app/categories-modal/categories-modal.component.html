@@ -1,0 +1,15 @@
+<div class="modal BroadCategories" 
+[class.category-modal-container]="modal">
+<div id="close" class="close-container" *ngIf="modal">
+    <a class="close-link" (click)="toggleCategoryModal.emit()">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </a>
+  </div>
+<ul>
+    <li *ngFor="let category of categories">
+      <h5 class="cursor-pointer" (click)="openSubCategory.emit(category)">
+        {{ category.name }}
+      </h5>
+    </li>
+  </ul>
+</div>
