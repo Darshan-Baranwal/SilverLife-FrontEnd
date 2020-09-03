@@ -5,7 +5,7 @@ export interface IUser {
   date_created?: Time;
   email: string;
   first_name?: string;
-  is_forgot_pwd?: string;
+  is_forgot_pwd?: boolean;
   last_name?: string;
   mobile?: string;
   password: string;

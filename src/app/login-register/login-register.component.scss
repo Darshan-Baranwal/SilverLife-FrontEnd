@@ -1,3 +1,25 @@
 .disabled-input {
   opacity: 0.6;
 }
+.login {
+  padding: 2% 10%;
+  text-align: center;
+}
+.login .heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.login .heading div {
+  margin: 0 10%;
+}
+.login .heading div:hover,
+.login .heading div.active {
+  color: rgb(223, 34, 65);
+  border-bottom: 1px solid rgb(223, 34, 65);
+}
+@media (max-width: 785px) {
+  .login {
+    padding: 0
+  }
+}

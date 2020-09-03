@@ -5,8 +5,6 @@ import "../../assets/js/smtp.js";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { FirebaseApiService } from "../firebase-api.service";
 import { tap, map } from "rxjs/operators";
-import { IUserAddress } from "../iuser-address.model";
-import { IOrder } from "../iorder-details.model";
 import { SUCCESS_IMAGE_BASE64 } from "../shared/constants";
 declare let Email: any;
 @Component({
@@ -17,7 +15,7 @@ declare let Email: any;
 export class UserDetailsComponent implements OnInit {
   userDetails: FormGroup;
   userPayment: FormControl;
-  newAddressSelected: boolean = false;
+  newAddressSelected = false;
   successImageSrc = SUCCESS_IMAGE_BASE64.successSrc.src;
   @ViewChild("firstNameInput", { static: false }) firstNameInput;
   constructor(
@@ -82,6 +80,7 @@ export class UserDetailsComponent implements OnInit {
             });
           }),
           tap((data: any) => {
+            // undefined on no user address
             this.service.loggedInUserAddress = data.map((v) => {
               v.data.user_id = v.id;
               return v.data;
@@ -95,6 +94,9 @@ export class UserDetailsComponent implements OnInit {
   showFirstAddress() {
     this.service.selectedAddress = this.service.loggedInUserAddress[0];
     this.newAddressSelected = false;
+    if (this.service.loggedInUserAddress.length === 0) {
+      this.newAddressSelected = true;
+    }
     this.setFormValuesAndDisableState();
   }
   selectStoredAddress(selectedAddressIndex: number) {
@@ -162,7 +164,7 @@ export class UserDetailsComponent implements OnInit {
         this.service.orderDetails.id = res.id;
         this.sendEmail().then((message) => {
           this.service.cartList.cartProducts = [];
-          this.service.cartList.userId = "";
+          this.service.cartList.userId = this.service.loggedInUser.id;
           this.router.navigate(["/order-successful"]);
         });
       })
@@ -188,17 +190,11 @@ export class UserDetailsComponent implements OnInit {
   sendEmail() {
     return Email.send({
       Host: "smtp.elasticemail.com",
-
       Username: "only4apps15@gmail.com",
-
       Password: "5A8CD76F9586056401874BD1E558CD5B6F05",
-
       To: "goeldiksha94@gmail.com",
-
       From: "only4apps15@gmail.com",
-
       Subject: "Test Mail",
-
       Body: this.getMailBody(),
     });
   }

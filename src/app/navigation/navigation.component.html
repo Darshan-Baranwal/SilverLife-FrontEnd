@@ -2,11 +2,18 @@
   <div class="EmptyTool DesktopOnly"></div>
   <nav class="">
     <ul class="NavigationItems">
-      <li class="NavigationItem DesktopOnly" (mouseover)="isCategoryHovered=true" 
-      (mouseleave)="isCategoryHovered=false">
-        <a routerLink="categories" >Categories</a>
-        <app-categories-modal *ngIf="isCategoryHovered" [modal]="false" 
-        [categories]="categories" (openSubCategory)= "openSubCategory($event)"></app-categories-modal>
+      <li
+        class="NavigationItem DesktopOnly"
+        (mouseover)="isCategoryHovered = true"
+        (mouseleave)="isCategoryHovered = false"
+      >
+        <a routerLink="categories">Categories</a>
+        <app-categories-modal
+          *ngIf="isCategoryHovered"
+          [modal]="false"
+          [categories]="categories"
+          (openSubCategory)="openSubCategory($event)"
+        ></app-categories-modal>
       </li>
       <li class="NavigationItem DesktopOnly">
         <a routerLink="popular">Popular</a>
@@ -48,17 +55,19 @@
       }}</span>
     </div>
     <div
-      *ngIf="!!service.sendUserDetail.value"
+      *ngIf="!!service.sendUserDetail?.value"
       (click)="logout()"
       class="logout-link cursor-pointer"
     >
       <a>Logout</a>
     </div>
     <div class="Icon cursor-pointer" (click)="navigateTo('shopping-cart')">
-      <div class="number">{{ service.cartList?.cartProducts.length }}</div>
+      <div class="number">
+        {{ !!service.cartList ? service.cartList?.cartProducts?.length : 0 }}
+      </div>
       <img src="../../assets/Cart.png" alt="Cart" />
       <div class="modal cart-info" *ngIf="toggleNewItemAddedToCartModal">
-        {{ newAddedProduct.name }}
+        {{ newAddedProduct?.name }}
       </div>
     </div>
     <div class="DrawerToggle" (click)="openDrawer()">
@@ -93,5 +102,11 @@
   (toggleSubCategoryModal)="toggleSubCategoryList = false"
   *ngIf="toggleSubCategoryList"
 ></app-subcategories-modal>
-<app-categories-modal class="MobileOnly" [modal]="true" *ngIf="isCategoryClickedFromMobile" 
-[categories]="categories" (toggleCategoryModal)="toggleCategoryModal()" (openSubCategory)= "openSubCategory($event)"></app-categories-modal>
+<app-categories-modal
+  class="MobileOnly"
+  [modal]="true"
+  *ngIf="isCategoryClickedFromMobile"
+  [categories]="categories"
+  (toggleCategoryModal)="toggleCategoryModal()"
+  (openSubCategory)="openSubCategory($event)"
+></app-categories-modal>

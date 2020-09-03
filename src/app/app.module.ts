@@ -44,6 +44,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ProductUploadComponent } from "./product-upload/product-upload.component";
 import { SubcategoriesModalComponent } from "./subcategories-modal/subcategories-modal.component";
 import { CategoriesModalComponent } from './categories-modal/categories-modal.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -80,6 +82,8 @@ import { CategoriesModalComponent } from './categories-modal/categories-modal.co
     ProductUploadComponent,
     SubcategoriesModalComponent,
     CategoriesModalComponent,
+    ForgotPasswordComponent,
+    ChangePasswordComponent,
   ],
   imports: [
     BrowserModule,

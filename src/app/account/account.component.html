@@ -1,25 +1,35 @@
 <div class="Account">
   <div>
     <ul class="list">
-      <li *ngIf="service.loggedInUser">My Orders</li>
-      <li *ngIf="service.loggedInUser">Edit Profile</li>
-      <li *ngIf="service.loggedInUser">Change Password</li>
+      <li class="cursor-pointer" *ngIf="service.loggedInUser">My Orders</li>
+      <li class="cursor-pointer" *ngIf="service.loggedInUser">Edit Profile</li>
       <li>Contact Us</li>
+      <li
+        class="cursor-pointer"
+        *ngIf="!service.loggedInUser"
+        routerLink="/account/login"
+      >
+        Login/Register
+      </li>
+      <li
+        class="cursor-pointer"
+        routerLink="forgotPassword"
+        *ngIf="!service.loggedInUser"
+      >
+        Forgot Password
+      </li>
+      <li
+        class="cursor-pointer"
+        routerLink="changePassword"
+        *ngIf="service.loggedInUser"
+      >
+        Change Password
+      </li>
     </ul>
   </div>
   <div class="working">
     <h1>My Account</h1>
-    <div class="login">
-      <div class="heading">
-        <div [class.active]="isLoginSelected" (click)="routeTo(true)">
-          Login
-        </div>
-        <div [class.active]="!isLoginSelected" (click)="routeTo(false)">
-          Register
-        </div>
-      </div>
-      <router-outlet></router-outlet>
-    </div>
+    <router-outlet></router-outlet>
   </div>
   <!-- <app-contact-mail></app-contact-mail> -->
 </div>

@@ -30,3 +30,16 @@ export function validateConfirmPassword(
     return { mismatchConfirmPassword: true };
   }
 }
+export function validateNewPassword(
+  control: AbstractControl
+): { [key: string]: boolean } | null {
+  if (
+    control.value &&
+    control.valid &&
+    control.value !== this.changePassword.get("oldPwd").value
+  ) {
+    return null;
+  } else {
+    return { sameNewPassword: true };
+  }
+}

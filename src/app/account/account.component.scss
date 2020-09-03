@@ -41,27 +41,6 @@
   padding-bottom: 3%;
 }
 
-.Account .working .login {
-  padding: 2% 10%;
-  text-align: center;
-}
-
-.Account .working .login .heading {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.Account .working .login .heading div {
-  margin: 0 10%;
-}
-
-.Account .working .login .heading div:hover,
-.Account .working .login .heading div.active {
-  color: rgb(223, 34, 65);
-  border-bottom: 1px solid rgb(223, 34, 65);
-}
-
 @media (max-width: 785px) {
   .Account {
     height: 100%;

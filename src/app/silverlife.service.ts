@@ -9,7 +9,10 @@ import { IUser } from "./iuser.model";
 import { IUserAddress } from "./iuser-address.model";
 import { IOrder } from "./iorder-details.model";
 import { CartProducts } from "./item-list/CartProducts.model";
+import { IMail } from "./imail.model";
+import { APP_MAIL } from "./mail-constants";
 
+declare let Email: any;
 @Injectable({
   providedIn: "root",
 })
@@ -20,7 +23,7 @@ export class SilverlifeService {
   cartList: CartProducts = {
     cartProducts: [],
     userId: "",
-    cartId: ""
+    cartId: "",
   };
   cartTotalAmount: number;
   loggedInUser: IUser = null;
@@ -40,5 +43,9 @@ export class SilverlifeService {
     queryParams.queryParams.category = category?.id;
     queryParams.queryParams.subcategory = subcategory?.id;
     this.router.navigate([routeLink], queryParams);
+  }
+  sendMail(mail: IMail) {
+    mail = { ...mail, ...APP_MAIL };
+    return Email.send(mail);
   }
 }

@@ -13,6 +13,8 @@ import { UserDetailsComponent } from "./user-details/user-details.component";
 import { OrderConfirmationComponent } from "./order-confirmation/order-confirmation.component";
 import { BlogComponent } from "./blog/blog.component";
 import { LoginRegisterComponent } from "./login-register/login-register.component";
+import { ForgotPasswordComponent } from "./forgot-password/forgot-password.component";
+import { ChangePasswordComponent } from "./change-password/change-password.component";
 
 const routes: Routes = [
   {
@@ -33,6 +35,8 @@ const routes: Routes = [
           activatedTab: "register",
         },
       },
+      { path: "forgotPassword", component: ForgotPasswordComponent },
+      { path: "changePassword", component: ChangePasswordComponent },
     ],
   },
   { path: "home", component: HomeComponent },

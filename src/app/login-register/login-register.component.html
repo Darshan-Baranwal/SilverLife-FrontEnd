@@ -1,4 +1,13 @@
-<form
+<div class="login">
+  <div class="heading">
+    <div [class.active]="isLoginSelected" (click)="routeTo(true)">
+      Login
+    </div>
+    <div [class.active]="!isLoginSelected" (click)="routeTo(false)">
+      Register
+    </div>
+  </div>
+  <form
   class="form"
   (ngSubmit)="loginRegisterUser()"
   [formGroup]="loginRegisterForm"
@@ -118,5 +127,6 @@
     [disabled]="loginRegisterForm.invalid"
     [class.disabled-input]="loginRegisterForm.invalid"
   />
-  <a>Forgot Password</a>
+  <a class="cursor-pointer" (click) = "forgotPassword()">Forgot Password</a>
 </form>
+</div>
