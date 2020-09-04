@@ -1,8 +1,20 @@
 <div class="Account">
   <div>
     <ul class="list">
-      <li class="cursor-pointer" *ngIf="service.loggedInUser">My Orders</li>
-      <li class="cursor-pointer" *ngIf="service.loggedInUser">Edit Profile</li>
+      <li
+        class="cursor-pointer"
+        *ngIf="service.loggedInUser"
+        routerLink="/account/orderSummary"
+      >
+        My Orders
+      </li>
+      <li
+        class="cursor-pointer"
+        *ngIf="service.loggedInUser"
+        routerLink="/account/editProfile"
+      >
+        Edit Profile
+      </li>
       <li>Contact Us</li>
       <li
         class="cursor-pointer"

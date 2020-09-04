@@ -85,7 +85,7 @@ export class LoginRegisterComponent
   }
 
   ngAfterViewInit() {
-    // this.loginUser();
+    //this.loginUser();
   }
   checkForRequestedPage() {
     this.router.events
@@ -152,8 +152,8 @@ export class LoginRegisterComponent
   }
   loginUser() {
     const user: IUser = {
-      email: this.loginRegisterForm.value.email,
-      password: this.loginRegisterForm.value.password,
+      email: "darshan.baranwal@gmail.com", //this.loginRegisterForm.value.email,
+      password: "trial@123", //this.loginRegisterForm.value.password,
     };
     this.fireBaseAPi
       .loginUser(user)
@@ -213,6 +213,7 @@ export class LoginRegisterComponent
             ? "home"
             : this.urlService.previousUrls[0],
         ]);
+        //this.router.navigate(["account/orderSummary"]);
         this.service.sendUserDetail.next(this.service.loggedInUser);
       });
   }

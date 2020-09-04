@@ -82,7 +82,7 @@ export class UserDetailsComponent implements OnInit {
           tap((data: any) => {
             // undefined on no user address
             this.service.loggedInUserAddress = data.map((v) => {
-              v.data.user_id = v.id;
+              v.data.address.id = v.id;
               return v.data;
             });
             this.showFirstAddress();
@@ -184,7 +184,9 @@ export class UserDetailsComponent implements OnInit {
         ...this.userDetails.value,
         user_id: this.service.loggedInUser.id,
       })
-      .then((res) => {})
+      .then((res) => {
+        console.log(res);
+      })
       .catch((rej) => alert("Adding Billing address fails. Please try again"));
   }
   sendEmail() {

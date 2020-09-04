@@ -1,0 +1,27 @@
+.order-list-container {
+  .order-item {
+    .order-item-details {
+      background-color: #df2241;
+      color: white;
+      border: 1px solid #dddddd;
+      border-radius: 8px 8px 0 0;
+      display: flex;
+      flex-direction: row;
+      padding: 8px;
+      justify-content: space-between;
+    }
+    .order-products-container {
+      border: 1px solid #dddddd;
+      border-radius: 0 0 8px 8px;
+      border-top: none;
+      padding: 8px;
+      .order-product {
+        font-size: 12px;
+        padding: 8px 0 24px 0;
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: 100%;
+      }
+    }
+  }
+}

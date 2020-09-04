@@ -35,8 +35,17 @@ export class FirebaseApiService {
       .collection("user", (ref) => ref.where("email", "==", email))
       .snapshotChanges();
   }
-  updatePwd(user: IUser) {
+  updateUser(user: IUser) {
     return this.firestore.doc("user/" + user.id).set(user);
+  }
+  updateUserProfile(user: IUser) {
+    return this.firestore.collection("user").doc(user.id).update({
+      user_name: user.user_name,
+      first_name: user.first_name,
+      last_name: user.last_name,
+      email: user.email,
+      mobile: user.mobile,
+    });
   }
   getUserAddressInfo(id: string) {
     return this.firestore
@@ -58,6 +67,13 @@ export class FirebaseApiService {
   getAllCartList(id: string) {
     return this.firestore
       .collection("user_cartList", (ref) => ref.where("userId", "==", id))
+      .snapshotChanges();
+  }
+  getAllOrderList(userId: string) {
+    return this.firestore
+      .collection("order", (ref) =>
+        ref.where("user_details.user_id", "==", userId)
+      )
       .snapshotChanges();
   }
 }

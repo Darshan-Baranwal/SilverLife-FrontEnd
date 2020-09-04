@@ -1,0 +1,39 @@
+<h3>My Orders</h3>
+
+<div class="order-list-container">
+  <div class="order-item" *ngFor="let item of orderItems">
+    <div class="order-item-details">
+      <div class="order-date">
+        <b>Order Date</b><br />
+        <span>{{ getDateForOrder(item.order_date_time) }}</span>
+      </div>
+      <div class="total-price">
+        <b>Total Price</b><br />
+        <span>Rs: {{ item.total_price }}</span>
+      </div>
+      <div class="order-details">
+        <b>Order Id: {{ item.id }}</b
+        ><br />
+        <span>Total Price: {{ item.total_price }}</span>
+      </div>
+    </div>
+    <div class="order-products-container">
+      <div class="order-product" *ngFor="let product of item.product_details">
+        <div><img [src]="product.imgAddress" alt="Product Image" /></div>
+        <div>
+          <span>{{ product.name }}</span
+          ><br />
+          <span>Price: Rs{{ product.price }},&nbsp;</span>
+          <span>Selected Count: {{ product.selectedCount }}</span
+          ><br />
+          <span
+            >Total Price: Rs{{ product.price * product.selectedCount }}</span
+          >
+        </div>
+        <div>
+          <button>Buy Again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

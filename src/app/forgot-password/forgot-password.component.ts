@@ -76,7 +76,7 @@ export class ForgotPasswordComponent implements OnInit, OnDestroy {
           id: user.id,
         };
         this.fireBaseAPi
-          .updatePwd(newuser)
+          .updateUser(newuser)
           .then((res) => {
             this.router.navigate(["account/login"]);
             alert("Mail send succesfully");

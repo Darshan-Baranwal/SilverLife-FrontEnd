@@ -15,6 +15,8 @@ import { BlogComponent } from "./blog/blog.component";
 import { LoginRegisterComponent } from "./login-register/login-register.component";
 import { ForgotPasswordComponent } from "./forgot-password/forgot-password.component";
 import { ChangePasswordComponent } from "./change-password/change-password.component";
+import { EditProfileComponent } from "./edit-profile/edit-profile.component";
+import { OrderSummaryComponent } from "./order-summary/order-summary.component";
 
 const routes: Routes = [
   {
@@ -37,6 +39,8 @@ const routes: Routes = [
       },
       { path: "forgotPassword", component: ForgotPasswordComponent },
       { path: "changePassword", component: ChangePasswordComponent },
+      { path: "editProfile", component: EditProfileComponent },
+      { path: "orderSummary", component: OrderSummaryComponent },
     ],
   },
   { path: "home", component: HomeComponent },

@@ -46,6 +46,8 @@ import { SubcategoriesModalComponent } from "./subcategories-modal/subcategories
 import { CategoriesModalComponent } from './categories-modal/categories-modal.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { OrderSummaryComponent } from './order-summary/order-summary.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,6 +86,8 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     CategoriesModalComponent,
     ForgotPasswordComponent,
     ChangePasswordComponent,
+    EditProfileComponent,
+    OrderSummaryComponent,
   ],
   imports: [
     BrowserModule,

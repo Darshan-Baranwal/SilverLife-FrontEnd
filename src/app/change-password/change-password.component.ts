@@ -60,7 +60,7 @@ export class ChangePasswordComponent implements OnInit, OnDestroy {
               password: this.changePassword.get("newPwd").value,
             };
             this.fireBaseAPi
-              .updatePwd(newuser)
+              .updateUser(newuser)
               .then((res) => {
                 alert("Password changed succesfully");
                 this.router.navigate(["account/login"]);
