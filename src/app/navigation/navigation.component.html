@@ -50,7 +50,7 @@
         alt="Login"
         *ngIf="!service.sendUserDetail.value"
       />
-      <span *ngIf="!!service.sendUserDetail.value" class="signature">{{
+      <span *ngIf="!!service.sendUserDetail.value" class="Icon signature">{{
         service.sendUserDetail.value?.first_name?.slice(0, 1).toUpperCase()
       }}</span>
     </div>
