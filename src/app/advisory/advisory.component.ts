@@ -48,6 +48,10 @@ export class AdvisoryComponent implements OnInit, AfterViewInit, OnDestroy {
               .getElementById("advisory")
               .scrollIntoView({ block: "start", behavior: "smooth" });
           }, 1000);
+        } else {
+          setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }, 10);
         }
       });
   }
