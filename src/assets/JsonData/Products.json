@@ -71,7 +71,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "To cover the open wounds along with antiseptic",
-      "Precautions": "Use immediately after opening of pack"
+      "Precautions": "Use immediately after opening of pack",
+      "hasVariant": true,
+      "variantId": 2,
+      "variantDesc": "5 pc"
     },
     {
       "id": 5,
@@ -87,7 +90,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "To cover the open wounds along with antiseptic",
-      "Precautions": "Use immediately after opening of pack"
+      "Precautions": "Use immediately after opening of pack",
+      "hasVariant": true,
+      "variantId": 2,
+      "variantDesc": "2 pc"
     },
     {
       "id": 6,
@@ -103,7 +109,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Rectangular strip band aid",
-      "Precautions": "Use immediately after opening of pack"
+      "Precautions": "Use immediately after opening of pack",
+      "hasVariant": false
     },
     {
       "id": 7,
@@ -119,7 +126,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Round spot band aid",
-      "Precautions": "Use immediately after opening of pack"
+      "Precautions": "Use immediately after opening of pack",
+      "hasVariant": false
     },
     {
       "id": 8,
@@ -135,7 +143,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For cleaning of skin ",
-      "Precautions": "Use immediately after opening of pack"
+      "Precautions": "Use immediately after opening of pack",
+      "hasVariant": false
     },
     {
       "id": 9,
@@ -152,9 +161,7 @@
       "selectedCount": 1,
       "overview": "For holding gauze pc and cotton",
       "Precautions": "Single use",
-      "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "hasVariant": false
     },
     {
       "id": 10,
@@ -171,9 +178,7 @@
       "selectedCount": 1,
       "overview": "For holding gauze pc and cotton",
       "Precautions": "Single use",
-      "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "hasVariant": false
     },
     {
       "id": 11,
@@ -189,7 +194,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For relief of sprains thru compression",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": true,
+      "variantId": 3,
+      "variantDesc": "4 inch"
     },
     {
       "id": 12,
@@ -205,7 +213,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For relief of sprains thru compression",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": true,
+      "variantId": 3,
+      "variantDesc": "6 inch"
     },
     {
       "id": 13,
@@ -221,7 +232,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For relief of sprains thru compression",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": true,
+      "variantId": 3,
+      "variantDesc": "Colored"
     },
     {
       "id": 14,
@@ -237,7 +251,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For retaing the gauze / cotton",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 15,
@@ -245,7 +260,7 @@
       "subCategoryId": 4,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Medical_Tape.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -255,8 +270,8 @@
       "overview": "For holding gauze pc and cotton",
       "Precautions": "Single use",
       "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "variantId": 4,
+      "variantDesc": "1/2 inch"
     },
     {
       "id": 16,
@@ -264,7 +279,7 @@
       "subCategoryId": 4,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Medical_Tape.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -274,8 +289,8 @@
       "overview": "For holding gauze pc and cotton",
       "Precautions": "Single use",
       "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "variantId": 4,
+      "variantDesc": "1 inch"
     },
     {
       "id": 17,
@@ -283,7 +298,7 @@
       "subCategoryId": 4,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Medical_Tape.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -293,8 +308,8 @@
       "overview": "For holding gauze pc and cotton",
       "Precautions": "Single use",
       "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "variantId": 4,
+      "variantDesc": "2 inch"
     },
     {
       "id": 18,
@@ -302,7 +317,7 @@
       "subCategoryId": 4,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Medical_Tape.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -312,8 +327,8 @@
       "overview": "For holding gauze pc and cotton",
       "Precautions": "Single use",
       "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "variantId": 4,
+      "variantDesc": "3 inch"
     },
     {
       "id": 19,
@@ -321,7 +336,7 @@
       "subCategoryId": 4,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/transparent_firm_roll.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -330,9 +345,7 @@
       "selectedCount": 1,
       "overview": "For holding gauze pc and cotton",
       "Precautions": "Single use",
-      "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "hasVariant": false
     },
     {
       "id": 20,
@@ -340,7 +353,7 @@
       "subCategoryId": 4,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Dressing_pad.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -349,9 +362,7 @@
       "selectedCount": 1,
       "overview": "To cover the wound",
       "Precautions": "Single use",
-      "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "hasVariant": false
     },
     {
       "id": 21,
@@ -359,7 +370,7 @@
       "subCategoryId": 5,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Anti_Blister_Pad.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -368,9 +379,7 @@
       "selectedCount": 1,
       "overview": "Provides comfort in blisters",
       "Precautions": "Single use",
-      "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "hasVariant": false
     },
     {
       "id": 22,
@@ -378,7 +387,7 @@
       "subCategoryId": 8,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Anti_Blister_Bandage.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -387,9 +396,7 @@
       "selectedCount": 1,
       "overview": "Provides comfort in blisters",
       "Precautions": "Single use",
-      "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "hasVariant": false
     },
     {
       "id": 23,
@@ -397,7 +404,7 @@
       "subCategoryId": 6,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Betadine_Ointment.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -405,7 +412,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Anti microbial function",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 24,
@@ -413,7 +421,7 @@
       "subCategoryId": 6,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Betadine_Solution.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -421,7 +429,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Anti microbial function",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 25,
@@ -429,7 +438,7 @@
       "subCategoryId": 6,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Betadine_Scrub.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -437,7 +446,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Anti microbial function",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 26,
@@ -445,7 +455,7 @@
       "subCategoryId": 7,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Antiseptic_cream.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -453,7 +463,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Anti microbial function",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 27,
@@ -461,7 +472,7 @@
       "subCategoryId": 7,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Antiseptic_cream.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -469,7 +480,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Anti microbial function",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 28,
@@ -477,7 +489,7 @@
       "subCategoryId": 7,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Burn_Dressing.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -485,7 +497,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "To be used on burn area",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 29,
@@ -493,7 +506,7 @@
       "subCategoryId": 9,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/First_Aid_Box_small.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -501,7 +514,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Small size first aid kit",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": true,
+      "variantId": 5,
+      "variantDesc": "small"
     },
     {
       "id": 30,
@@ -509,7 +525,7 @@
       "subCategoryId": 9,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/First_Aid_Box_Large.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -517,7 +533,10 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Large size first aid kit",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": true,
+      "variantId": 5,
+      "variantDesc": "large"
     },
     {
       "id": 31,
@@ -525,7 +544,7 @@
       "subCategoryId": 8,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Wound_Closure_Strips.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -534,17 +553,15 @@
       "selectedCount": 1,
       "overview": "To be put on the cuts on the skin",
       "Precautions": "Single use",
-      "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "hasVariant": false
     },
     {
       "id": 32,
-      "name": "Veldress pads",
+      "name": "Cuticell classic",
       "subCategoryId": 10,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Paraffin_dressing.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -553,9 +570,7 @@
       "selectedCount": 1,
       "overview": "Used for dry bedsores",
       "Precautions": "Single use",
-      "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "hasVariant": false
     },
     {
       "id": 33,
@@ -563,7 +578,7 @@
       "subCategoryId": 10,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/leukomed_t_plus.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -572,9 +587,7 @@
       "selectedCount": 1,
       "overview": "Used for dry bedsores",
       "Precautions": "Single use",
-      "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "hasVariant": false
     },
     {
       "id": 34,
@@ -582,7 +595,7 @@
       "subCategoryId": 12,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Mepilex.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -592,8 +605,8 @@
       "overview": "Small size bed sore",
       "Precautions": "Single use",
       "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "variantId": 6,
+      "variantDesc": "small"
     },
     {
       "id": 35,
@@ -601,7 +614,7 @@
       "subCategoryId": 12,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Mepilex.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -611,8 +624,8 @@
       "overview": "Large size bed sore",
       "Precautions": "Single use",
       "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "variantId": 6,
+      "variantDesc": "small"
     },
     {
       "id": 36,
@@ -620,7 +633,7 @@
       "subCategoryId": 12,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Mepilex_Sacrum.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -629,9 +642,7 @@
       "selectedCount": 1,
       "overview": "For bedsore on lower back / Buttock area",
       "Precautions": "Single use",
-      "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "hasVariant": false
     },
     {
       "id": 37,
@@ -639,7 +650,7 @@
       "subCategoryId": 12,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Mepilex_heel.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -648,9 +659,7 @@
       "selectedCount": 1,
       "overview": "For bedsore in Heel area",
       "Precautions": "Single use",
-      "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "hasVariant": false
     },
     {
       "id": 38,
@@ -658,7 +667,7 @@
       "subCategoryId": 11,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Mepilex_Ag.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -667,9 +676,7 @@
       "selectedCount": 1,
       "overview": "Silver containing anti microbial bedsore dressing",
       "Precautions": "Single use",
-      "hasVariant": true,
-      "variantId": 12,
-      "variantDesc": "variantDesc"
+      "hasVariant": false
     },
     {
       "id": 39,
@@ -677,7 +684,7 @@
       "subCategoryId": 11,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Allevyn_Ag.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -685,7 +692,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Silver containing anti microbial bedsore dressing",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 40,
@@ -693,7 +701,7 @@
       "subCategoryId": 11,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Silver_crystal_dressing.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -701,7 +709,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Silver containing anti microbial bedsore dressing",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 41,
@@ -709,7 +718,7 @@
       "subCategoryId": 13,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Hot_Water_Bottle.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -717,7 +726,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For giving heat to the sprain area",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 42,
@@ -725,7 +735,7 @@
       "subCategoryId": 13,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Hot_Water_Pouch.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -733,7 +743,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For giving heat to the sprain area",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 43,
@@ -741,7 +752,7 @@
       "subCategoryId": 13,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Gel_Pack.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -749,7 +760,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Gives pain relief to the desired area",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 44,
@@ -757,7 +769,7 @@
       "subCategoryId": 13,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -765,7 +777,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Gives pain relief to the desired area",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 45,
@@ -773,7 +786,7 @@
       "subCategoryId": 13,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Electric_Heating_Pad.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -781,7 +794,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Gives pain relief to the desired area thru heat",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 46,
@@ -789,7 +803,7 @@
       "subCategoryId": 14,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Mimo.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -797,7 +811,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Small size massager",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 47,
@@ -805,7 +820,7 @@
       "subCategoryId": 14,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Lifelong.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -813,7 +828,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "4 attachment massager",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 48,
@@ -821,7 +837,7 @@
       "subCategoryId": 14,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Beurer.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -829,7 +845,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Electric massager - Premium quality",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 49,
@@ -837,7 +854,7 @@
       "subCategoryId": 15,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Foot_Massager.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -845,7 +862,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "Foot massager - Premium quality",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 50,
@@ -853,7 +871,7 @@
       "subCategoryId": 16,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Back_Scrather.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -861,7 +879,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For back relief",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 51,
@@ -869,7 +888,7 @@
       "subCategoryId": 16,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Bone_Massager.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -877,7 +896,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For back relief",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 52,
@@ -885,7 +905,7 @@
       "subCategoryId": 16,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Scalp_Tingle.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -893,7 +913,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For scalp relief",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 53,
@@ -901,7 +922,7 @@
       "subCategoryId": 16,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Finger_Massager.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -909,7 +930,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "for relief of fingers",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 54,
@@ -917,7 +939,7 @@
       "subCategoryId": 16,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Accupressure_Kit.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -925,7 +947,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "To be used to give relief to various points",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 55,
@@ -933,7 +956,7 @@
       "subCategoryId": 17,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Volini_Gel.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -941,7 +964,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For pain relief",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 56,
@@ -949,7 +973,7 @@
       "subCategoryId": 17,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Moov_Gel.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -957,7 +981,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For pain relief",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 57,
@@ -965,7 +990,7 @@
       "subCategoryId": 17,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Himalayan_Pain_Relief_Oil.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -973,7 +998,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For pain relief",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 58,
@@ -981,7 +1007,7 @@
       "subCategoryId": 17,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Dabur_Pain_Relief_Oil.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -989,7 +1015,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For pain relief",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 59,
@@ -997,7 +1024,7 @@
       "subCategoryId": 18,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Volini_Gel.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -1005,7 +1032,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For pain relief",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 60,
@@ -1013,7 +1041,7 @@
       "subCategoryId": 18,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Moov_Gel.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -1021,7 +1049,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For pain relief",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     },
     {
       "id": 61,
@@ -1029,7 +1058,7 @@
       "subCategoryId": 18,
       "price": 1000,
       "currency": "Rs",
-      "imgAddress": "",
+      "imgAddress": "../ProductImages/Relis_Spray.png",
       "details": "",
       "isSale": false,
       "isPopular": false,
@@ -1037,7 +1066,8 @@
       "percentageSymbol": "%",
       "selectedCount": 1,
       "overview": "For pain relief",
-      "Precautions": ""
+      "Precautions": "",
+      "hasVariant": false
     }
   ]
 }
