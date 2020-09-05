@@ -6,6 +6,9 @@ export enum PRODUCT_TYPE {
 const query = {
   queryParams: { majorCategory: "popular", category: null, subcategory: null },
 };
+export const DELIVERY_DURATION = {
+  deliveryDays: 5,
+};
 
 export const CATEGORY_QUERY_PARAMETER = {
   query,

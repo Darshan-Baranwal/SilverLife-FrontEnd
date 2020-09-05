@@ -7,5 +7,5 @@ export interface IOrder {
   product_details: IProduct[];
   total_price: number;
   payment_mode: string;
-  order_date_time: Date;
+  order_date_time: string;
 }

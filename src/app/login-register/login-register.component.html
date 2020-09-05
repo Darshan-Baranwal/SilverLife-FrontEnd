@@ -8,125 +8,126 @@
     </div>
   </div>
   <form
-  class="form"
-  (ngSubmit)="loginRegisterUser()"
-  [formGroup]="loginRegisterForm"
->
-  <label for="username" *ngIf="!isLogin">
-    Username<span class="required">*</span>
-  </label>
-  <input
-    formControlName="userName"
-    id="username"
-    class="textbox"
-    type="text"
-    *ngIf="!isLogin"
-    placeholder="Enter your name"
-  />
-  <label for="email">Email address<span class="required">*</span></label>
-  <input
-    type="email"
-    class="textbox"
-    id="email"
-    formControlName="email"
-    email="true"
-    placeholder="Enter your email"
-  />
-  <div
-    *ngIf="
-      loginRegisterForm.get('email').dirty &&
-      loginRegisterForm.get('email')?.invalid
-    "
-    class="required"
+    class="form"
+    (ngSubmit)="loginRegisterUser()"
+    [formGroup]="loginRegisterForm"
   >
-    Email is invalid
-  </div>
-  <label for="phoneNumber" *ngIf="!isLogin">Mobile Number(+91-)</label>
-  <input
-    placeholder="Mobile number with 10 digits"
-    type="number"
-    class="textbox"
-    id="phoneNumber"
-    formControlName="phoneNumber"
-    minlength="10"
-    maxlength="10"
-    *ngIf="!isLogin"
-  />
-  <div
-    *ngIf="
-      loginRegisterForm.get('phoneNumber').dirty &&
-      loginRegisterForm.get('phoneNumber').invalid
-    "
-    class="required"
-  >
-    10 digit mobile number required
-  </div>
-  <label for="password"> Password<span class="required">*</span> </label>
-  <input
-    class="textbox"
-    type="password"
-    id="password"
-    formControlName="password"
-    minlength="6"
-    maxlength="15"
-    placeholder="Enter your password"
-  />
-  <div
-    *ngIf="
-      loginRegisterForm.get('password').dirty &&
-      loginRegisterForm.get('password')?.errors?.minlength
-    "
-    class="required"
-  >
-    Password is required with minlength 6 characters
-  </div>
-  <div
-    *ngIf="
-      loginRegisterForm.get('password').dirty &&
-      loginRegisterForm.get('password')?.errors?.maxlength
-    "
-    class="required"
-  >
-    Password is required with maxlength 15 characters
-  </div>
-  <label for="confirmPassword" *ngIf="!isLogin"
-    >Confirm Password<span class="required">*</span>
-  </label>
-  <input
-    class="textbox"
-    type="password"
-    id="confirmPassword"
-    formControlName="confirmPassword"
-    minlength="6"
-    maxlength="15"
-    *ngIf="!isLogin"
-    placeholder="Confirm your password"
-  />
-  <div
-    *ngIf="
-      loginRegisterForm.get('confirmPassword').dirty &&
-      loginRegisterForm.get('confirmPassword')?.errors?.mismatchConfirmPassword
-    "
-    class="required"
-  >
-    Confirm password is not same as password
-  </div>
-  <label for="rememberMe">
+    <label for="username" *ngIf="!isLogin">
+      Username<span class="required">*</span>
+    </label>
     <input
-      type="checkbox"
-      id="rememberMe"
-      value=""
-      style="display: inline-block;"
+      formControlName="userName"
+      id="username"
+      class="textbox"
+      type="text"
+      *ngIf="!isLogin"
+      placeholder="Enter your name"
     />
-    Remember Me
-  </label>
-  <input
-    class="Loginbutton button"
-    type="submit"
-    [value]="isLogin ? 'Log In' : 'Register'"
-    [disabled]="loginRegisterForm.invalid"
-    [class.disabled-input]="loginRegisterForm.invalid"
-  />
-  <a class="cursor-pointer" (click) = "forgotPassword()">Forgot Password</a>
-</form>
+    <label for="email">Email address<span class="required">*</span></label>
+    <input
+      type="email"
+      class="textbox"
+      id="email"
+      formControlName="email"
+      email="true"
+      placeholder="Enter your email"
+    />
+    <div
+      *ngIf="
+        loginRegisterForm.get('email').dirty &&
+        loginRegisterForm.get('email')?.invalid
+      "
+      class="required"
+    >
+      Email is invalid
+    </div>
+    <label for="phoneNumber" *ngIf="!isLogin">Mobile Number(+91-)</label>
+    <input
+      placeholder="Mobile number with 10 digits"
+      type="number"
+      class="textbox"
+      id="phoneNumber"
+      formControlName="phoneNumber"
+      minlength="10"
+      maxlength="10"
+      *ngIf="!isLogin"
+    />
+    <div
+      *ngIf="
+        loginRegisterForm.get('phoneNumber').dirty &&
+        loginRegisterForm.get('phoneNumber').invalid
+      "
+      class="required"
+    >
+      10 digit mobile number required
+    </div>
+    <label for="password"> Password<span class="required">*</span> </label>
+    <input
+      class="textbox"
+      type="password"
+      id="password"
+      formControlName="password"
+      minlength="6"
+      maxlength="15"
+      placeholder="Enter your password"
+    />
+    <div
+      *ngIf="
+        loginRegisterForm.get('password').dirty &&
+        loginRegisterForm.get('password')?.errors?.minlength
+      "
+      class="required"
+    >
+      Password is required with minlength 6 characters
+    </div>
+    <div
+      *ngIf="
+        loginRegisterForm.get('password').dirty &&
+        loginRegisterForm.get('password')?.errors?.maxlength
+      "
+      class="required"
+    >
+      Password is required with maxlength 15 characters
+    </div>
+    <label for="confirmPassword" *ngIf="!isLogin"
+      >Confirm Password<span class="required">*</span>
+    </label>
+    <input
+      class="textbox"
+      type="password"
+      id="confirmPassword"
+      formControlName="confirmPassword"
+      minlength="6"
+      maxlength="15"
+      *ngIf="!isLogin"
+      placeholder="Confirm your password"
+    />
+    <div
+      *ngIf="
+        loginRegisterForm.get('confirmPassword').dirty &&
+        loginRegisterForm.get('confirmPassword')?.errors
+          ?.mismatchConfirmPassword
+      "
+      class="required"
+    >
+      Confirm password is not same as password
+    </div>
+    <label for="rememberMe" *ngIf="isLogin">
+      <input
+        type="checkbox"
+        id="rememberMe"
+        value=""
+        style="display: inline-block;"
+      />
+      Remember Me
+    </label>
+    <input
+      class="Loginbutton button"
+      type="submit"
+      [value]="isLogin ? 'Log In' : 'Register'"
+      [disabled]="loginRegisterForm.invalid"
+      [class.disabled-input]="loginRegisterForm.invalid"
+    />
+    <a class="cursor-pointer" (click)="forgotPassword()">Forgot Password</a>
+  </form>
 </div>

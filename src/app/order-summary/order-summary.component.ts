@@ -4,6 +4,7 @@ import { FirebaseApiService } from "../firebase-api.service";
 import { SilverlifeService } from "../silverlife.service";
 import { takeUntil, map } from "rxjs/operators";
 import { Subject } from "rxjs";
+import { DateUtils } from '../dateUtils';
 
 @Component({
   selector: "app-order-summary",
@@ -13,6 +14,7 @@ import { Subject } from "rxjs";
 export class OrderSummaryComponent implements OnInit, OnDestroy {
   orderItems: IOrder[];
   destroy$ = new Subject();
+  dateUtils = DateUtils;
   constructor(
     private fireBaseApi: FirebaseApiService,
     private service: SilverlifeService
@@ -37,9 +39,6 @@ export class OrderSummaryComponent implements OnInit, OnDestroy {
         this.orderItems = data;
         console.log(data);
       });
-  }
-  getDateForOrder(date: Date) {
-    return new Date(date).getDate().toLocaleString();
   }
   ngOnDestroy() {
     this.destroy$.next();

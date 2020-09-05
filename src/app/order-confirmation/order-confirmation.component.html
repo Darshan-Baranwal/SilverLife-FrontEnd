@@ -25,11 +25,11 @@
 
       <div class="detailsRow">
         <div class="rightBorder">Order Date</div>
-        <div>24 June 2020</div>
+        <div>{{dateUtils.getDateInfoFromString(service.orderDetails.order_date_time)}}</div>
       </div>
       <div class="detailsRow">
         <div class="rightBorder">Expected Delivery Date</div>
-        <div>1 July 2020</div>
+        <div>{{dateUtils.getLaterDateFromString(deliverydays)}}</div>
       </div>
       <div class="detailsRow">
         <div class="rightBorder">Total Amount</div>

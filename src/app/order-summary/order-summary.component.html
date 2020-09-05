@@ -5,16 +5,21 @@
     <div class="order-item-details">
       <div class="order-date">
         <b>Order Date</b><br />
-        <span>{{ getDateForOrder(item.order_date_time) }}</span>
+        <span>{{ dateUtils.getDateInfoFromString(item.order_date_time) }}</span>
       </div>
       <div class="total-price">
         <b>Total Price</b><br />
         <span>Rs: {{ item.total_price }}</span>
       </div>
+      <div class="shipping-details">
+        <b>Ship to: {{ item.user_details.first_name }}</b
+        ><br />
+        <span>{{ item.user_details.address.house_building }}</span>
+      </div>
       <div class="order-details">
         <b>Order Id: {{ item.id }}</b
         ><br />
-        <span>Total Price: {{ item.total_price }}</span>
+        <span></span>
       </div>
     </div>
     <div class="order-products-container">
@@ -31,7 +36,9 @@
           >
         </div>
         <div>
-          <button>Buy Again</button>
+          <button [routerLink]="['/product-detail', product.id]">
+            Buy Again
+          </button>
         </div>
       </div>
     </div>

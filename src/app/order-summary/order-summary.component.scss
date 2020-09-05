@@ -1,5 +1,6 @@
 .order-list-container {
   .order-item {
+    margin-bottom: 24px;
     .order-item-details {
       background-color: #df2241;
       color: white;
@@ -7,8 +8,9 @@
       border-radius: 8px 8px 0 0;
       display: flex;
       flex-direction: row;
-      padding: 8px;
+      padding: 12px;
       justify-content: space-between;
+      font-size: 12px;
     }
     .order-products-container {
       border: 1px solid #dddddd;

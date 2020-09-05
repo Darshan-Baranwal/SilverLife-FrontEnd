@@ -85,7 +85,7 @@ export class LoginRegisterComponent
   }
 
   ngAfterViewInit() {
-    //this.loginUser();
+    this.loginUser();
   }
   checkForRequestedPage() {
     this.router.events
@@ -205,15 +205,15 @@ export class LoginRegisterComponent
         })
       )
       .subscribe((data) => {
-        this.router.navigate([
-          this.urlService.previousUrls[0] === null
-            ? "home"
-            : this.urlService.previousUrls[0] ===
-              this.urlService.previousUrls[3]
-            ? "home"
-            : this.urlService.previousUrls[0],
-        ]);
-        //this.router.navigate(["account/orderSummary"]);
+        // this.router.navigate([
+        //   this.urlService.previousUrls[0] === null
+        //     ? "home"
+        //     : this.urlService.previousUrls[0] ===
+        //       this.urlService.previousUrls[3]
+        //     ? "home"
+        //     : this.urlService.previousUrls[0],
+        // ]);
+        this.router.navigate(["account/orderSummary"]);
         this.service.sendUserDetail.next(this.service.loggedInUser);
       });
   }

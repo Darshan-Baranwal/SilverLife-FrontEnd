@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { SilverlifeService } from "../silverlife.service";
 import { LocationStrategy } from "@angular/common";
+import { DateUtils } from "../dateUtils";
+import { DELIVERY_DURATION } from "../shared/constants";
 
 @Component({
   selector: "app-order-confirmation",
@@ -9,13 +11,14 @@ import { LocationStrategy } from "@angular/common";
 })
 export class OrderConfirmationComponent implements OnInit {
   base64textString: string;
+  dateUtils = DateUtils;
+  deliverydays = DELIVERY_DURATION.deliveryDays;
   constructor(
     public service: SilverlifeService,
     private location: LocationStrategy
   ) {
     history.pushState(null, null, window.location.href);
     this.location.onPopState(() => {
-      debugger;
       history.pushState(null, null, window.location.href);
     });
   }
