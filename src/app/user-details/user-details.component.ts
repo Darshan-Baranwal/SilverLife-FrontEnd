@@ -5,7 +5,8 @@ import "../../assets/js/smtp.js";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { FirebaseApiService } from "../firebase-api.service";
 import { tap, map } from "rxjs/operators";
-import { SUCCESS_IMAGE_BASE64 } from "../shared/constants";
+import { SUCCESS_IMAGE_BASE64, DELIVERY_DURATION } from "../shared/constants";
+import { DateUtils } from "../dateUtils";
 declare let Email: any;
 @Component({
   selector: "app-user-details",
@@ -17,6 +18,7 @@ export class UserDetailsComponent implements OnInit {
   userPayment: FormControl;
   newAddressSelected = false;
   successImageSrc = SUCCESS_IMAGE_BASE64.successSrc.src;
+  dateUtils = DateUtils;
   @ViewChild("firstNameInput", { static: false }) firstNameInput;
   constructor(
     public service: SilverlifeService,
@@ -156,7 +158,7 @@ export class UserDetailsComponent implements OnInit {
       product_details: this.service.cartList.cartProducts,
       payment_mode: this.userPayment.value,
       total_price: this.getTotalProductAmount(),
-      order_date_time: new Date(),
+      order_date_time: new Date().toString(),
     };
     this.firestore
       .saveOrderDetails(this.service.orderDetails)
@@ -288,13 +290,15 @@ font-size: 20px;
       ${productDetailsHTML}
       <div class="detailsRow">
           <div class="rightBorder">Order Date</div>
-          <div>${this.service.orderDetails.order_date_time.toLocaleDateString()}</div>
+          <div>${this.dateUtils.getDateInfoFromString(
+            this.service.orderDetails.order_date_time
+          )}</div>
       </div>
       <div class="detailsRow">
           <div class="rightBorder">Expected Delivery Date</div>
-          <div>${new Date(
-            new Date().getTime() + 5 * 24 * 60 * 60 * 1000
-          ).toLocaleDateString()}</div>
+          <div>${this.dateUtils.getLaterDateFromString(
+            DELIVERY_DURATION.deliveryDays
+          )}</div>
       </div>
       <div class="detailsRow">
           <div class="rightBorder">Total Amount</div>
