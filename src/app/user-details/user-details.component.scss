@@ -9,6 +9,9 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  .toCenter{
+    margin: auto;
+  }
 }
 .AddressRow {
   padding: 1% 0;
@@ -26,7 +29,7 @@
 
 .save-address-btn,
 .proceed-btn {
-  width: 60%;
+  width: 30%;
   font-size: 20px;
   &:disabled {
     opacity: 0.5;

@@ -29,7 +29,7 @@
     (ngSubmit)="submitBillingInfo()"
     *ngIf="newAddressSelected || !!service.selectedAddress"
   >
-    <div>
+    <div class="toCenter">
       <h3>Billing Details</h3>
       <div class="AddressRow">
         <div>
@@ -152,10 +152,11 @@
     </div>
   </form>
   <form
+  class="Address"
     *ngIf="newAddressSelected || !!service.selectedAddress"
     (ngSubmit)="proceedToOrder()"
   >
-    <div>
+    <div class="toCenter">
       <h3>Sub Total</h3>
       <span>₹ {{ service.cartTotalAmount }}</span>
       <h3>Payment Mode</h3>
