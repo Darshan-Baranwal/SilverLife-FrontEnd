@@ -8,13 +8,18 @@ import { SilverlifeService } from "../silverlife.service";
   styleUrls: ["./account.component.scss"],
 })
 export class AccountComponent implements OnInit {
-  
   constructor(
     private router: Router,
     private activateRoute: ActivatedRoute,
     public service: SilverlifeService
   ) {}
   ngOnInit() {
-    this.router.navigate(["login"], { relativeTo: this.activateRoute });
+    if (!!this.service.loggedInUser) {
+      this.router.navigate(["orderSummary"], {
+        relativeTo: this.activateRoute,
+      });
+    } else {
+      this.router.navigate(["login"], { relativeTo: this.activateRoute });
+    }
   }
 }

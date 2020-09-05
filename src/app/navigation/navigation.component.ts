@@ -1,9 +1,4 @@
-import {
-  Component,
-  OnInit,
-  Output,
-  EventEmitter,
-} from "@angular/core";
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 import { Router } from "@angular/router";
 import { SilverlifeService } from "../silverlife.service";
 import { filter, map, catchError } from "rxjs/operators";
@@ -42,11 +37,11 @@ export class NavigationComponent implements OnInit {
   }
   toggleCategoryModal() {
     this.isCategoryClickedFromMobile = false;
-    document.body.style.position = '';
-    document.body.style.top = '';
+    document.body.style.position = "";
+    document.body.style.top = "";
   }
   getCategoryModalForMobile() {
-    this.service.showCategoryListModalForMobile.subscribe(data => {
+    this.service.showCategoryListModalForMobile.subscribe((data) => {
       this.isCategoryClickedFromMobile = true;
     });
   }
@@ -79,6 +74,7 @@ export class NavigationComponent implements OnInit {
   }
   navigateTo(routerLink) {
     this.router.navigate([routerLink]);
+    this.service.focusToAdvisory.next("");
   }
   openDrawer() {
     this.toggleDrawer.emit();
@@ -98,9 +94,7 @@ export class NavigationComponent implements OnInit {
     this.toggleSubCategoryList = !this.toggleSubCategoryList;
   }
   focusToAdvisory() {
-    setTimeout(() => {
-      this.service.focusToAdvisory.next('advisory');
-      this.router.navigate(["/home"]);
-    }, 10);
+    this.router.navigate(["/home"]);
+    this.service.focusToAdvisory.next("advisory");
   }
 }

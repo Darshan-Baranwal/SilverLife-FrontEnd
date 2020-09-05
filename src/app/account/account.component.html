@@ -5,6 +5,7 @@
         class="cursor-pointer"
         *ngIf="service.loggedInUser"
         routerLink="/account/orderSummary"
+        routerLinkActive="active"
       >
         My Orders
       </li>
@@ -12,6 +13,7 @@
         class="cursor-pointer"
         *ngIf="service.loggedInUser"
         routerLink="/account/editProfile"
+        routerLinkActive="active"
       >
         Edit Profile
       </li>
@@ -20,12 +22,14 @@
         class="cursor-pointer"
         *ngIf="!service.loggedInUser"
         routerLink="/account/login"
+        routerLinkActive="active"
       >
         Login/Register
       </li>
       <li
         class="cursor-pointer"
         routerLink="forgotPassword"
+        routerLinkActive="active"
         *ngIf="!service.loggedInUser"
       >
         Forgot Password
@@ -33,6 +37,7 @@
       <li
         class="cursor-pointer"
         routerLink="changePassword"
+        routerLinkActive="active"
         *ngIf="service.loggedInUser"
       >
         Change Password

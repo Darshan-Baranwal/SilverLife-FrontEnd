@@ -3,7 +3,8 @@
   position: relative;
   top: 65px;
   padding: 2% 15%;
-  height: 700px;
+  height: 500px;
+  overflow: scroll;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -19,10 +20,14 @@
 
 .Account .list li {
   color: rgb(223, 34, 65);
-  font-size: 18px;
+  font-size: 16px;
   padding: 8px;
   font-weight: 500;
   border-bottom: 1px solid rgb(224, 224, 224);
+  &.active {
+    border: 1px solid #df2241;
+    border-radius: 8px;
+  }
 }
 
 .Account .list li:active,

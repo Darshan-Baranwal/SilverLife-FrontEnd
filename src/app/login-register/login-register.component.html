@@ -1,9 +1,17 @@
 <div class="login">
   <div class="heading">
-    <div [class.active]="isLoginSelected" (click)="routeTo(true)">
+    <div
+      class="cursor-pointer"
+      [class.active]="isLogin"
+      (click)="routeTo(true)"
+    >
       Login
     </div>
-    <div [class.active]="!isLoginSelected" (click)="routeTo(false)">
+    <div
+      class="cursor-pointer"
+      [class.active]="!isLogin"
+      (click)="routeTo(false)"
+    >
       Register
     </div>
   </div>

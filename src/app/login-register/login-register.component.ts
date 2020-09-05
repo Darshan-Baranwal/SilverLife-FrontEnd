@@ -44,7 +44,6 @@ export class LoginRegisterComponent
   destroy$ = new Subject();
   previousUrl: string = null;
   currentUrl: string = null;
-  isLoginSelected: boolean = true;
   constructor(
     private router: Router,
     public fireBaseAPi: FirebaseApiService,
@@ -54,15 +53,11 @@ export class LoginRegisterComponent
   ) {}
   ngOnInit(): void {
     this.checkForRequestedPage();
-    this.loginRegisterForm = new FormGroup({
-      userName: new FormControl(""),
-      email: new FormControl("", Validators.required),
-      password: new FormControl("", Validators.required),
-      confirmPassword: new FormControl("", [
-        validateConfirmPassword.bind(this),
-      ]),
-      phoneNumber: new FormControl("", Validators.pattern("^[0-9_-]{10,12}")),
-    });
+    this.createLoginRegisterForm();
+    this.subscribeActivatedRoute();
+    this.restrictPhoneNumberToMaxlength();
+  }
+  subscribeActivatedRoute() {
     this.activateRoute.data.pipe().subscribe((data) => {
       this.isLogin = data.activatedTab == "login" ? true : false;
       if (!this.isLogin) {
@@ -74,7 +69,8 @@ export class LoginRegisterComponent
         this.loginRegisterForm.get("confirmPassword").setValidators(null);
       }
     });
-
+  }
+  restrictPhoneNumberToMaxlength() {
     this.loginRegisterForm.get("phoneNumber").valueChanges.subscribe((data) => {
       if ((data + "").split("").length > 10) {
         this.loginRegisterForm.patchValue({
@@ -83,15 +79,26 @@ export class LoginRegisterComponent
       }
     });
   }
+  createLoginRegisterForm() {
+    this.loginRegisterForm = new FormGroup({
+      userName: new FormControl(""),
+      email: new FormControl("", Validators.required),
+      password: new FormControl("", Validators.required),
+      confirmPassword: new FormControl("", [
+        validateConfirmPassword.bind(this),
+      ]),
+      phoneNumber: new FormControl("", Validators.pattern("^[0-9_-]{10,12}")),
+    });
+  }
 
   ngAfterViewInit() {
-    this.loginUser();
+    //this.loginUser();
   }
   checkForRequestedPage() {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((data: NavigationEnd) => {
-        this.isLoginSelected = data.url.split("/").includes("login");
+        this.isLogin = data.url.split("/").includes("login");
       });
   }
   loginRegisterUser() {
@@ -205,15 +212,15 @@ export class LoginRegisterComponent
         })
       )
       .subscribe((data) => {
-        // this.router.navigate([
-        //   this.urlService.previousUrls[0] === null
-        //     ? "home"
-        //     : this.urlService.previousUrls[0] ===
-        //       this.urlService.previousUrls[3]
-        //     ? "home"
-        //     : this.urlService.previousUrls[0],
-        // ]);
-        this.router.navigate(["account/orderSummary"]);
+        this.router.navigate([
+          this.urlService.previousUrls[0] === null
+            ? "home"
+            : this.urlService.previousUrls[0] ===
+              this.urlService.previousUrls[3]
+            ? "home"
+            : this.urlService.previousUrls[0],
+        ]);
+        //this.router.navigate(["account/orderSummary"]);
         this.service.sendUserDetail.next(this.service.loggedInUser);
       });
   }
@@ -231,7 +238,7 @@ export class LoginRegisterComponent
   }
 
   routeTo(isLogin: boolean) {
-    this.isLoginSelected = isLogin;
+    this.isLogin = isLogin;
     if (isLogin) {
       this.router.navigate(["../login"], { relativeTo: this.activateRoute });
     } else {
