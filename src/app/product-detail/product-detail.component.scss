@@ -1,7 +1,7 @@
 .Product {
   position: relative;
   top: 60px;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   padding: 0 15%;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -47,8 +47,8 @@
 
 .KeyFeatures .KeyFeature {
   width: 30%;
-  font-size: 15px;
-  padding-bottom: 7px;
+  font-size: 16px;
+  padding-bottom: 8px;
 }
 
 .SizeSelect {
@@ -57,11 +57,12 @@
   border: 1px solid #dcdcdc;
   display: inline-block;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   width: 190px;
   height: 40px;
   color: white;
   font-weight: 500;
+  padding: 8px;
 }
 
 .SizeSelect option {
@@ -98,14 +99,14 @@
   vertical-align: middle;
 }
 
-@media (max-width:785px){
-  .Product{
+@media (max-width: 785px) {
+  .Product {
     padding: 2%;
   }
   .Product .ProductDisplay {
     flex-direction: column;
   }
-  .ProductDisplay img{
+  .ProductDisplay img {
     width: 100%;
     height: 300px;
   }
