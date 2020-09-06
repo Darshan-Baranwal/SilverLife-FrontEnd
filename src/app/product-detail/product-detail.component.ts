@@ -62,7 +62,6 @@ export class ProductDetailComponent implements OnInit {
       )
       .subscribe((data) => {
         this.productDetail = data;
-        console.log(this.productDetail);
       });
   }
   changeProductCount(action: number) {
@@ -93,6 +92,10 @@ export class ProductDetailComponent implements OnInit {
               console.log(data);
               this.service.cartList = data[0].data;
               this.service.cartList.cartId = data[0].id;
+              sessionStorage.setItem(
+                "userCartList",
+                JSON.stringify(this.service.cartList)
+              );
               this.service.informCartInNavigation.next(this.productDetail);
             });
         });
@@ -107,6 +110,10 @@ export class ProductDetailComponent implements OnInit {
   getCartSaved(): Promise<any> {
     if (!!this.service.cartList) {
       this.service.cartList.cartProducts.push(this.productDetail);
+      sessionStorage.setItem(
+        "userCartList",
+        JSON.stringify(this.service.cartList)
+      );
     }
     return !this.service.cartList
       ? this.firestore.addUserInCartTable({

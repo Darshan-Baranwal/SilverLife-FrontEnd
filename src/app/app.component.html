@@ -17,10 +17,7 @@
 </div>
 <div class="side-drawer-content" id="side-drawer-div" *ngIf="toggleSideDrawer">
   <ul>
-    <li
-      class="MobileOnly cursor-pointer"
-      (click)="listItemClicked('category')"
-    >
+    <li class="MobileOnly cursor-pointer" (click)="listItemClicked('category')">
       Categories
     </li>
     <li
@@ -37,10 +34,7 @@
     >
       Sale
     </li>
-    <li
-      class="MobileOnly cursor-pointer"
-      (click)="listItemClicked('blog')"
-    >
+    <li class="MobileOnly cursor-pointer" (click)="listItemClicked('blog')">
       Blog
     </li>
     <li
@@ -48,7 +42,7 @@
       routerLink="account/login"
       (click)="toggleSideDrawer = false"
     >
-      Login
+      {{ !service.loggedInUser ? "Login" : "Logout" }}
     </li>
     <li
       class="cursor-pointer"

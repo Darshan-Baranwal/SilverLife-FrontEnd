@@ -21,9 +21,12 @@ export class AppComponent implements OnInit {
   constructor(
     private router: Router,
     private urlService: UrlStateService,
-    private service: SilverlifeService
+    public service: SilverlifeService
   ) {}
   ngOnInit() {
+    if (sessionStorage.getItem("userInfo")) {
+      this.restoreAfterReload();
+    }
     this.getPreviousUrl();
   }
   getPreviousUrl() {
@@ -32,17 +35,36 @@ export class AppComponent implements OnInit {
       .subscribe((event: NavigationEnd) => {
         this.previousUrl = this.currentUrl;
         this.currentUrl = event.url;
+        this.urlService.previousUrls = JSON.parse(
+          sessionStorage.getItem("previousUrls")
+        );
         this.urlService.previousUrls.push(this.previousUrl);
         this.urlService.previousUrls.push(this.currentUrl);
+
         if (this.urlService.previousUrls.length > 4) {
           this.urlService.previousUrls.shift();
           this.urlService.previousUrls.shift();
         }
         this.urlService.setPreviousUrl(this.previousUrl);
+        sessionStorage.setItem(
+          "previousUrls",
+          JSON.stringify(this.urlService.previousUrls)
+        );
       });
   }
   navigateTo() {
     alert("navigate working");
+  }
+
+  restoreAfterReload() {
+    this.service.loggedInUser = JSON.parse(sessionStorage.getItem("userInfo"));
+    this.service.cartList = JSON.parse(sessionStorage.getItem("userCartList"));
+    if (JSON.parse(sessionStorage.getItem("previousUrls")) !== null) {
+      this.urlService.previousUrls = JSON.parse(
+        sessionStorage.getItem("previousUrls")
+      );
+    }
+    this.service.sendUserDetail.next(this.service.loggedInUser);
   }
   listItemClicked(listItemName: string) {
     this.toggleSideDrawer = false;

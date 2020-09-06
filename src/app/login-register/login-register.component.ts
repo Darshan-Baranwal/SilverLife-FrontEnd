@@ -159,8 +159,8 @@ export class LoginRegisterComponent
   }
   loginUser() {
     const user: IUser = {
-      email: "darshan.baranwal@gmail.com", //this.loginRegisterForm.value.email,
-      password: "trial@123", //this.loginRegisterForm.value.password,
+      email: this.loginRegisterForm.value.email,
+      password: this.loginRegisterForm.value.password,
     };
     this.fireBaseAPi
       .loginUser(user)
@@ -183,6 +183,10 @@ export class LoginRegisterComponent
               id: users[0].id,
               password: "",
             };
+            sessionStorage.setItem(
+              "userInfo",
+              JSON.stringify(this.service.loggedInUser)
+            );
             return this.fireBaseAPi.getAllCartList(users[0].id).pipe(
               takeUntil(this.destroy$),
               map((data) => {
@@ -201,7 +205,10 @@ export class LoginRegisterComponent
                 } else {
                   this.service.cartList = data[0];
                 }
-                console.log(this.service.cartList);
+                sessionStorage.setItem(
+                  "userCartList",
+                  JSON.stringify(this.service.cartList)
+                );
               }),
               catchError((err) => {
                 console.log(err);
@@ -229,6 +236,7 @@ export class LoginRegisterComponent
       relativeTo: this.activateRoute,
     });
   }
+
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();

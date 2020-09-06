@@ -167,6 +167,10 @@ export class UserDetailsComponent implements OnInit {
         this.sendEmail().then((message) => {
           this.service.cartList.cartProducts = [];
           this.service.cartList.userId = this.service.loggedInUser.id;
+          sessionStorage.setItem(
+            "userCartList",
+            JSON.stringify(this.service.cartList)
+          );
           this.router.navigate(["/order-successful"]);
         });
       })

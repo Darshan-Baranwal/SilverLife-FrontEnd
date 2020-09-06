@@ -86,6 +86,10 @@ export class NavigationComponent implements OnInit {
       cartProducts: [],
       userId: "",
     };
+    sessionStorage.setItem(
+      "userCartList",
+      JSON.stringify(this.service.cartList)
+    );
     this.router.navigate(["/home"]);
   }
   openSubCategory(selectedCategory: ICategory) {
