@@ -4,6 +4,7 @@ import { switchMap, map, filter, catchError } from "rxjs/operators";
 import { HttpClient } from "@angular/common/http";
 import { of, combineLatest } from "rxjs";
 import { SubCategory } from "../category/sub-category/SubcategoryModel";
+import { IProduct } from "./ProductModel";
 @Component({
   selector: "app-item-list",
   templateUrl: "./item-list.component.html",
@@ -16,7 +17,7 @@ export class ItemListComponent implements OnInit {
   @Input() isSale: boolean | undefined;
   showAdvisories = false;
   categoryInfoObj: any = {};
-  productList;
+  productList: IProduct[];
   overviewOfSubcategory: SubCategory;
   constructor(
     private http: HttpClient,
