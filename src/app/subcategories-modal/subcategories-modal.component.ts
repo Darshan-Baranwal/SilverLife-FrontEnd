@@ -43,6 +43,7 @@ export class SubcategoriesModalComponent implements OnInit {
       });
   }
   navigateToProductListpage(subcategory: SubCategory) {
+    this.toggleSubCategoryModal.emit();
     this.service.navigateToProductListpage(
       "item-list",
       undefined,
