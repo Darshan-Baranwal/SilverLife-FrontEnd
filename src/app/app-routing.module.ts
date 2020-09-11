@@ -17,6 +17,7 @@ import { ForgotPasswordComponent } from "./forgot-password/forgot-password.compo
 import { ChangePasswordComponent } from "./change-password/change-password.component";
 import { EditProfileComponent } from "./edit-profile/edit-profile.component";
 import { OrderSummaryComponent } from "./order-summary/order-summary.component";
+import { SearchedProductComponent } from "./searched-product/searched-product.component";
 
 const routes: Routes = [
   {
@@ -53,6 +54,10 @@ const routes: Routes = [
   { path: "item-list", component: ItemListComponent },
   { path: "user-details", component: UserDetailsComponent },
   { path: "order-successful", component: OrderConfirmationComponent },
+  {
+    path: "searchedProduct",
+    component: SearchedProductComponent,
+  },
   { path: "blog/:id", component: BlogComponent, pathMatch: "full" },
   { path: "blog", component: BlogComponent, pathMatch: "full" },
   { path: "", pathMatch: "full", redirectTo: "home" },

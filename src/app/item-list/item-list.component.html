@@ -1,4 +1,7 @@
-<div class="Justarrived item-list-container">
+<div
+  class="Justarrived item-list-container"
+  *ngIf="productList?.length > 0; else noProduct"
+>
   <app-item-list-header
     [header]="overviewOfSubcategory?.name"
     [hideAllNewLink]="hideAllNewLink"
@@ -14,3 +17,6 @@
     </li>
   </ul>
 </div>
+<ng-template class="Justarrived item-list-container" #noProduct>
+  <div class="Justarrived item-list-container">No Product Found</div>
+</ng-template>

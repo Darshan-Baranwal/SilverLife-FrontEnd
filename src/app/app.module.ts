@@ -48,6 +48,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
+import { SearchedProductComponent } from './searched-product/searched-product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -88,6 +89,7 @@ import { OrderSummaryComponent } from './order-summary/order-summary.component';
     ChangePasswordComponent,
     EditProfileComponent,
     OrderSummaryComponent,
+    SearchedProductComponent,
   ],
   imports: [
     BrowserModule,

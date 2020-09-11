@@ -83,9 +83,41 @@
       (autoCloseOnclickOutside)="openCloseSearchModal = false"
     >
       <div class="inner-wrap">
-        <form role="search">
-          <input type="text" name="s" id="s" value="" placeholder="Search" />
+        <select
+          name="category"
+          id="category"
+          (change)="loadSubcategory(searchBarSelectedCategory)"
+          [(ngModel)]="searchBarSelectedCategory"
+        >
+          <option *ngFor="let category of categories" [ngValue]="category">{{
+            category.name
+          }}</option>
+        </select>
+        <select
+          name="subcategory"
+          id="subcategory"
+          [(ngModel)]="searchBarSelectedSubCategory"
+        >
+          <option>
+            <input type="text" (keyup)="filterListSubCategoryList($event)" />
+          </option>
+          <option
+            *ngFor="let subcategory of selectedCategorySubCategories"
+            [ngValue]="subcategory"
+            >{{ subcategory.name }}</option
+          >
+        </select>
+        <form role="search" (ngSubmit)="searchInProducts()">
+          <input
+            type="text"
+            name="s"
+            id="s"
+            value=""
+            placeholder="Search"
+            [(ngModel)]="searchedKeyword"
+          />
           <input type="hidden" name="post_type" value="product" />
+          <input type="submit" value="Search" />
           <div>Hit enter to search or ESC to close</div>
         </form>
         <div id="close">

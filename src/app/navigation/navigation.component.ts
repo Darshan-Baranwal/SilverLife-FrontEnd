@@ -6,6 +6,7 @@ import { IProduct } from "../item-list/ProductModel";
 import { HttpClient } from "@angular/common/http";
 import { of } from "rxjs";
 import { ICategory } from "../category/CategoryModel";
+import { SubCategory } from "../category/sub-category/SubcategoryModel";
 
 @Component({
   selector: "app-navigation",
@@ -16,12 +17,16 @@ export class NavigationComponent implements OnInit {
   openCloseSearchModal: boolean = false;
   categories: ICategory[] = [];
   selectedCategory: ICategory;
+  searchBarSelectedCategory: ICategory;
+  searchBarSelectedSubCategory: SubCategory;
   isCategoryHovered: boolean = false;
   isCategoryClickedFromMobile = false;
   @Output() toggleDrawer = new EventEmitter<void>();
   newAddedProduct: IProduct;
-  toggleNewItemAddedToCartModal: boolean = false;
-  toggleSubCategoryList: boolean = false;
+  toggleNewItemAddedToCartModal = false;
+  toggleSubCategoryList = false;
+  searchedKeyword = "";
+  selectedCategorySubCategories: SubCategory;
   constructor(
     private router: Router,
     public service: SilverlifeService,
@@ -100,5 +105,45 @@ export class NavigationComponent implements OnInit {
   focusToAdvisory() {
     this.router.navigate(["/home"]);
     this.service.focusToAdvisory.next("advisory");
+  }
+  searchInProducts() {
+    this.openCloseSearchModal = false;
+    this.router.navigate(["/searchedProduct"], {
+      queryParams: {
+        categoryId: !!this.searchBarSelectedCategory
+          ? this.searchBarSelectedCategory.id
+          : "",
+        subcategoryId: !!this.searchBarSelectedSubCategory
+          ? this.searchBarSelectedSubCategory.id
+          : "",
+        searchedText: this.searchedKeyword,
+      },
+    });
+  }
+  filterListSubCategoryList(text) {
+    console.log(text);
+  }
+  loadSubcategory(category: ICategory) {
+    this.getSubcategories(category);
+  }
+  getSubcategories(category: ICategory) {
+    this.http
+      .get<{ subCategories: SubCategory[] }>(
+        "../assets/JsonData/SubCategories.json"
+      )
+      .pipe(
+        map((response) => {
+          return response.subCategories;
+        }),
+        filter((data) => !!data),
+        catchError((err) => {
+          return of(err);
+        })
+      )
+      .subscribe((data) => {
+        this.selectedCategorySubCategories = data.filter(
+          (v: SubCategory) => v.categoryId === category.id
+        );
+      });
   }
 }
