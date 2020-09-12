@@ -1,4 +1,12 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  Output,
+  EventEmitter,
+  Input,
+  OnChanges,
+  SimpleChanges,
+} from "@angular/core";
 import { Router } from "@angular/router";
 import { SilverlifeService } from "../silverlife.service";
 import { filter, map, catchError } from "rxjs/operators";
@@ -13,7 +21,8 @@ import { SubCategory } from "../category/sub-category/SubcategoryModel";
   templateUrl: "./navigation.component.html",
   styleUrls: ["./navigation.component.scss"],
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent implements OnInit, OnChanges {
+  @Input() isLogout: boolean;
   openCloseSearchModal: boolean = false;
   categories: ICategory[] = [];
   selectedCategory: ICategory;
@@ -32,7 +41,14 @@ export class NavigationComponent implements OnInit {
     public service: SilverlifeService,
     private http: HttpClient
   ) {}
-
+  ngOnChanges(obj: SimpleChanges) {
+    if (
+      this.service.loggedInUser &&
+      obj.isLogout.previousValue !== obj.isLogout.currentValue
+    ) {
+      this.logout();
+    }
+  }
   ngOnInit(): void {
     this.getCartInfo();
     this.getCategoriesList();

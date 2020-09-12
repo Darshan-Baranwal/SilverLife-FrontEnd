@@ -54,13 +54,13 @@
         service.sendUserDetail.value?.first_name?.slice(0, 1).toUpperCase()
       }}</span>
     </div>
-    <div
+    <!-- <div
       *ngIf="!!service.sendUserDetail?.value"
       (click)="logout()"
       class="logout-link cursor-pointer"
     >
       <a>Logout</a>
-    </div>
+    </div> -->
     <div class="Icon cursor-pointer" (click)="navigateTo('shopping-cart')">
       <div class="number">
         {{ !!service.cartList ? service.cartList?.cartProducts?.length : 0 }}

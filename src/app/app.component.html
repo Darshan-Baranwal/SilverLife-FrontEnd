@@ -9,6 +9,7 @@
     </div>
   </div>
   <app-navigation
+    [isLogout]="logoutClicked"
     (toggleDrawer)="toggleDrawerForSideDrawer($event)"
   ></app-navigation>
   <router-outlet></router-outlet>
@@ -40,7 +41,7 @@
     <li
       class="cursor-pointer"
       routerLink="account/login"
-      (click)="toggleSideDrawer = false"
+      (click)="actionSignSignOut()"
     >
       {{ !service.loggedInUser ? "Login" : "Logout" }}
     </li>

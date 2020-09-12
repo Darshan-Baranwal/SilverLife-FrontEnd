@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   toggleSideDrawer = false;
   previousUrl: string = null;
   currentUrl: string = null;
+  logoutClicked = false;
   @ViewChild("mainContainer", { static: false }) mainContainer;
   toggleDrawerForSideDrawer(event) {
     this.toggleSideDrawer = !this.toggleSideDrawer;
@@ -51,6 +52,12 @@ export class AppComponent implements OnInit {
           JSON.stringify(this.urlService.previousUrls)
         );
       });
+  }
+  actionSignSignOut() {
+    this.toggleSideDrawer = false;
+    if (!!this.service.loggedInUser) {
+      this.logoutClicked = !this.logoutClicked;
+    }
   }
   navigateTo() {
     alert("navigate working");
