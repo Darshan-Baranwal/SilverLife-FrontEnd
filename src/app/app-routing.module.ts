@@ -18,6 +18,8 @@ import { ChangePasswordComponent } from "./change-password/change-password.compo
 import { EditProfileComponent } from "./edit-profile/edit-profile.component";
 import { OrderSummaryComponent } from "./order-summary/order-summary.component";
 import { SearchedProductComponent } from "./searched-product/searched-product.component";
+import { ContactMailComponent } from "./contact-mail/contact-mail.component";
+import { ProductUploadComponent } from "./product-upload/product-upload.component";
 
 const routes: Routes = [
   {
@@ -42,6 +44,8 @@ const routes: Routes = [
       { path: "changePassword", component: ChangePasswordComponent },
       { path: "editProfile", component: EditProfileComponent },
       { path: "orderSummary", component: OrderSummaryComponent },
+      { path: "contactUs", component: ContactMailComponent },
+      { path: "addProduct", component: ProductUploadComponent },
     ],
   },
   { path: "home", component: HomeComponent },

@@ -1,5 +1,6 @@
 import { IUserAddress } from "./iuser-address.model";
 import { IProduct } from "./item-list/ProductModel";
+import { IRazorPaymentResponse } from "./razorpayment.model";
 
 export interface IOrder {
   id?: string;
@@ -8,4 +9,5 @@ export interface IOrder {
   total_price: number;
   payment_mode: string;
   order_date_time: string;
+  paymentDetails?: IRazorPaymentResponse;
 }

@@ -61,9 +61,9 @@ export class ForgotPasswordComponent implements OnInit, OnDestroy {
   }
   sendNewPassword(user) {
     const mail: IMail = {
-      To: "goeldiksha94@gmail.com",
+      To: user.email,
       From: "only4apps15@gmail.com",
-      Subject: "Test Mail",
+      Subject: "Silver Life new password",
       Body: this.getMailBody(),
     };
     this.service

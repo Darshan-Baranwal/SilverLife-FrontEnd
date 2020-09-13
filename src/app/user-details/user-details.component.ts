@@ -1,13 +1,11 @@
-import { Component, OnInit, AfterViewInit, ViewChild } from "@angular/core";
-import { SilverlifeService } from "../silverlife.service";
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
+import { map, tap } from "rxjs/operators";
 import "../../assets/js/smtp.js";
-import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { FirebaseApiService } from "../firebase-api.service";
-import { tap, map } from "rxjs/operators";
-import { SUCCESS_IMAGE_BASE64, DELIVERY_DURATION } from "../shared/constants";
-import { DateUtils } from "../dateUtils";
-declare let Email: any;
+import { SilverlifeService } from "../silverlife.service";
+declare var Razorpay: any;
 @Component({
   selector: "app-user-details",
   templateUrl: "./user-details.component.html",
@@ -17,8 +15,6 @@ export class UserDetailsComponent implements OnInit {
   userDetails: FormGroup;
   userPayment: FormControl;
   newAddressSelected = false;
-  successImageSrc = SUCCESS_IMAGE_BASE64.successSrc.src;
-  dateUtils = DateUtils;
   @ViewChild("firstNameInput", { static: false }) firstNameInput;
   constructor(
     public service: SilverlifeService,
@@ -153,6 +149,17 @@ export class UserDetailsComponent implements OnInit {
     }
   }
   proceedToOrder() {
+    this.createOrderDetailsObj();
+    if (this.userPayment.value === "pod") {
+      this.service.saveOrderDetails();
+    } else {
+      this.service.createRazorPayOptions();
+      const rzp1 = new Razorpay(this.service.razorPayOptions);
+      rzp1.open();
+    }
+  }
+
+  createOrderDetailsObj() {
     this.service.orderDetails = {
       user_details: this.service.selectedAddress,
       product_details: this.service.cartList.cartProducts,
@@ -160,23 +167,6 @@ export class UserDetailsComponent implements OnInit {
       total_price: this.getTotalProductAmount(),
       order_date_time: new Date().toString(),
     };
-    this.firestore
-      .saveOrderDetails(this.service.orderDetails)
-      .then((res) => {
-        this.service.orderDetails.id = res.id;
-        this.sendEmail().then((message) => {
-          this.service.cartList.cartProducts = [];
-          this.service.cartList.userId = this.service.loggedInUser.id;
-          sessionStorage.setItem(
-            "userCartList",
-            JSON.stringify(this.service.cartList)
-          );
-          this.router.navigate(["/order-successful"]);
-        });
-      })
-      .catch((rej) => {
-        alert("Order Not placed");
-      });
   }
   getTotalProductAmount(): number {
     return this.service.cartList.cartProducts.reduce((a, v) => {
@@ -194,125 +184,5 @@ export class UserDetailsComponent implements OnInit {
         console.log(res);
       })
       .catch((rej) => alert("Adding Billing address fails. Please try again"));
-  }
-  sendEmail() {
-    return Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "only4apps15@gmail.com",
-      Password: "5A8CD76F9586056401874BD1E558CD5B6F05",
-      To: "goeldiksha94@gmail.com",
-      From: "only4apps15@gmail.com",
-      Subject: "Test Mail",
-      Body: this.getMailBody(),
-    });
-  }
-  getMailBody() {
-    const productDetailsHTML = this.service.orderDetails.product_details.reduce(
-      (a, v) => {
-        a =
-          a +
-          `<div class="detailsRow">
-        <div class="rightBorder"> ${v.name} </div>
-          <div>Price: ${v.selectedCount} * ${v.price} Rs = ${
-            v.price * v.selectedCount
-          } Rs </div>
-            </div>`;
-        return a;
-      },
-      ""
-    );
-    return `
-      <style>
-.OrderConfirmation{
-  position: relative;
-  top:150px;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  width: 100%;
-  align-content: center;
-  text-align: center;
-  height: 600px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.success{
-  height: 150px;
-  width: 150px;
-}
-
-.details{
-  border: 1px solid grey;
-  width: 500px;
-  margin: 0 auto;
-}
-
-.detailsRow{
-  height: 30px;
-  padding-top: 5px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-}
-
-.detailsRow div{
-  text-align: left;
-  padding: 0 20px;
-  width: 50%;
-  margin: auto;
-}
-
-.rightBorder{
-  border-right: 1px solid grey;
-}
-
-h2,h4{
-  margin-top: 5px;
-}
-
-.ContnuShpg{
-margin-top: 10px;
-width: 200px;
-font-size: 20px;
-}
-</style>
-<div class="OrderConfirmation">
-  <h2>Your order has been confirmed!</h2>
-  <h4>Below are order details</h4>
-  <div>
-<img src=${this.successImageSrc} alt="Success Image" class = "success">
-  </div>
-  <div>
-  <div class="details">
-      <div class="detailsRow">
-          <div class="rightBorder">Order Number</div>
-          <div>${this.service.orderDetails.id}</div>
-      </div>
-      <div class="detailsRow">
-          <div class="rightBorder">Products Details</div>
-      </div>
-      ${productDetailsHTML}
-      <div class="detailsRow">
-          <div class="rightBorder">Order Date</div>
-          <div>${this.dateUtils.getDateInfoFromString(
-            this.service.orderDetails.order_date_time
-          )}</div>
-      </div>
-      <div class="detailsRow">
-          <div class="rightBorder">Expected Delivery Date</div>
-          <div>${this.dateUtils.getLaterDateFromString(
-            DELIVERY_DURATION.deliveryDays
-          )}</div>
-      </div>
-      <div class="detailsRow">
-          <div class="rightBorder">Total Amount</div>
-          <div>Rs ${this.service.cartTotalAmount}</div>
-      </div>
-  </div>
-</div>
-<div>
-<a href="https://silverlife.herokuapp.com/">Continue Shopping</a>
-</div>
-      `;
   }
 }

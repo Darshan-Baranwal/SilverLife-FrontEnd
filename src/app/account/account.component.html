@@ -17,7 +17,13 @@
       >
         Edit Profile
       </li>
-      <li>Contact Us</li>
+      <li
+        class="cursor-pointer"
+        routerLink="contactUs"
+        routerLinkActive="active"
+      >
+        Contact Us
+      </li>
       <li
         class="cursor-pointer"
         *ngIf="!service.loggedInUser"
@@ -42,11 +48,21 @@
       >
         Change Password
       </li>
+      <li
+        class="cursor-pointer"
+        routerLink="addProduct"
+        routerLinkActive="active"
+        *ngIf="
+          service.loggedInUser &&
+          service.loggedInUser.email === 'darshan.baranwal@gmail.com'
+        "
+      >
+        Add Product
+      </li>
     </ul>
   </div>
   <div class="working">
     <h1>My Account</h1>
     <router-outlet></router-outlet>
   </div>
-  <!-- <app-contact-mail></app-contact-mail> -->
 </div>

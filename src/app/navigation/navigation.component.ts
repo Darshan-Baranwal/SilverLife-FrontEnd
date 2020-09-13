@@ -21,8 +21,7 @@ import { SubCategory } from "../category/sub-category/SubcategoryModel";
   templateUrl: "./navigation.component.html",
   styleUrls: ["./navigation.component.scss"],
 })
-export class NavigationComponent implements OnInit, OnChanges {
-  @Input() isLogout: boolean;
+export class NavigationComponent implements OnInit {
   openCloseSearchModal: boolean = false;
   categories: ICategory[] = [];
   selectedCategory: ICategory;
@@ -41,14 +40,6 @@ export class NavigationComponent implements OnInit, OnChanges {
     public service: SilverlifeService,
     private http: HttpClient
   ) {}
-  ngOnChanges(obj: SimpleChanges) {
-    if (
-      this.service.loggedInUser &&
-      obj.isLogout.previousValue !== obj.isLogout.currentValue
-    ) {
-      this.logout();
-    }
-  }
   ngOnInit(): void {
     this.getCartInfo();
     this.getCategoriesList();
@@ -100,19 +91,7 @@ export class NavigationComponent implements OnInit, OnChanges {
   openDrawer() {
     this.toggleDrawer.emit();
   }
-  logout() {
-    this.service.sendUserDetail.next(null);
-    this.service.loggedInUser = null;
-    this.service.cartList = {
-      cartProducts: [],
-      userId: "",
-    };
-    sessionStorage.setItem(
-      "userCartList",
-      JSON.stringify(this.service.cartList)
-    );
-    this.router.navigate(["/home"]);
-  }
+
   openSubCategory(selectedCategory: ICategory) {
     this.isCategoryClickedFromMobile = false;
     this.selectedCategory = selectedCategory;
