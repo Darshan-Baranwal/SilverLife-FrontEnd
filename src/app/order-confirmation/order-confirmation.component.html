@@ -14,22 +14,28 @@
       </div>
       <div
         class="detailsRow"
-        *ngFor="let product of service.orderDetails.product_details"
+        *ngFor="let product of service?.orderDetails?.product_details"
       >
-        <div class="rightBorder">Product - {{ product.name }}</div>
+        <div class="rightBorder">Product - {{ product?.name }}</div>
         <div>
-          Price: {{ product.selectedCount }} * {{ product.price }} Rs =
-          {{ product.price * product.selectedCount }} Rs
+          Price: {{ product?.selectedCount }} * {{ product?.price }} Rs =
+          {{ product?.price * product?.selectedCount }} Rs
         </div>
       </div>
 
       <div class="detailsRow">
         <div class="rightBorder">Order Date</div>
-        <div>{{dateUtils.getDateInfoFromString(service.orderDetails.order_date_time)}}</div>
+        <div>
+          {{
+            dateUtils.getDateInfoFromString(
+              service.orderDetails?.order_date_time
+            )
+          }}
+        </div>
       </div>
       <div class="detailsRow">
         <div class="rightBorder">Expected Delivery Date</div>
-        <div>{{dateUtils.getLaterDateFromString(deliverydays)}}</div>
+        <div>{{ dateUtils.getLaterDateFromString(deliverydays) }}</div>
       </div>
       <div class="detailsRow">
         <div class="rightBorder">Total Amount</div>
