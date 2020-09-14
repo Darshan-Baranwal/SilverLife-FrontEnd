@@ -74,7 +74,6 @@ export class SilverlifeService {
         this.orderDetails.id = res.id;
         const mailConfig: IMail = {
           To: this.loggedInUser ? this.loggedInUser.email : "",
-          From: "only4apps15@gmail.com",
           Subject: "Silver Life new Order",
           Body: this.getMailBody(),
         };
@@ -112,6 +111,7 @@ export class SilverlifeService {
       cartProducts: [],
       userId: "",
     };
+    sessionStorage.setItem("userInfo", "");
     sessionStorage.setItem("userCartList", JSON.stringify(this.cartList));
     this.router.navigate(["/home"]);
   }

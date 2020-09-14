@@ -1,7 +1,8 @@
 export const APP_MAIL = {
   Host: "smtp.elasticemail.com",
-  Username: "only4apps15@gmail.com",
-  Password: "5A8CD76F9586056401874BD1E558CD5B6F05",
+  Username: "support@silver-life.in",
+  Password: "A332DCEE03B4D81D6D5C5E89264AF3ECB20E",
+  From: "support@silver-life.in",
 };
 export const USER_DEFAULT_PWD = {
   pwd: "trial@123",

@@ -3,7 +3,7 @@ export interface IMail {
   Username?: string;
   Password?: string;
   To: string;
-  From: string;
+  From?: string;
   Subject: string;
   Body: string;
 }

@@ -35,9 +35,6 @@ export class AppComponent implements OnInit {
       .subscribe((event: NavigationEnd) => {
         this.previousUrl = this.currentUrl;
         this.currentUrl = event.url;
-        this.urlService.previousUrls = JSON.parse(
-          sessionStorage.getItem("previousUrls")
-        );
         this.urlService.previousUrls.push(this.previousUrl);
         this.urlService.previousUrls.push(this.currentUrl);
 
