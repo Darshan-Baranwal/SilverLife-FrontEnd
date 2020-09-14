@@ -384,7 +384,7 @@
     {
       "id": 22,
       "name": "Anti blister bandage",
-      "subCategoryId": 8,
+      "subCategoryId": 5,
       "price": 1000,
       "currency": "Rs",
       "imgAddress": "../../assets/ProductImages/Anti_Blister_Bandage.png",
